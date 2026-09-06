@@ -13,6 +13,7 @@ import {
   useProgress,
 } from "@/lib/progressStore";
 import { StudySession } from "@/components/StudySession";
+import { SymbolButtons } from "@/components/SymbolButtons";
 import { useMounted } from "@/hooks/useMounted";
 
 export default function LecturePage() {
@@ -168,6 +169,9 @@ export default function LecturePage() {
                       onChange={(e) => setEditNuance(e.target.value)}
                       className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
                     />
+                    <div className="mt-1.5">
+                      <SymbolButtons onInsert={(s) => setEditNuance((v) => v + s)} />
+                    </div>
                   </div>
                   <button
                     onClick={() => saveEdit(w.id)}

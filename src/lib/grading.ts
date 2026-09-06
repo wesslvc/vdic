@@ -25,7 +25,13 @@ function stripKoreanSuffix(word: string): string {
 }
 
 function normalize(str: string): string {
-  return str.replace(/\s+/g, "").trim().toLowerCase();
+  return str
+    .replace(/\s+/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/<->|<=>/g, "↔")
+    .replace(/->|=>/g, "→")
+    .replace(/<-|<=/g, "←");
 }
 
 /** Splits a raw meaning/term field into separate acceptable answers. */

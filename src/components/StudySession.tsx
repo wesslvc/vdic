@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { StudyWord } from "@/lib/derived";
 import { logSession, recordAnswer } from "@/lib/progressStore";
 import { isAnswerCorrect } from "@/lib/grading";
+import { SymbolButtons } from "@/components/SymbolButtons";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -209,6 +210,9 @@ export function StudySession({
               spellCheck={false}
               className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-center text-lg dark:border-neutral-700 dark:bg-neutral-800"
             />
+            <div className="mt-2.5 flex justify-center">
+              <SymbolButtons onInsert={(s) => setNuanceInput((v) => v + s)} />
+            </div>
           </form>
         )}
 

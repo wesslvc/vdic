@@ -1,0 +1,2410 @@
+{
+  "lectures": [
+    {
+      "id": 1,
+      "title": "1강",
+      "subtitle": "챕터 01 · 안 헷갈려?",
+      "words": [
+        {
+          "id": "1-1",
+          "term": "attitude",
+          "meaning": "태도"
+        },
+        {
+          "id": "1-2",
+          "term": "altitude",
+          "meaning": "고도"
+        },
+        {
+          "id": "1-3",
+          "term": "latitude",
+          "meaning": "위도"
+        },
+        {
+          "id": "1-4",
+          "term": "longtitude",
+          "meaning": "경도"
+        },
+        {
+          "id": "1-5",
+          "term": "graditude",
+          "meaning": "고마움"
+        },
+        {
+          "id": "1-6",
+          "term": "aptitude",
+          "meaning": "적성"
+        },
+        {
+          "id": "1-7",
+          "term": "affect",
+          "meaning": "영향을 미치다, 감정을 유발하다, 감정"
+        },
+        {
+          "id": "1-8",
+          "term": "affection",
+          "meaning": "애정"
+        },
+        {
+          "id": "1-9",
+          "term": "affectionate",
+          "meaning": "애정어린, 다정한"
+        },
+        {
+          "id": "1-10",
+          "term": "priceless",
+          "meaning": "귀중한"
+        },
+        {
+          "id": "1-11",
+          "term": "valueless",
+          "meaning": "가치없는"
+        },
+        {
+          "id": "1-12",
+          "term": "invaluable",
+          "meaning": "귀중한"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "2강",
+      "subtitle": "챕터 01 · 안 헷갈려?",
+      "words": [
+        {
+          "id": "2-1",
+          "term": "worthless",
+          "meaning": "가치없는"
+        },
+        {
+          "id": "2-2",
+          "term": "appliance",
+          "meaning": "가정용 기기, 적용"
+        },
+        {
+          "id": "2-3",
+          "term": "appliances",
+          "meaning": "가정용 기기들"
+        },
+        {
+          "id": "2-4",
+          "term": "A is the appliance of B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "2-5",
+          "term": "intelligent",
+          "meaning": "지적인"
+        },
+        {
+          "id": "2-6",
+          "term": "intelligible",
+          "meaning": "이해할 수 있는(=understandable)"
+        },
+        {
+          "id": "2-7",
+          "term": "lie",
+          "meaning": "거짓말 하다, 거짓말"
+        },
+        {
+          "id": "2-8",
+          "term": "lie ( -lay - lain )",
+          "meaning": "누워 있다 . 눕다 . 놓여 있다 (자동사)"
+        },
+        {
+          "id": "2-9",
+          "term": "lay ( -laid - laid )",
+          "meaning": "놓다 . 두다 . 낳다 (타동사)"
+        },
+        {
+          "id": "2-10",
+          "term": "causal",
+          "meaning": "인과 관계의"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "3강",
+      "subtitle": "챕터 02 · 제대로 아니?",
+      "words": [
+        {
+          "id": "3-1",
+          "term": "Casual",
+          "meaning": "무심한 , 대충 하는"
+        },
+        {
+          "id": "3-2",
+          "term": "reap",
+          "meaning": "수확하다, 얻다"
+        },
+        {
+          "id": "3-3",
+          "term": "rip",
+          "meaning": "찢다"
+        },
+        {
+          "id": "3-4",
+          "term": "rib",
+          "meaning": "갈비"
+        },
+        {
+          "id": "3-5",
+          "term": "lip",
+          "meaning": "입술"
+        },
+        {
+          "id": "3-6",
+          "term": "leap",
+          "meaning": "도약하다"
+        },
+        {
+          "id": "3-7",
+          "term": "ripe",
+          "meaning": "익은"
+        },
+        {
+          "id": "3-8",
+          "term": "terrible",
+          "meaning": "끔찍한"
+        },
+        {
+          "id": "3-9",
+          "term": "terrific",
+          "meaning": "훌륭한"
+        },
+        {
+          "id": "3-10",
+          "term": "access",
+          "meaning": "접근하다"
+        },
+        {
+          "id": "3-11",
+          "term": "assess",
+          "meaning": "평가하다"
+        },
+        {
+          "id": "3-12",
+          "term": "public",
+          "meaning": "대중에게 드러내는 이미지"
+        },
+        {
+          "id": "3-13",
+          "term": "publication",
+          "meaning": "출판"
+        },
+        {
+          "id": "3-14",
+          "term": "publicity",
+          "meaning": "홍보, 관심"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "4강",
+      "subtitle": "챕터 02 · 제대로 아니?",
+      "words": [
+        {
+          "id": "4-1",
+          "term": "publicize",
+          "meaning": "홍보하다"
+        },
+        {
+          "id": "4-2",
+          "term": "public relation",
+          "meaning": "홍보 활동(자기PR)"
+        },
+        {
+          "id": "4-3",
+          "term": "alter",
+          "meaning": "변하다, 바꾸다"
+        },
+        {
+          "id": "4-4",
+          "term": "alternative",
+          "meaning": "대안 , 대체 가능한"
+        },
+        {
+          "id": "4-5",
+          "term": "alternate",
+          "meaning": "번갈아 발생하다"
+        },
+        {
+          "id": "4-6",
+          "term": "alternatively",
+          "meaning": "그렇지 않으면 (둘째대안소개)"
+        },
+        {
+          "id": "4-7",
+          "term": "root",
+          "meaning": "뿌리"
+        },
+        {
+          "id": "4-8",
+          "term": "route",
+          "meaning": "길"
+        },
+        {
+          "id": "4-9",
+          "term": "Stationary",
+          "meaning": "정지된(역)"
+        },
+        {
+          "id": "4-10",
+          "term": "Stationary bicycle",
+          "meaning": "실내 자전거"
+        },
+        {
+          "id": "4-11",
+          "term": "Stationery",
+          "meaning": "문구류"
+        },
+        {
+          "id": "4-12",
+          "term": "Spontaneously",
+          "meaning": "자발적으로"
+        },
+        {
+          "id": "4-13",
+          "term": "simultaneously",
+          "meaning": "동시에"
+        },
+        {
+          "id": "4-14",
+          "term": "comprehensive",
+          "meaning": "포괄적인(=inclusive)"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "5강",
+      "subtitle": "챕터 02 · 제대로 아니?",
+      "words": [
+        {
+          "id": "5-1",
+          "term": "comprehensible",
+          "meaning": "아해할 수 있는(=understandable, intelligible)"
+        },
+        {
+          "id": "5-2",
+          "term": "mixed",
+          "meaning": "+ - 공존"
+        },
+        {
+          "id": "5-3",
+          "term": "occupy",
+          "meaning": "차지하다"
+        },
+        {
+          "id": "5-4",
+          "term": "be occupied with A",
+          "meaning": "A에 사로잡히다(=be absorbed by A)"
+        },
+        {
+          "id": "5-5",
+          "term": "be absorbed by ( with )",
+          "meaning": "A 에 사로 잡히다"
+        },
+        {
+          "id": "5-6",
+          "term": "struggle",
+          "meaning": "-이미지, 무언가 잘 안될 때(서장훈 is struggling)"
+        },
+        {
+          "id": "5-7",
+          "term": "Strive",
+          "meaning": "+이미지, 열심히 하는 이미지"
+        },
+        {
+          "id": "5-8",
+          "term": "Vacuum",
+          "meaning": "진공상태, 고립된 상태(=isolated)"
+        },
+        {
+          "id": "5-9",
+          "term": "myth",
+          "meaning": "사실이 아닌 이야기(뒤에서 반대가 나올것 기대)"
+        },
+        {
+          "id": "5-10",
+          "term": "alien",
+          "meaning": "외계인 , 외국인 , 이질적인"
+        },
+        {
+          "id": "5-11",
+          "term": "alienate",
+          "meaning": "멀어지게 하다, 소외감을 느끼게 하다(=vacuum=isolated)"
+        },
+        {
+          "id": "5-12",
+          "term": "Alien Species",
+          "meaning": "외래종"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "6강",
+      "subtitle": "챕터 02 · 제대로 아니?",
+      "words": [
+        {
+          "id": "6-1",
+          "term": "Weigh",
+          "meaning": "무게가 ~이다, 중요하다, 따져 보다(양팔저울)"
+        },
+        {
+          "id": "6-2",
+          "term": "inform",
+          "meaning": "알리다, 통지 하다"
+        },
+        {
+          "id": "6-3",
+          "term": "informed 명",
+          "meaning": "좋은(많은 정보에 기반하기 때문에)"
+        },
+        {
+          "id": "6-4",
+          "term": "incident",
+          "meaning": "사건"
+        },
+        {
+          "id": "6-5",
+          "term": "incidental",
+          "meaning": "중요하지 않은"
+        },
+        {
+          "id": "6-6",
+          "term": "manipulate",
+          "meaning": "조종하다, 조작하다(등처먹다, 가스라이팅)"
+        },
+        {
+          "id": "6-7",
+          "term": "optional",
+          "meaning": "중요하지 않은(=incidental)"
+        },
+        {
+          "id": "6-8",
+          "term": "submit A",
+          "meaning": "A를 제출하다"
+        },
+        {
+          "id": "6-9",
+          "term": "submit to A",
+          "meaning": "A에게 굴복하다"
+        },
+        {
+          "id": "6-10",
+          "term": "yield A",
+          "meaning": "A를 산출하다"
+        },
+        {
+          "id": "6-11",
+          "term": "yield to A",
+          "meaning": "A에게 굴복하다"
+        },
+        {
+          "id": "6-12",
+          "term": "fascinate",
+          "meaning": "+이미지, 유혹하다"
+        },
+        {
+          "id": "6-13",
+          "term": "tempt",
+          "meaning": "-이미지, 하면 안되는 것을 유혹하다"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "7강",
+      "subtitle": "챕터 03 · 다 아니?",
+      "words": [
+        {
+          "id": "7-1",
+          "term": "develop",
+          "meaning": "개발하다, 성장하다(생명체), 발생하다(부정적인 것)"
+        },
+        {
+          "id": "7-2",
+          "term": "developed countries",
+          "meaning": "선진국"
+        },
+        {
+          "id": "7-3",
+          "term": "developing countries",
+          "meaning": "후진국(발전중인 국가x)=poor countries"
+        },
+        {
+          "id": "7-4",
+          "term": "suspect",
+          "meaning": "~ 일거라 생각하다"
+        },
+        {
+          "id": "7-5",
+          "term": "doubt",
+          "meaning": "~가 아닐거라 생각하다"
+        },
+        {
+          "id": "7-6",
+          "term": "adopt",
+          "meaning": "입양하다, 채택 하다기존에 없던 새롭게 갖게 되는 느낌"
+        },
+        {
+          "id": "7-7",
+          "term": "adapt",
+          "meaning": "적응하다,각색하다(change)"
+        },
+        {
+          "id": "7-8",
+          "term": "adaptation",
+          "meaning": "각색"
+        },
+        {
+          "id": "7-9",
+          "term": "adapt A",
+          "meaning": "A를 적응시키다"
+        },
+        {
+          "id": "7-10",
+          "term": "adapt to A",
+          "meaning": "A로 적응 하다"
+        },
+        {
+          "id": "7-11",
+          "term": "faith",
+          "meaning": "신뢰"
+        },
+        {
+          "id": "7-12",
+          "term": "faithful",
+          "meaning": "충실한, 있는 그대로의"
+        },
+        {
+          "id": "7-13",
+          "term": "bother",
+          "meaning": "괴롭히다"
+        },
+        {
+          "id": "7-14",
+          "term": "bother (부정)",
+          "meaning": "(주로 부정문 의문문) 신경쓰다(사람들은 저에 대해서 말하는걸 즐겨하고 저에 대란 뒷담화를 하는것을 좋아해요 but i don't bother it)"
+        },
+        {
+          "id": "7-15",
+          "term": "tolerate",
+          "meaning": "참다, 민감하지 않다"
+        },
+        {
+          "id": "7-16",
+          "term": "intolerance",
+          "meaning": "과민증(민감하다)"
+        },
+        {
+          "id": "7-17",
+          "term": "existing A",
+          "meaning": "기존의 A"
+        },
+        {
+          "id": "7-18",
+          "term": "irony",
+          "meaning": "+ - ,- +"
+        },
+        {
+          "id": "7-19",
+          "term": "paradox",
+          "meaning": "+ -, - +"
+        },
+        {
+          "id": "7-20",
+          "term": "assume",
+          "meaning": "(사실이 아닐 수도 있는것을)가정하다(반대가 사실일 가능성 기대)"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "8강",
+      "subtitle": "챕터 03 · 다 아니?",
+      "words": [
+        {
+          "id": "8-1",
+          "term": "assume 명사",
+          "meaning": "취하다"
+        },
+        {
+          "id": "8-2",
+          "term": "Compromise",
+          "meaning": "타협하다, 훼손시키다, 변절시키다(캡틴 아메리카 he's compromised so we don't need to be friends with him)"
+        },
+        {
+          "id": "8-3",
+          "term": "negotiate",
+          "meaning": "협상하다(대등관계)"
+        },
+        {
+          "id": "8-4",
+          "term": "biology",
+          "meaning": "타고남(=infant, innate, be programmed to v, gene, genetic, dna, hardwire, anchor)"
+        },
+        {
+          "id": "8-5",
+          "term": "exclusive",
+          "meaning": "오직(only)"
+        },
+        {
+          "id": "8-6",
+          "term": "Prescribe",
+          "meaning": "규정하다, 처방하다"
+        },
+        {
+          "id": "8-7",
+          "term": "Presume",
+          "meaning": "(사실이 아닐수도 있는것을 사실이라)추정하다(=assume)"
+        },
+        {
+          "id": "8-8",
+          "term": "mere",
+          "meaning": "겨우 그래봤자 고작(무시 깔보는 이미지)"
+        },
+        {
+          "id": "8-9",
+          "term": "static",
+          "meaning": "고정된"
+        },
+        {
+          "id": "8-10",
+          "term": "displace",
+          "meaning": "대체하다 (어떤 위치한것에 대해 dis 를 걸어 버린다는 이미지로 쫓아 내다까지)"
+        },
+        {
+          "id": "8-11",
+          "term": "seize",
+          "meaning": "붙잡다(확 잡아서 자기쪽으로 끌어 당기는 이미지로 기회 주도권을 잡다까지)"
+        },
+        {
+          "id": "8-12",
+          "term": "seige",
+          "meaning": "포위"
+        },
+        {
+          "id": "8-13",
+          "term": "orientation",
+          "meaning": "성향(삶의 방식에 있어서 방향을 잡는다)"
+        },
+        {
+          "id": "8-14",
+          "term": "disorient",
+          "meaning": "방향을 잡지못하다(물리적, 추상적 둘다 해당)"
+        },
+        {
+          "id": "8-15",
+          "term": "identify",
+          "meaning": "확인하다"
+        },
+        {
+          "id": "8-16",
+          "term": "identificiation",
+          "meaning": "신원확인, 신분증"
+        },
+        {
+          "id": "8-17",
+          "term": "identity",
+          "meaning": "신원, 정체성"
+        },
+        {
+          "id": "8-18",
+          "term": "identify with A",
+          "meaning": "A와 동일시하다"
+        },
+        {
+          "id": "8-19",
+          "term": "reconsider",
+          "meaning": "재고하다(결국 기존의 상황에 대해 변화가 있어야한다는 이미지)"
+        },
+        {
+          "id": "8-20",
+          "term": "counterpart",
+          "meaning": "상응, 대응 관계에 있는 사람(반대가 아니라 동일한 지위나 기능)"
+        },
+        {
+          "id": "8-21",
+          "term": "mobilize",
+          "meaning": "동원하다(단순한 이동이 아니라 특정한 목적이 전제된 상태)"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "9강",
+      "subtitle": "챕터 03 · 다 아니?",
+      "words": [
+        {
+          "id": "9-1",
+          "term": "initiate",
+          "meaning": "시작하다"
+        },
+        {
+          "id": "9-2",
+          "term": "initiative",
+          "meaning": "진취성, 계획(남들이 하기전에 가장 먼저 시작하는 이미지)"
+        },
+        {
+          "id": "9-3",
+          "term": "established",
+          "meaning": "인정받는, 저명한"
+        },
+        {
+          "id": "9-4",
+          "term": "even",
+          "meaning": "평평한, 고른, 짝수의"
+        },
+        {
+          "id": "9-5",
+          "term": "odd",
+          "meaning": "이상한, 홀수의"
+        },
+        {
+          "id": "9-6",
+          "term": "odds",
+          "meaning": "가능성 , 고난"
+        },
+        {
+          "id": "9-7",
+          "term": "mean",
+          "meaning": "비열한, 중간"
+        },
+        {
+          "id": "9-8",
+          "term": "means",
+          "meaning": "수단, 방법, 돈"
+        },
+        {
+          "id": "9-9",
+          "term": "claim",
+          "meaning": "주장하다, (목숨을)앗아가다"
+        },
+        {
+          "id": "9-10",
+          "term": "subject",
+          "meaning": "주제, 과목, 피실험자, ~의 영향을 받다(=be affected by)"
+        },
+        {
+          "id": "9-11",
+          "term": "Contemporary",
+          "meaning": "동시대의, 동시대인, 현재의"
+        },
+        {
+          "id": "9-12",
+          "term": "demanding A",
+          "meaning": "힘든(자꾸 많은것을 요구하는 이미지)"
+        },
+        {
+          "id": "9-13",
+          "term": "consequence",
+          "meaning": "결과, 중요성"
+        },
+        {
+          "id": "9-14",
+          "term": "sequence",
+          "meaning": "순서"
+        },
+        {
+          "id": "9-15",
+          "term": "consequential",
+          "meaning": "중요한"
+        },
+        {
+          "id": "9-16",
+          "term": "providing, Provided SV",
+          "meaning": "If로 읽기(가정법)"
+        },
+        {
+          "id": "9-17",
+          "term": "Provision",
+          "meaning": "공급 , 준비"
+        },
+        {
+          "id": "9-18",
+          "term": "rather",
+          "meaning": "오히려~~~ 부등호달고 달리기"
+        },
+        {
+          "id": "9-19",
+          "term": "Instead of A~, B~",
+          "meaning": "A<->B"
+        },
+        {
+          "id": "9-20",
+          "term": "game",
+          "meaning": "사냥감"
+        },
+        {
+          "id": "9-21",
+          "term": "moter",
+          "meaning": "자동차, 운동의"
+        },
+        {
+          "id": "9-22",
+          "term": "rate",
+          "meaning": "비율, 속도, 등급을 매기다"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "10강",
+      "subtitle": "챕터 03 · 다 아니?",
+      "words": [
+        {
+          "id": "10-1",
+          "term": "Contain",
+          "meaning": "포함하다, 억제하다(컨테이너 생각! 바깥으로 빠져나가지 못하도록 하는 이미지)"
+        },
+        {
+          "id": "10-2",
+          "term": "vehicle",
+          "meaning": "차량, 수단"
+        },
+        {
+          "id": "10-3",
+          "term": "flavor",
+          "meaning": "맛, 특징"
+        },
+        {
+          "id": "10-4",
+          "term": "celebrity",
+          "meaning": "유명 인사(셀수 o) , 명성(셀수 x)"
+        },
+        {
+          "id": "10-5",
+          "term": "virtual",
+          "meaning": "가상의, 사실상의(문맥으로 판단)"
+        },
+        {
+          "id": "10-6",
+          "term": "scarce",
+          "meaning": "부족한 , 드문"
+        },
+        {
+          "id": "10-7",
+          "term": "scarcity",
+          "meaning": "부족, 희소성(경제적)"
+        },
+        {
+          "id": "10-8",
+          "term": "hardly rarely seldom scarcely",
+          "meaning": "거의 ~ 하지 않는"
+        },
+        {
+          "id": "10-9",
+          "term": "grant",
+          "meaning": "주다 , 보조금, 장학금"
+        },
+        {
+          "id": "10-10",
+          "term": "take A for granted",
+          "meaning": "A를 당연시 여기다"
+        },
+        {
+          "id": "10-11",
+          "term": "Granted (that) S V~",
+          "meaning": "그래.. 너 말은 인정해,, 근데!!(반전 기대)"
+        },
+        {
+          "id": "10-12",
+          "term": "engage",
+          "meaning": "관심을 끌다(잡아서 내 쪽으로 끌어 당기는 이미지)"
+        },
+        {
+          "id": "10-13",
+          "term": "engage in A",
+          "meaning": "A에 참여하다, 관여하다"
+        },
+        {
+          "id": "10-14",
+          "term": "engaging",
+          "meaning": "매력적인(=attractive)"
+        },
+        {
+          "id": "10-15",
+          "term": "colony",
+          "meaning": "식민지, 군집"
+        },
+        {
+          "id": "10-16",
+          "term": "settle",
+          "meaning": "정착하다(자동사), ~를 해결하다(타동사)"
+        },
+        {
+          "id": "10-17",
+          "term": "dispute",
+          "meaning": "분쟁을 벌이다"
+        },
+        {
+          "id": "10-18",
+          "term": "undisputed",
+          "meaning": "반박의 여자가 없는, 확실한"
+        },
+        {
+          "id": "10-19",
+          "term": "context",
+          "meaning": "상황"
+        },
+        {
+          "id": "10-20",
+          "term": "break",
+          "meaning": "뉴스가 알려지다, 소식을 알리다"
+        },
+        {
+          "id": "10-21",
+          "term": "breaking news",
+          "meaning": "긴급 속보"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "11강",
+      "subtitle": "챕터 03 · 다 아니?",
+      "words": [
+        {
+          "id": "11-1",
+          "term": "relevant",
+          "meaning": "관련 있는 , 중요한 , 적절한"
+        },
+        {
+          "id": "11-2",
+          "term": "appreciate",
+          "meaning": "고마워하다, 진가를 알아보다, 환영하다(높이 평가 하는 이미지)"
+        },
+        {
+          "id": "11-3",
+          "term": "exceptional",
+          "meaning": "뛰어난(=outstanding)(예외적인 같은 부정적 뉘앙스x)"
+        },
+        {
+          "id": "11-4",
+          "term": "credit",
+          "meaning": "공로, 업적, 학점, 신용"
+        },
+        {
+          "id": "11-5",
+          "term": "A be credited to B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "11-6",
+          "term": "frequency",
+          "meaning": "주파수"
+        },
+        {
+          "id": "11-7",
+          "term": "count",
+          "meaning": "중요하다, 간주하다"
+        },
+        {
+          "id": "11-8",
+          "term": "count on somebody",
+          "meaning": "의지하다(=rely on)"
+        },
+        {
+          "id": "11-9",
+          "term": "Count A as B",
+          "meaning": "A를 B로 간주하다(=regard A as B)"
+        },
+        {
+          "id": "11-10",
+          "term": "case",
+          "meaning": "경우, 소송, 상자"
+        },
+        {
+          "id": "11-11",
+          "term": "the case",
+          "meaning": "사실"
+        },
+        {
+          "id": "11-12",
+          "term": "make the case",
+          "meaning": "주장을 하다"
+        },
+        {
+          "id": "11-13",
+          "term": "inquire",
+          "meaning": "물어보다"
+        },
+        {
+          "id": "11-14",
+          "term": "inquiry",
+          "meaning": "질문, 조사, 탐구"
+        },
+        {
+          "id": "11-15",
+          "term": "Positive",
+          "meaning": "양성의, 적극적인"
+        },
+        {
+          "id": "11-16",
+          "term": "negative",
+          "meaning": "음성의, 소극적인"
+        },
+        {
+          "id": "11-17",
+          "term": "Chemistry",
+          "meaning": "화학, 교감"
+        },
+        {
+          "id": "11-18",
+          "term": "cell",
+          "meaning": "세포, 독방, 칸"
+        },
+        {
+          "id": "11-19",
+          "term": "contract",
+          "meaning": "계약하다, 수축시키다, (병에)걸리다"
+        },
+        {
+          "id": "11-20",
+          "term": "register",
+          "meaning": "등록하다, 나타낸다, 인식하다(뇌에 등록하다)"
+        },
+        {
+          "id": "11-21",
+          "term": "agent",
+          "meaning": "행위자, 대리인, 중개인"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "12강",
+      "subtitle": "챕터 04 · 반드시 알아야 할 숙어",
+      "words": [
+        {
+          "id": "12-1",
+          "term": "agency",
+          "meaning": "행위"
+        },
+        {
+          "id": "12-2",
+          "term": "figure",
+          "meaning": "모양, 수치, (등장)인물, 생각하다"
+        },
+        {
+          "id": "12-3",
+          "term": "figure out",
+          "meaning": "알아내다"
+        },
+        {
+          "id": "12-4",
+          "term": "account",
+          "meaning": "계좌, 이야기(설명), 중요성"
+        },
+        {
+          "id": "12-5",
+          "term": "accountable",
+          "meaning": "책임이 있는"
+        },
+        {
+          "id": "12-6",
+          "term": "take A into account",
+          "meaning": "A를 고려하다(여러가지 중 중요하니까)"
+        },
+        {
+          "id": "12-7",
+          "term": "account for A",
+          "meaning": "A를 차지하다"
+        },
+        {
+          "id": "12-8",
+          "term": "edge",
+          "meaning": "이점(+이미지)"
+        },
+        {
+          "id": "12-9",
+          "term": "cutting-edge",
+          "meaning": "첨단"
+        },
+        {
+          "id": "12-10",
+          "term": "rewarding",
+          "meaning": "좋은(+이미지)(<->demanding)"
+        },
+        {
+          "id": "12-11",
+          "term": "substantial",
+          "meaning": "상당한(=large)(<->sufficient:충분한)"
+        },
+        {
+          "id": "12-12",
+          "term": "originate",
+          "meaning": "~에서 비롯하다"
+        },
+        {
+          "id": "12-13",
+          "term": "Original",
+          "meaning": "독창적인(처음에 한거니까)"
+        },
+        {
+          "id": "12-14",
+          "term": "originality",
+          "meaning": "독창성"
+        },
+        {
+          "id": "12-15",
+          "term": "measure",
+          "meaning": "측정하다, 조치, 정책"
+        },
+        {
+          "id": "12-16",
+          "term": "address",
+          "meaning": "주소, 연설, 다루다"
+        },
+        {
+          "id": "12-17",
+          "term": "represent",
+          "meaning": "대표하다, 표현하다, 나타내다"
+        },
+        {
+          "id": "12-18",
+          "term": "compound",
+          "meaning": "혼합하다, 혼합물, 악화시키다"
+        },
+        {
+          "id": "12-19",
+          "term": "observe",
+          "meaning": "관찰하다, 지키다, 준수하다"
+        },
+        {
+          "id": "12-20",
+          "term": "observation",
+          "meaning": "관찰"
+        },
+        {
+          "id": "12-21",
+          "term": "observance",
+          "meaning": "준수"
+        },
+        {
+          "id": "12-22",
+          "term": "anchor",
+          "meaning": "닻을 내리다, 타고난(몸에 안에서 고정된 채로 태어난)(=biology~)"
+        },
+        {
+          "id": "12-23",
+          "term": "margin",
+          "meaning": "주변부(코어가 아닌 부분), 하찮은것"
+        },
+        {
+          "id": "12-24",
+          "term": "marginal",
+          "meaning": "중요하지 않은"
+        },
+        {
+          "id": "12-25",
+          "term": "marginalize",
+          "meaning": "무시하다, 소외시키다(=ignore=alienate)"
+        },
+        {
+          "id": "12-26",
+          "term": "shallow",
+          "meaning": "얕은, 천박한(생각이 얕은), 피상적인"
+        },
+        {
+          "id": "12-27",
+          "term": "respect",
+          "meaning": "면, 점"
+        },
+        {
+          "id": "12-28",
+          "term": "in this respect",
+          "meaning": "이러한 측면에서(=in this light)"
+        },
+        {
+          "id": "12-29",
+          "term": "respectable",
+          "meaning": "존경할만한"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "13강",
+      "subtitle": "챕터 04 · 반드시 알아야 할 숙어",
+      "words": [
+        {
+          "id": "13-1",
+          "term": "respective",
+          "meaning": "각각의"
+        },
+        {
+          "id": "13-2",
+          "term": "respectively",
+          "meaning": "각각"
+        },
+        {
+          "id": "13-3",
+          "term": "property",
+          "meaning": "재산, 특성, 속성"
+        },
+        {
+          "id": "13-4",
+          "term": "rough",
+          "meaning": "거친, 대략적인(=approximate) rough하게 봤을때~"
+        },
+        {
+          "id": "13-5",
+          "term": "succeed to v",
+          "meaning": "성공하다"
+        },
+        {
+          "id": "13-6",
+          "term": "succeed to 명사",
+          "meaning": "계승하다"
+        },
+        {
+          "id": "13-7",
+          "term": "successive",
+          "meaning": "연속적인(<->successful:성공적인)"
+        },
+        {
+          "id": "13-8",
+          "term": "succession",
+          "meaning": "연속물"
+        },
+        {
+          "id": "13-9",
+          "term": "custom",
+          "meaning": "개별적, 저기만의것-> 관습, 풍습"
+        },
+        {
+          "id": "13-10",
+          "term": "customize",
+          "meaning": "맞춤 제작"
+        },
+        {
+          "id": "13-11",
+          "term": "customization",
+          "meaning": "맞춤화"
+        },
+        {
+          "id": "13-12",
+          "term": "climate",
+          "meaning": "기후, 분위기"
+        },
+        {
+          "id": "13-13",
+          "term": "pitch",
+          "meaning": "투구, 음 높이, 던지다"
+        },
+        {
+          "id": "13-14",
+          "term": "cast",
+          "meaning": "던지다(윌슨 cast away), (그림자를)드리우다, 출연진, 깁스"
+        },
+        {
+          "id": "13-15",
+          "term": "score",
+          "meaning": "악보"
+        },
+        {
+          "id": "13-16",
+          "term": "scores of",
+          "meaning": "아주 많이(=a lot of)"
+        },
+        {
+          "id": "13-17",
+          "term": "integrate",
+          "meaning": "통합시키다"
+        },
+        {
+          "id": "13-18",
+          "term": "integral",
+          "meaning": "필수적인"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "14강",
+      "subtitle": "챕터 04 · 반드시 알아야 할 숙어",
+      "words": [
+        {
+          "id": "14-1",
+          "term": "integrity",
+          "meaning": "온전함, 진실성, 청렴"
+        },
+        {
+          "id": "14-2",
+          "term": "mark",
+          "meaning": "특징짓다(임마는 좀 특이하네 체크!)"
+        },
+        {
+          "id": "14-3",
+          "term": "A condition B",
+          "meaning": "A가 B를 조건화시키다(종소리가 개를 조건화시키다) A->B"
+        },
+        {
+          "id": "14-4",
+          "term": "unconditional",
+          "meaning": "무조건적인"
+        },
+        {
+          "id": "14-5",
+          "term": "precondition",
+          "meaning": "전제 조건"
+        },
+        {
+          "id": "14-6",
+          "term": "minute",
+          "meaning": "미세한"
+        },
+        {
+          "id": "14-7",
+          "term": "invariable",
+          "meaning": "변함없는"
+        },
+        {
+          "id": "14-8",
+          "term": "invariably",
+          "meaning": "항상(=always)"
+        },
+        {
+          "id": "14-9",
+          "term": "question",
+          "meaning": "이의을 제기하다, 의문을 갖다(=doubt)"
+        },
+        {
+          "id": "14-10",
+          "term": "be imnmune to A",
+          "meaning": "A 에 영향을 받지 않는"
+        },
+        {
+          "id": "14-11",
+          "term": "in this light",
+          "meaning": "이러한 측면에서(=in this respect)"
+        },
+        {
+          "id": "14-12",
+          "term": "sound",
+          "meaning": "+이미지, 건전한, 견고한"
+        },
+        {
+          "id": "14-13",
+          "term": "fineq",
+          "meaning": "미세한, 정교한, 순수한(refine:정제하다, fine gold:순금), 벌금"
+        },
+        {
+          "id": "14-14",
+          "term": "treat",
+          "meaning": "대접하다(trick or treat), 한턱"
+        },
+        {
+          "id": "14-15",
+          "term": "retreat",
+          "meaning": "후퇴하다"
+        },
+        {
+          "id": "14-16",
+          "term": "treaty",
+          "meaning": "조약"
+        },
+        {
+          "id": "14-17",
+          "term": "authorize",
+          "meaning": "권한을 부여하다, 강화시키다(힘을 주어)"
+        },
+        {
+          "id": "14-18",
+          "term": "authorized",
+          "meaning": "권한을 받은, 공인된"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "15강",
+      "subtitle": "챕터 05 · 관계를 주는 단어",
+      "words": [
+        {
+          "id": "15-1",
+          "term": "mechanical",
+          "meaning": "진심이 담기지 않은(기계적인 사랑, 대답이 기계적이다)"
+        },
+        {
+          "id": "15-2",
+          "term": "be it A or B",
+          "meaning": "A이든 B이든(whether it is A or B에서 whether 생략되고 도치)"
+        },
+        {
+          "id": "15-3",
+          "term": "turn sour",
+          "meaning": "안좋게 되다"
+        },
+        {
+          "id": "15-4",
+          "term": "A contribute to B",
+          "meaning": "A->B"
+        },
+        {
+          "id": "15-5",
+          "term": "it follows that s v",
+          "meaning": "~이다(필자의 주장)"
+        },
+        {
+          "id": "15-6",
+          "term": "at best",
+          "meaning": "기껏해야"
+        },
+        {
+          "id": "15-7",
+          "term": "at most",
+          "meaning": "기껏해야"
+        },
+        {
+          "id": "15-8",
+          "term": "at worst",
+          "meaning": "at best가 부정적의미라고 해서 긍정적 의미x"
+        },
+        {
+          "id": "15-9",
+          "term": "A is a creation of B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "15-10",
+          "term": "A is a product of B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "15-11",
+          "term": "A is a function of B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "15-12",
+          "term": "not so much A as B",
+          "meaning": "A 라기보다는 오히려~~~ B다(A<B)"
+        },
+        {
+          "id": "15-13",
+          "term": "other than A",
+          "meaning": "A를 제외하고(=except)"
+        },
+        {
+          "id": "15-14",
+          "term": "not A until B",
+          "meaning": "B를 하고 나서야 비로서 A다"
+        },
+        {
+          "id": "15-15",
+          "term": "not until B~,A~",
+          "meaning": "A부분 도치!"
+        },
+        {
+          "id": "15-16",
+          "term": "removed from A",
+          "meaning": "A로부터 멀리 떨어져 있다"
+        },
+        {
+          "id": "15-17",
+          "term": "A is a window into B",
+          "meaning": "A->B(A를 보면 B를 알 수 있다)"
+        },
+        {
+          "id": "15-18",
+          "term": "attend to",
+          "meaning": "주목하다(=pay attention to)"
+        },
+        {
+          "id": "15-19",
+          "term": "aside(=apart) from A",
+          "meaning": "A 와는 별개로(A에 대한 얘기는 여기까지, B에 대한 얘기 여기서부터)"
+        },
+        {
+          "id": "15-20",
+          "term": "confuse with A with/and B",
+          "meaning": "A=B인 줄 안다는 것"
+        },
+        {
+          "id": "15-21",
+          "term": "be programmed to V",
+          "meaning": "타고난"
+        },
+        {
+          "id": "15-22",
+          "term": "distinction/gap between A and B",
+          "meaning": "A<->B"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "16강",
+      "subtitle": "챕터 06 · 초기본 단어의 본질과 확장",
+      "words": [
+        {
+          "id": "16-1",
+          "term": "A is to B as/what C is to D",
+          "meaning": "A와 B의 관계는 C와 D의 관계와 같다"
+        },
+        {
+          "id": "16-2",
+          "term": "as 형 as",
+          "meaning": "(문장 맨앞에 있을 때) ~일지라도"
+        },
+        {
+          "id": "16-3",
+          "term": "even so",
+          "meaning": "(역접)그럼에도 불구하도"
+        },
+        {
+          "id": "16-4",
+          "term": "replace A with B",
+          "meaning": "A를 B고 대체하다(A가 사라지고 B로 바뀐다)"
+        },
+        {
+          "id": "16-5",
+          "term": "substitute A for B",
+          "meaning": "B를 A로 대체하다"
+        },
+        {
+          "id": "16-6",
+          "term": "be absorbed in A",
+          "meaning": "A 에 열중하다(=be occupied with A)"
+        },
+        {
+          "id": "16-7",
+          "term": "make a difference",
+          "meaning": "혁신을 만들다(iphone, we make a difference)"
+        },
+        {
+          "id": "16-8",
+          "term": "as well",
+          "meaning": "또한(=also) 주제는 같지만 다른 소재 제시"
+        },
+        {
+          "id": "16-9",
+          "term": "should s v",
+          "meaning": "if"
+        },
+        {
+          "id": "16-10",
+          "term": "attribute A to B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "16-11",
+          "term": "attribute",
+          "meaning": "속성, 특성"
+        },
+        {
+          "id": "16-12",
+          "term": "draw on A",
+          "meaning": "A를 이용하다"
+        },
+        {
+          "id": "16-13",
+          "term": "as far as",
+          "meaning": "~ 하는 한(=as long as=so far as=in so far as)"
+        },
+        {
+          "id": "16-14",
+          "term": "argue for",
+          "meaning": "~에 찬성하다"
+        },
+        {
+          "id": "16-15",
+          "term": "aruge against",
+          "meaning": "~에 반대하다"
+        },
+        {
+          "id": "16-16",
+          "term": "in need",
+          "meaning": "어려움에 처한(계속 필요한것)"
+        },
+        {
+          "id": "16-17",
+          "term": "be on the same page",
+          "meaning": "입장이 같다"
+        },
+        {
+          "id": "16-18",
+          "term": "tap into",
+          "meaning": "다가가다(모르는 친구애게 툭툭치며 다가가는 이미지), 이용하다"
+        },
+        {
+          "id": "16-19",
+          "term": "in and of itself",
+          "meaning": "그자체로"
+        },
+        {
+          "id": "16-20",
+          "term": "having said that",
+          "meaning": "그렇기는 하지만"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "17강",
+      "subtitle": "챕터 06 · 초기본 단어의 본질과 확장",
+      "words": [
+        {
+          "id": "17-1",
+          "term": "Chances are S V",
+          "meaning": "~일 가능성이 있다(=be likely to)"
+        },
+        {
+          "id": "17-2",
+          "term": "take over",
+          "meaning": "인계받다, 장악하다"
+        },
+        {
+          "id": "17-3",
+          "term": "give rise to",
+          "meaning": "발생시키다"
+        },
+        {
+          "id": "17-4",
+          "term": "take place",
+          "meaning": "발생하다"
+        },
+        {
+          "id": "17-5",
+          "term": "lay off",
+          "meaning": "해고시키다"
+        },
+        {
+          "id": "17-6",
+          "term": "nothing but",
+          "meaning": "오직(=only), i have nothing but you"
+        },
+        {
+          "id": "17-7",
+          "term": "rule out",
+          "meaning": "제외시키다(=exclude)"
+        },
+        {
+          "id": "17-8",
+          "term": "in V-ing",
+          "meaning": "~할 때"
+        },
+        {
+          "id": "17-9",
+          "term": "deal with",
+          "meaning": "다루다, 해결해내다(hey, deal with it!)"
+        },
+        {
+          "id": "17-10",
+          "term": "rob A of B",
+          "meaning": "A에게서 B를 빼앗다(=strip A of B=deprive A of B)"
+        },
+        {
+          "id": "17-11",
+          "term": "cannot help but v",
+          "meaning": "~하지 않을 수 없다(=cannot but v=cannot help ving)"
+        },
+        {
+          "id": "17-12",
+          "term": "give away",
+          "meaning": "내어주다"
+        },
+        {
+          "id": "17-13",
+          "term": "It is (not) that S V",
+          "meaning": "~때문이다 (is that 사이 아무것도 없음)"
+        },
+        {
+          "id": "17-14",
+          "term": "mover",
+          "meaning": "원동력"
+        },
+        {
+          "id": "17-15",
+          "term": "outpace",
+          "meaning": "A>B(=outstand, outnumber, outperform)"
+        },
+        {
+          "id": "17-16",
+          "term": "base A on B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "17-17",
+          "term": "A is the basis of B",
+          "meaning": "A->B"
+        },
+        {
+          "id": "17-18",
+          "term": "~A on which B is based",
+          "meaning": "A->B"
+        },
+        {
+          "id": "17-19",
+          "term": "A is a driving force in B",
+          "meaning": "A->B"
+        },
+        {
+          "id": "17-20",
+          "term": "determine",
+          "meaning": "A->B"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "18강",
+      "subtitle": "챕터 06 · 초기본 단어의 본질과 확장",
+      "words": [
+        {
+          "id": "18-1",
+          "term": "determinant",
+          "meaning": "결정요인"
+        },
+        {
+          "id": "18-2",
+          "term": "determinism",
+          "meaning": "결정론"
+        },
+        {
+          "id": "18-3",
+          "term": "determinacy",
+          "meaning": "결정성, 확정성"
+        },
+        {
+          "id": "18-4",
+          "term": "determination",
+          "meaning": "결정, 결단력"
+        },
+        {
+          "id": "18-5",
+          "term": "distinguish A from B",
+          "meaning": "A<->B"
+        },
+        {
+          "id": "18-6",
+          "term": "distinguishing",
+          "meaning": "독특란"
+        },
+        {
+          "id": "18-7",
+          "term": "distinguished",
+          "meaning": "유명한"
+        },
+        {
+          "id": "18-8",
+          "term": "reflect",
+          "meaning": "반영하다, 반성하다, 반사하다"
+        },
+        {
+          "id": "18-9",
+          "term": "A reflect B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "18-10",
+          "term": "A require B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "18-11",
+          "term": "A~ according to B~",
+          "meaning": "B에 따라서 A하다(A<-B)"
+        },
+        {
+          "id": "18-12",
+          "term": "A follow B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "18-13",
+          "term": "A is followed by B",
+          "meaning": "A->B"
+        },
+        {
+          "id": "18-14",
+          "term": "outgrowth",
+          "meaning": "결과"
+        },
+        {
+          "id": "18-15",
+          "term": "subordinate",
+          "meaning": "종속된"
+        },
+        {
+          "id": "18-16",
+          "term": "A is subordinate to B",
+          "meaning": "A<-B"
+        },
+        {
+          "id": "18-17",
+          "term": "independent",
+          "meaning": "독립적인"
+        },
+        {
+          "id": "18-18",
+          "term": "owe A to B",
+          "meaning": "A는 B덕분이다(A<-B)"
+        },
+        {
+          "id": "18-19",
+          "term": "school",
+          "meaning": "학교, 무리"
+        },
+        {
+          "id": "18-20",
+          "term": "new to A",
+          "meaning": "A에 미숙한"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "19강",
+      "subtitle": "챕터 07 · 이걸 외워?",
+      "words": [
+        {
+          "id": "19-1",
+          "term": "cost",
+          "meaning": "비용, 대가, 희생"
+        },
+        {
+          "id": "19-2",
+          "term": "at the cost of A",
+          "meaning": "A를 대가로(=at the expense of=at the toll of=at the price of)"
+        },
+        {
+          "id": "19-3",
+          "term": "level",
+          "meaning": "평평한, 평평하게 하다(i'm on the next level ㄷ)"
+        },
+        {
+          "id": "19-4",
+          "term": "cultural",
+          "meaning": "특정적(<->universal)"
+        },
+        {
+          "id": "19-5",
+          "term": "discount",
+          "meaning": "무시하다(내 노력을 깍아내리지마!)"
+        },
+        {
+          "id": "19-6",
+          "term": "economy",
+          "meaning": "(경제 주체로서의)국가, 절약"
+        },
+        {
+          "id": "19-7",
+          "term": "star",
+          "meaning": "나타나다, 출연하다"
+        },
+        {
+          "id": "19-8",
+          "term": "put",
+          "meaning": "말하다, 쓰다(let me put it this way)"
+        },
+        {
+          "id": "19-9",
+          "term": "win over",
+          "meaning": "설득하다(완전히 이겨버리다)"
+        },
+        {
+          "id": "19-10",
+          "term": "file",
+          "meaning": "쌓다, 정리하다"
+        },
+        {
+          "id": "19-11",
+          "term": "invite",
+          "meaning": "끌다, 매혹하다"
+        },
+        {
+          "id": "19-12",
+          "term": "inviting",
+          "meaning": "매혹적인(=attractive=engaging)"
+        },
+        {
+          "id": "19-13",
+          "term": "general",
+          "meaning": "종합적인(=whole)"
+        },
+        {
+          "id": "19-14",
+          "term": "common(s)",
+          "meaning": "공유지, 공유자원"
+        },
+        {
+          "id": "19-15",
+          "term": "social",
+          "meaning": "사교적"
+        },
+        {
+          "id": "19-16",
+          "term": "socialize",
+          "meaning": "어울리다"
+        },
+        {
+          "id": "19-17",
+          "term": "social development",
+          "meaning": "사회 발달(x) 사교성 발달(o)"
+        },
+        {
+          "id": "19-18",
+          "term": "partial",
+          "meaning": "부분적인, 편파적인, 불공평한"
+        },
+        {
+          "id": "19-19",
+          "term": "impartial",
+          "meaning": "공정한"
+        },
+        {
+          "id": "19-20",
+          "term": "still",
+          "meaning": "그럼에도 불구하고, 가만히 있는(stay still)"
+        },
+        {
+          "id": "19-21",
+          "term": "manner",
+          "meaning": "방식"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "20강",
+      "subtitle": "챕터 07 · 이걸 외워?",
+      "words": [
+        {
+          "id": "20-1",
+          "term": "things",
+          "meaning": "상황, 형편"
+        },
+        {
+          "id": "20-2",
+          "term": "in A's shoes",
+          "meaning": "A의 입장에서"
+        },
+        {
+          "id": "20-3",
+          "term": "tackle",
+          "meaning": "(어려운 사안에 대해서)다루다(=deal with)"
+        },
+        {
+          "id": "20-4",
+          "term": "coin",
+          "meaning": "만들다"
+        },
+        {
+          "id": "20-5",
+          "term": "pay",
+          "meaning": "~에게 이익이 되다, 대가를 치르다(you're gonna pay for this)"
+        },
+        {
+          "id": "20-6",
+          "term": "pay-off, pay off",
+          "meaning": "보상, 보상을 주다"
+        },
+        {
+          "id": "20-7",
+          "term": "mirror",
+          "meaning": "반영하다(=reflect)"
+        },
+        {
+          "id": "20-8",
+          "term": "second",
+          "meaning": "이류, 열등한"
+        },
+        {
+          "id": "20-9",
+          "term": "secondary",
+          "meaning": "이차적인, 부수적인(=incidental=optional=marginal)"
+        },
+        {
+          "id": "20-10",
+          "term": "increasingly",
+          "meaning": "증가하게도(x) 점점(o)"
+        },
+        {
+          "id": "20-11",
+          "term": "party",
+          "meaning": "정당, 당사자"
+        },
+        {
+          "id": "20-12",
+          "term": "beyond A",
+          "meaning": "A의 수준을 넘어섰다=A로는 안된다"
+        },
+        {
+          "id": "20-13",
+          "term": "very",
+          "meaning": "adj 바로 그"
+        },
+        {
+          "id": "20-14",
+          "term": "pale",
+          "meaning": "창백한, 잘 못하는, 어설픈"
+        },
+        {
+          "id": "20-15",
+          "term": "press",
+          "meaning": "언론, 기자들"
+        },
+        {
+          "id": "20-16",
+          "term": "life",
+          "meaning": "생물, 생명체"
+        },
+        {
+          "id": "20-17",
+          "term": "cultivate",
+          "meaning": "경작하다, 만들다, 기르다"
+        },
+        {
+          "id": "20-18",
+          "term": "meet",
+          "meaning": "충족핟, (기한을)지키다"
+        },
+        {
+          "id": "20-19",
+          "term": "challenge",
+          "meaning": "어려운 일, 이의를 제기하다"
+        },
+        {
+          "id": "20-20",
+          "term": "factor",
+          "meaning": "요소, 원인"
+        },
+        {
+          "id": "20-21",
+          "term": "while",
+          "meaning": "~하는데"
+        },
+        {
+          "id": "20-22",
+          "term": "limit A",
+          "meaning": "A를 제한하다"
+        },
+        {
+          "id": "20-23",
+          "term": "be limited to A",
+          "meaning": "A까지 제한됨=A까지는 ok"
+        },
+        {
+          "id": "20-24",
+          "term": "free from A",
+          "meaning": "A로 부터 자유로운=A가 없는"
+        },
+        {
+          "id": "20-25",
+          "term": "free to v",
+          "meaning": "자유롭게 ~하다"
+        },
+        {
+          "id": "20-26",
+          "term": "A-free",
+          "meaning": "A가 없는"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "21강",
+      "subtitle": "챕터 07 · 이걸 외워?",
+      "words": [
+        {
+          "id": "21-1",
+          "term": "plastic",
+          "meaning": "바꾸기가 쉬운, 가짜의"
+        },
+        {
+          "id": "21-2",
+          "term": "arugably",
+          "meaning": "주장하건대"
+        },
+        {
+          "id": "21-3",
+          "term": "gauge",
+          "meaning": "판단하다, 측정하다"
+        },
+        {
+          "id": "21-4",
+          "term": "end",
+          "meaning": "목적"
+        },
+        {
+          "id": "21-5",
+          "term": "A survive B",
+          "meaning": "A가 B보다 오래 살다"
+        },
+        {
+          "id": "21-6",
+          "term": "clear",
+          "meaning": "제거하다(clear the area! 싹다 쓸어버려!)"
+        },
+        {
+          "id": "21-7",
+          "term": "literautre",
+          "meaning": "문학, 문헌"
+        },
+        {
+          "id": "21-8",
+          "term": "make up",
+          "meaning": "화장하다, 구성하다, (거짓으로)꾸며넣다"
+        },
+        {
+          "id": "21-9",
+          "term": "long for",
+          "meaning": "갈망하다"
+        },
+        {
+          "id": "21-10",
+          "term": "competition",
+          "meaning": "경쟁, 경쟁자"
+        },
+        {
+          "id": "21-11",
+          "term": "trunk",
+          "meaning": "몸통, 줄기"
+        },
+        {
+          "id": "21-12",
+          "term": "mad",
+          "meaning": "화난, 미친듯이"
+        },
+        {
+          "id": "21-13",
+          "term": "modest",
+          "meaning": "크지 않은, 겸손한"
+        },
+        {
+          "id": "21-14",
+          "term": "seal",
+          "meaning": "봉인하다, 바다표범"
+        },
+        {
+          "id": "21-15",
+          "term": "anecdote",
+          "meaning": "일화, 이야기"
+        },
+        {
+          "id": "21-16",
+          "term": "shiver",
+          "meaning": "떨다(춥다 시벌)"
+        },
+        {
+          "id": "21-17",
+          "term": "better/well off",
+          "meaning": "형평이 나은"
+        },
+        {
+          "id": "21-18",
+          "term": "layperson",
+          "meaning": "비전문기"
+        },
+        {
+          "id": "21-19",
+          "term": "comfort zone=autopilot",
+          "meaning": "변화나 혁신이 필요없는 곳"
+        },
+        {
+          "id": "21-20",
+          "term": "the last thing",
+          "meaning": "가장 원하지 않는 것"
+        },
+        {
+          "id": "21-21",
+          "term": "analogy",
+          "meaning": "비유"
+        },
+        {
+          "id": "21-22",
+          "term": "natural selection",
+          "meaning": "자연섬택=적자생존"
+        },
+        {
+          "id": "21-23",
+          "term": "hardwire",
+          "meaning": "타고난"
+        },
+        {
+          "id": "21-24",
+          "term": "ratio of A to B",
+          "meaning": "B에 대한 A의 비율=A/B"
+        },
+        {
+          "id": "21-25",
+          "term": "diabetes",
+          "meaning": "당뇨병"
+        },
+        {
+          "id": "21-26",
+          "term": "patent",
+          "meaning": "특허"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "22강",
+      "subtitle": "챕터 07 · 이걸 외워?",
+      "words": [
+        {
+          "id": "22-1",
+          "term": "manifest",
+          "meaning": "명백한, 나타내다"
+        },
+        {
+          "id": "22-2",
+          "term": "manifestation",
+          "meaning": "증상(결과)"
+        },
+        {
+          "id": "22-3",
+          "term": "incompatible",
+          "meaning": "양립할 수 없는"
+        },
+        {
+          "id": "22-4",
+          "term": "indispensable",
+          "meaning": "없어서는 안되는=필수적인"
+        },
+        {
+          "id": "22-5",
+          "term": "outdated",
+          "meaning": "구식이 된"
+        },
+        {
+          "id": "22-6",
+          "term": "perplex",
+          "meaning": "당혹하게 하다(=confuse)"
+        },
+        {
+          "id": "22-7",
+          "term": "perserve",
+          "meaning": "참다"
+        },
+        {
+          "id": "22-8",
+          "term": "preserve",
+          "meaning": "지키다"
+        },
+        {
+          "id": "22-9",
+          "term": "perseverance",
+          "meaning": "인내심"
+        },
+        {
+          "id": "22-10",
+          "term": "double-edged sword",
+          "meaning": "양날의 검"
+        },
+        {
+          "id": "22-11",
+          "term": "authenticate",
+          "meaning": "진짜임을 증명하다"
+        },
+        {
+          "id": "22-12",
+          "term": "authentic",
+          "meaning": "진짜의"
+        },
+        {
+          "id": "22-13",
+          "term": "tyrant",
+          "meaning": "폭군"
+        },
+        {
+          "id": "22-14",
+          "term": "milestone",
+          "meaning": "중요한 순간"
+        },
+        {
+          "id": "22-15",
+          "term": "A is a milestone of B",
+          "meaning": "A를 보면 B를 알 수 있다"
+        },
+        {
+          "id": "22-16",
+          "term": "conerstone",
+          "meaning": "주춧돌(=base)"
+        },
+        {
+          "id": "22-17",
+          "term": "peasant",
+          "meaning": "소작농"
+        },
+        {
+          "id": "22-18",
+          "term": "quest",
+          "meaning": "탐구하다"
+        },
+        {
+          "id": "22-19",
+          "term": "fluctuate",
+          "meaning": "변동하다"
+        },
+        {
+          "id": "22-20",
+          "term": "fluctuation",
+          "meaning": "변동"
+        },
+        {
+          "id": "22-21",
+          "term": "indigenous",
+          "meaning": "토착의"
+        },
+        {
+          "id": "22-22",
+          "term": "symmetry",
+          "meaning": "대칭, 균형"
+        },
+        {
+          "id": "22-23",
+          "term": "asymmetry",
+          "meaning": "비대칭, 불균형"
+        },
+        {
+          "id": "22-24",
+          "term": "coverage",
+          "meaning": "보도범위"
+        },
+        {
+          "id": "22-25",
+          "term": "self-contained",
+          "meaning": "독립된(스스로 컨테이너안에 차단된 상태)"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "23강",
+      "subtitle": "챕터 07 · 이걸 외워?",
+      "words": [
+        {
+          "id": "23-1",
+          "term": "lest",
+          "meaning": "~하지 않기 위해서(<->in order to)"
+        },
+        {
+          "id": "23-2",
+          "term": "conventional wisdom",
+          "meaning": "통념"
+        },
+        {
+          "id": "23-3",
+          "term": "pitfall",
+          "meaning": "위험(구멍에 떨어지다)"
+        },
+        {
+          "id": "23-4",
+          "term": "aggravate",
+          "meaning": "악화시키다(공격하다X)"
+        },
+        {
+          "id": "23-5",
+          "term": "unaided eye",
+          "meaning": "맨눈(다른것의 도움을 받지 않은 눈)"
+        },
+        {
+          "id": "23-6",
+          "term": "naked eye",
+          "meaning": "맨눈"
+        },
+        {
+          "id": "23-7",
+          "term": "fortify",
+          "meaning": "요새화하다, 강화하다"
+        },
+        {
+          "id": "23-8",
+          "term": "time lag",
+          "meaning": "시간 지연"
+        },
+        {
+          "id": "23-9",
+          "term": "jet lag",
+          "meaning": "시차로 인란 피로감"
+        },
+        {
+          "id": "23-10",
+          "term": "cutting-edge",
+          "meaning": "첨단"
+        },
+        {
+          "id": "23-11",
+          "term": "natural enemy",
+          "meaning": "천적"
+        },
+        {
+          "id": "23-12",
+          "term": "zero-sum game",
+          "meaning": "(뜻 미입력)"
+        },
+        {
+          "id": "23-13",
+          "term": "polarize",
+          "meaning": "양극화하다"
+        },
+        {
+          "id": "23-14",
+          "term": "polarity",
+          "meaning": "양극성"
+        },
+        {
+          "id": "23-15",
+          "term": "built-in",
+          "meaning": "내재된"
+        },
+        {
+          "id": "23-16",
+          "term": "photosynthesize",
+          "meaning": "광합성하다"
+        },
+        {
+          "id": "23-17",
+          "term": "photosynthesis",
+          "meaning": "광합성"
+        },
+        {
+          "id": "23-18",
+          "term": "acquaint",
+          "meaning": "알다, 가까워지다"
+        },
+        {
+          "id": "23-19",
+          "term": "acquaintance",
+          "meaning": "지인(알고 있는 사람)"
+        },
+        {
+          "id": "23-20",
+          "term": "be acquainted with",
+          "meaning": "~와 알고지내다"
+        },
+        {
+          "id": "23-21",
+          "term": "proactive",
+          "meaning": "상황을 압서서 주도하는"
+        },
+        {
+          "id": "23-22",
+          "term": "autonomy",
+          "meaning": "저율성"
+        },
+        {
+          "id": "23-23",
+          "term": "autonomous",
+          "meaning": "자율의"
+        },
+        {
+          "id": "23-24",
+          "term": "perspective",
+          "meaning": "관점, 원근법"
+        }
+      ]
+    }
+  ]
+}

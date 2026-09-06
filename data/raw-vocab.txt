@@ -1,0 +1,898 @@
+attitude
+태도
+altitude
+고도
+latitude
+위도
+longtitude
+경도
+graditude
+고마움
+aptitude
+적성
+affect
+영향을 미치다, 감정을 유발하다, 감정
+affection
+애정
+affectionate
+애정어린, 다정한
+priceless
+귀중한
+valueless
+가치없는
+invaluable
+귀중한
+worthless
+가치없는
+appliance
+가정용 기기, 적용
+appliances
+가정용 기기들
+A is the appliance of B
+A<-B
+intelligent
+지적인
+intelligible
+이해할 수 있는(=understandable)
+lie
+거짓말 하다, 거짓말
+lie ( -lay - lain )
+누워 있다 . 눕다 . 놓여 있다 (자동사)
+lay ( -laid - laid )
+놓다 . 두다 . 낳다 (타동사)
+causal
+인과 관계의
+Casual
+무심한 , 대충 하는
+reap
+수확하다, 얻다
+rip
+찢다
+rib
+갈비
+lip
+입술
+leap
+도약하다
+ripe
+익은
+terrible
+끔찍한
+terrific
+훌륭한
+access
+접근하다
+assess
+평가하다
+public
+대중에게 드러내는 이미지
+publication
+출판
+publicity
+홍보, 관심
+publicize
+홍보하다
+public relation
+홍보 활동(자기PR)
+alter
+변하다, 바꾸다
+alternative
+대안 , 대체 가능한
+alternate
+번갈아 발생하다
+alternatively
+그렇지 않으면 (둘째대안소개)
+root
+뿌리
+route
+길
+Stationary
+정지된(역)
+Stationary bicycle
+실내 자전거
+Stationery
+문구류
+Spontaneously
+자발적으로
+simultaneously
+동시에
+comprehensive
+포괄적인(=inclusive)
+comprehensible
+아해할 수 있는(=understandable, intelligible)
+mixed
++ - 공존
+occupy
+차지하다
+be occupied with A
+A에 사로잡히다(=be absorbed by A)
+be absorbed by ( with )
+A 에 사로 잡히다
+struggle
+-이미지, 무언가 잘 안될 때(서장훈 is struggling)
+Strive
++이미지, 열심히 하는 이미지
+Vacuum
+진공상태, 고립된 상태(=isolated)
+myth
+사실이 아닌 이야기(뒤에서 반대가 나올것 기대)
+alien
+외계인 , 외국인 , 이질적인
+alienate
+멀어지게 하다, 소외감을 느끼게 하다(=vacuum=isolated)
+Alien Species
+외래종
+Weigh
+무게가 ~이다, 중요하다, 따져 보다(양팔저울)
+inform
+알리다, 통지 하다
+informed 명
+좋은(많은 정보에 기반하기 때문에)
+incident
+사건
+incidental
+중요하지 않은
+manipulate
+조종하다, 조작하다(등처먹다, 가스라이팅)
+optional
+중요하지 않은(=incidental)
+submit A
+A를 제출하다
+submit to A
+A에게 굴복하다
+yield A
+A를 산출하다
+yield to A
+A에게 굴복하다
+fascinate
++이미지, 유혹하다
+tempt
+-이미지, 하면 안되는 것을 유혹하다
+develop
+개발하다, 성장하다(생명체), 발생하다(부정적인 것)
+developed countries
+선진국
+developing countries
+후진국(발전중인 국가x)=poor countries
+suspect
+~ 일거라 생각하다
+doubt
+~가 아닐거라 생각하다
+adopt
+입양하다, 채택 하다기존에 없던 새롭게 갖게 되는 느낌
+adapt
+적응하다,각색하다(change)
+adaptation
+각색
+adapt A
+A를 적응시키다
+adapt to A
+A로 적응 하다
+faith
+신뢰
+faithful
+충실한, 있는 그대로의
+bother
+괴롭히다
+bother (부정)
+(주로 부정문 의문문) 신경쓰다(사람들은 저에 대해서 말하는걸 즐겨하고 저에 대란 뒷담화를 하는것을 좋아해요 but i don't bother it)
+tolerate
+참다, 민감하지 않다
+intolerance
+과민증(민감하다)
+existing A
+기존의 A
+irony
++ - ,- +
+paradox
++ -, - +
+assume
+(사실이 아닐 수도 있는것을)가정하다(반대가 사실일 가능성 기대)
+assume 명사
+취하다
+Compromise
+타협하다, 훼손시키다, 변절시키다(캡틴 아메리카 he's compromised so we don't need to be friends with him)
+negotiate
+협상하다(대등관계)
+biology
+타고남(=infant, innate, be programmed to v, gene, genetic, dna, hardwire, anchor)
+exclusive
+오직(only)
+Prescribe
+규정하다, 처방하다
+Presume
+(사실이 아닐수도 있는것을 사실이라)추정하다(=assume)
+mere
+겨우 그래봤자 고작(무시 깔보는 이미지)
+static
+고정된
+displace
+대체하다 (어떤 위치한것에 대해 dis 를 걸어 버린다는 이미지로 쫓아 내다까지)
+seize
+붙잡다(확 잡아서 자기쪽으로 끌어 당기는 이미지로 기회 주도권을 잡다까지)
+seige
+포위
+orientation
+성향(삶의 방식에 있어서 방향을 잡는다)
+disorient
+방향을 잡지못하다(물리적, 추상적 둘다 해당)
+identify
+확인하다
+identificiation
+신원확인, 신분증
+identity
+신원, 정체성
+identify with A
+A와 동일시하다
+reconsider
+재고하다(결국 기존의 상황에 대해 변화가 있어야한다는 이미지)
+counterpart
+상응, 대응 관계에 있는 사람(반대가 아니라 동일한 지위나 기능)
+mobilize
+동원하다(단순한 이동이 아니라 특정한 목적이 전제된 상태)
+initiate
+시작하다
+initiative
+진취성, 계획(남들이 하기전에 가장 먼저 시작하는 이미지)
+established
+인정받는, 저명한
+even
+평평한, 고른, 짝수의
+odd
+이상한, 홀수의
+odds
+가능성 , 고난
+mean
+비열한, 중간
+means
+수단, 방법, 돈
+claim
+주장하다, (목숨을)앗아가다
+subject
+주제, 과목, 피실험자, ~의 영향을 받다(=be affected by)
+Contemporary
+동시대의, 동시대인, 현재의
+demanding A
+힘든(자꾸 많은것을 요구하는 이미지)
+consequence
+결과, 중요성
+sequence
+순서
+consequential
+중요한
+providing, Provided SV
+If로 읽기(가정법)
+Provision
+공급 , 준비
+rather
+오히려~~~ 부등호달고 달리기
+Instead of A~, B~
+A<->B
+game
+사냥감
+moter
+자동차, 운동의
+rate
+비율, 속도, 등급을 매기다
+Contain
+포함하다, 억제하다(컨테이너 생각! 바깥으로 빠져나가지 못하도록 하는 이미지)
+vehicle
+차량, 수단
+flavor
+맛, 특징
+celebrity
+유명 인사(셀수 o) , 명성(셀수 x)
+virtual
+가상의, 사실상의(문맥으로 판단)
+scarce
+부족한 , 드문
+scarcity
+부족, 희소성(경제적)
+hardly rarely seldom scarcely
+거의 ~ 하지 않는
+grant
+주다 , 보조금, 장학금
+take A for granted
+A를 당연시 여기다
+Granted (that) S V~
+그래.. 너 말은 인정해,, 근데!!(반전 기대)
+engage
+관심을 끌다(잡아서 내 쪽으로 끌어 당기는 이미지)
+engage in A
+A에 참여하다, 관여하다
+engaging
+매력적인(=attractive)
+colony
+식민지, 군집
+settle
+정착하다(자동사), ~를 해결하다(타동사)
+dispute
+분쟁을 벌이다
+undisputed
+반박의 여자가 없는, 확실한
+context
+상황
+break
+뉴스가 알려지다, 소식을 알리다
+breaking news
+긴급 속보
+relevant
+관련 있는 , 중요한 , 적절한
+appreciate
+고마워하다, 진가를 알아보다, 환영하다(높이 평가 하는 이미지)
+exceptional
+뛰어난(=outstanding)(예외적인 같은 부정적 뉘앙스x)
+credit
+공로, 업적, 학점, 신용
+A be credited to B
+A<-B
+frequency
+주파수
+count
+중요하다, 간주하다
+count on somebody
+의지하다(=rely on)
+Count A as B
+A를 B로 간주하다(=regard A as B)
+case
+경우, 소송, 상자
+the case
+사실
+make the case
+주장을 하다
+inquire
+물어보다
+inquiry
+질문, 조사, 탐구
+Positive
+양성의, 적극적인
+negative
+음성의, 소극적인
+Chemistry
+화학, 교감
+cell
+세포, 독방, 칸
+contract
+계약하다, 수축시키다, (병에)걸리다
+register
+등록하다, 나타낸다, 인식하다(뇌에 등록하다)
+agent
+행위자, 대리인, 중개인
+agency
+행위
+figure
+모양, 수치, (등장)인물, 생각하다
+figure out
+알아내다
+account
+계좌, 이야기(설명), 중요성
+accountable
+책임이 있는
+take A into account
+A를 고려하다(여러가지 중 중요하니까)
+account for A
+A를 차지하다
+edge
+이점(+이미지)
+cutting-edge
+첨단
+rewarding
+좋은(+이미지)(<->demanding)
+substantial
+상당한(=large)(<->sufficient:충분한)
+originate
+~에서 비롯하다
+Original
+독창적인(처음에 한거니까)
+originality
+독창성
+measure
+측정하다, 조치, 정책
+address
+주소, 연설, 다루다
+represent
+대표하다, 표현하다, 나타내다
+compound
+혼합하다, 혼합물, 악화시키다
+observe
+관찰하다, 지키다, 준수하다
+observation
+관찰
+observance
+준수
+anchor
+닻을 내리다, 타고난(몸에 안에서 고정된 채로 태어난)(=biology~)
+margin
+주변부(코어가 아닌 부분), 하찮은것
+marginal
+중요하지 않은
+marginalize
+무시하다, 소외시키다(=ignore=alienate)
+shallow
+얕은, 천박한(생각이 얕은), 피상적인
+respect
+면, 점
+in this respect
+이러한 측면에서(=in this light)
+respectable
+존경할만한
+respective
+각각의
+respectively
+각각
+property
+재산, 특성, 속성
+rough
+거친, 대략적인(=approximate) rough하게 봤을때~
+succeed to v
+성공하다
+succeed to 명사
+계승하다
+successive
+연속적인(<->successful:성공적인)
+succession
+연속물
+custom
+개별적, 저기만의것-> 관습, 풍습
+customize
+맞춤 제작
+customization
+맞춤화
+climate
+기후, 분위기
+pitch
+투구, 음 높이, 던지다
+cast
+던지다(윌슨 cast away), (그림자를)드리우다, 출연진, 깁스
+score
+악보
+scores of
+아주 많이(=a lot of)
+integrate
+통합시키다
+integral
+필수적인
+integrity
+온전함, 진실성, 청렴
+mark
+특징짓다(임마는 좀 특이하네 체크!)
+A condition B
+A가 B를 조건화시키다(종소리가 개를 조건화시키다) A->B
+unconditional
+무조건적인
+precondition
+전제 조건
+minute
+미세한
+invariable
+변함없는
+invariably
+항상(=always)
+question
+이의을 제기하다, 의문을 갖다(=doubt)
+be imnmune to A
+A 에 영향을 받지 않는
+in this light
+이러한 측면에서(=in this respect)
+sound
++이미지, 건전한, 견고한
+fineq
+미세한, 정교한, 순수한(refine:정제하다, fine gold:순금), 벌금
+treat
+대접하다(trick or treat), 한턱
+retreat
+후퇴하다
+treaty
+조약
+authorize
+권한을 부여하다, 강화시키다(힘을 주어)
+authorized
+권한을 받은, 공인된
+mechanical
+진심이 담기지 않은(기계적인 사랑, 대답이 기계적이다)
+be it A or B
+A이든 B이든(whether it is A or B에서 whether 생략되고 도치)
+turn sour
+안좋게 되다
+A contribute to B
+A->B
+it follows that s v
+~이다(필자의 주장)
+at best
+기껏해야
+at most
+기껏해야
+at worst
+at best가 부정적의미라고 해서 긍정적 의미x
+A is a creation of B
+A<-B
+A is a product of B
+A<-B
+A is a function of B
+A<-B
+not so much A as B
+A 라기보다는 오히려~~~ B다(A<B)
+other than A
+A를 제외하고(=except)
+not A until B
+B를 하고 나서야 비로서 A다
+not until B~,A~
+A부분 도치!
+removed from A
+A로부터 멀리 떨어져 있다
+A is a window into B
+A->B(A를 보면 B를 알 수 있다)
+attend to
+주목하다(=pay attention to)
+aside(=apart) from A
+A 와는 별개로(A에 대한 얘기는 여기까지, B에 대한 얘기 여기서부터)
+confuse with A with/and B
+A=B인 줄 안다는 것
+be programmed to V
+타고난
+distinction/gap between A and B
+A<->B
+A is to B as/what C is to D
+A와 B의 관계는 C와 D의 관계와 같다
+as 형 as
+(문장 맨앞에 있을 때) ~일지라도
+even so
+(역접)그럼에도 불구하도
+replace A with B
+A를 B고 대체하다(A가 사라지고 B로 바뀐다)
+substitute A for B
+B를 A로 대체하다
+be absorbed in A
+A 에 열중하다(=be occupied with A)
+make a difference
+혁신을 만들다(iphone, we make a difference)
+as well
+또한(=also) 주제는 같지만 다른 소재 제시
+should s v
+if
+attribute A to B
+A<-B
+attribute
+속성, 특성
+draw on A
+A를 이용하다
+as far as
+~ 하는 한(=as long as=so far as=in so far as)
+argue for
+~에 찬성하다
+aruge against
+~에 반대하다
+in need
+어려움에 처한(계속 필요한것)
+be on the same page
+입장이 같다
+tap into
+다가가다(모르는 친구애게 툭툭치며 다가가는 이미지), 이용하다
+in and of itself
+그자체로
+having said that
+그렇기는 하지만
+Chances are S V
+~일 가능성이 있다(=be likely to)
+take over
+인계받다, 장악하다
+give rise to
+발생시키다
+take place
+발생하다
+lay off
+해고시키다
+nothing but
+오직(=only), i have nothing but you
+rule out
+제외시키다(=exclude)
+in V-ing
+~할 때
+deal with
+다루다, 해결해내다(hey, deal with it!)
+rob A of B
+A에게서 B를 빼앗다(=strip A of B=deprive A of B)
+cannot help but v
+~하지 않을 수 없다(=cannot but v=cannot help ving)
+give away
+내어주다
+It is (not) that S V
+~때문이다 (is that 사이 아무것도 없음)
+mover
+원동력
+outpace
+A>B(=outstand, outnumber, outperform)
+base A on B
+A<-B
+A is the basis of B
+A->B
+~A on which B is based
+A->B
+A is a driving force in B
+A->B
+determine
+A->B
+determinant
+결정요인
+determinism
+결정론
+determinacy
+결정성, 확정성
+determination
+결정, 결단력
+distinguish A from B
+A<->B
+distinguishing
+독특란
+distinguished
+유명한
+reflect
+반영하다, 반성하다, 반사하다
+A reflect B
+A<-B
+A require B
+A<-B
+A~ according to B~
+B에 따라서 A하다(A<-B)
+A follow B
+A<-B
+A is followed by B
+A->B
+outgrowth
+결과
+subordinate
+종속된
+A is subordinate to B
+A<-B
+independent
+독립적인
+owe A to B
+A는 B덕분이다(A<-B)
+school
+학교, 무리
+new to A
+A에 미숙한
+cost
+비용, 대가, 희생
+at the cost of A
+A를 대가로(=at the expense of=at the toll of=at the price of)
+level
+평평한, 평평하게 하다(i'm on the next level ㄷ)
+cultural
+특정적(<->universal)
+discount
+무시하다(내 노력을 깍아내리지마!)
+economy
+(경제 주체로서의)국가, 절약
+star
+나타나다, 출연하다
+put
+말하다, 쓰다(let me put it this way)
+win over
+설득하다(완전히 이겨버리다)
+file
+쌓다, 정리하다
+invite
+끌다, 매혹하다
+inviting
+매혹적인(=attractive=engaging)
+general
+종합적인(=whole)
+common(s)
+공유지, 공유자원
+social
+사교적
+socialize
+어울리다
+social development
+사회 발달(x) 사교성 발달(o)
+partial
+부분적인, 편파적인, 불공평한
+impartial
+공정한
+still
+그럼에도 불구하고, 가만히 있는(stay still)
+manner
+방식
+things
+상황, 형편
+in A's shoes
+A의 입장에서
+tackle
+(어려운 사안에 대해서)다루다(=deal with)
+coin
+만들다
+pay
+~에게 이익이 되다, 대가를 치르다(you're gonna pay for this)
+pay-off, pay off
+보상, 보상을 주다
+mirror
+반영하다(=reflect)
+second
+이류, 열등한
+secondary
+이차적인, 부수적인(=incidental=optional=marginal)
+increasingly
+증가하게도(x) 점점(o)
+party
+정당, 당사자
+beyond A
+A의 수준을 넘어섰다=A로는 안된다
+very
+adj 바로 그
+pale
+창백한, 잘 못하는, 어설픈
+press
+언론, 기자들
+life
+생물, 생명체
+cultivate
+경작하다, 만들다, 기르다
+meet
+충족핟, (기한을)지키다
+challenge
+어려운 일, 이의를 제기하다
+factor
+요소, 원인
+while
+~하는데
+limit A
+A를 제한하다
+be limited to A
+A까지 제한됨=A까지는 ok
+free from A
+A로 부터 자유로운=A가 없는
+free to v
+자유롭게 ~하다
+A-free
+A가 없는
+plastic
+바꾸기가 쉬운, 가짜의
+arugably
+주장하건대
+gauge
+판단하다, 측정하다
+end
+목적
+A survive B
+A가 B보다 오래 살다
+clear
+제거하다(clear the area! 싹다 쓸어버려!)
+literautre
+문학, 문헌
+make up
+화장하다, 구성하다, (거짓으로)꾸며넣다
+long for
+갈망하다
+competition
+경쟁, 경쟁자
+trunk
+몸통, 줄기
+mad
+화난, 미친듯이
+modest
+크지 않은, 겸손한
+seal
+봉인하다, 바다표범
+anecdote
+일화, 이야기
+shiver
+떨다(춥다 시벌)
+better/well off
+형평이 나은
+layperson
+비전문기
+comfort zone=autopilot
+변화나 혁신이 필요없는 곳
+the last thing
+가장 원하지 않는 것
+analogy
+비유
+natural selection
+자연섬택=적자생존
+hardwire
+타고난
+ratio of A to B
+B에 대한 A의 비율=A/B
+diabetes
+당뇨병
+patent
+특허
+manifest
+명백한, 나타내다
+manifestation
+증상(결과)
+incompatible
+양립할 수 없는
+indispensable
+없어서는 안되는=필수적인
+outdated
+구식이 된
+perplex
+당혹하게 하다(=confuse)
+perserve
+참다
+preserve
+지키다
+perseverance
+인내심
+double-edged sword
+양날의 검
+authenticate
+진짜임을 증명하다
+authentic
+진짜의
+tyrant
+폭군
+milestone
+중요한 순간
+A is a milestone of B
+A를 보면 B를 알 수 있다
+conerstone
+주춧돌(=base)
+peasant
+소작농
+quest
+탐구하다
+fluctuate
+변동하다
+fluctuation
+변동
+indigenous
+토착의
+symmetry
+대칭, 균형
+asymmetry
+비대칭, 불균형
+coverage
+보도범위
+self-contained
+독립된(스스로 컨테이너안에 차단된 상태)
+lest
+~하지 않기 위해서(<->in order to)
+conventional wisdom
+통념
+pitfall
+위험(구멍에 떨어지다)
+aggravate
+악화시키다(공격하다X)
+unaided eye
+맨눈(다른것의 도움을 받지 않은 눈)
+naked eye
+맨눈
+fortify
+요새화하다, 강화하다
+time lag
+시간 지연
+jet lag
+시차로 인란 피로감
+cutting-edge
+첨단
+natural enemy
+천적
+zero-sum game
+(뜻 미입력)
+polarize
+양극화하다
+polarity
+양극성
+built-in
+내재된
+photosynthesize
+광합성하다
+photosynthesis
+광합성
+acquaint
+알다, 가까워지다
+acquaintance
+지인(알고 있는 사람)
+be acquainted with
+~와 알고지내다
+proactive
+상황을 압서서 주도하는
+autonomy
+저율성
+autonomous
+자율의
+perspective
+관점, 원근법

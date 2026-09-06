@@ -1,5 +1,7 @@
-// Parses data/raw-vocab.txt (alternating term/meaning lines) into data/words.json,
-// grouped into 23 lecture units using the word-count ranges from the course listing.
+// Parses data/raw-vocab.txt (alternating term/meaning lines) into src/data/words.json,
+// grouped into 23 lecture units. Word IDs are stable global sequence numbers (w1, w2, ...)
+// based on position in raw-vocab.txt, independent of which lecture a word falls into - so
+// re-running this after a boundary correction never orphans a user's saved progress.
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -18,19 +20,36 @@ for (let i = 0; i < lines.length - 1; i += 2) {
   entries.push({ term: lines[i], meaning: lines[i + 1] });
 }
 
-// Word-count per lecture, derived from the course's numbered ranges (1-9, 10-17, 18-28,
-// ... 307-325 for lectures 1-22; lecture 23's own range wasn't legible, so it's guessed
-// at ~20 like its neighbors). Because related/synonym words in these notes are grouped
-// together under one numbered slot, this note set has more entries (449) than the
-// course's 325ish numbered slots - so every lecture's base count is scaled up by the
-// same ratio rather than dumping the entire surplus into one lecture. This is only an
-// initial guess; use the app's "강의 재배정" editor to correct any lecture's boundaries.
-const baseCounts = [9, 8, 11, 11, 9, 10, 15, 16, 17, 16, 16, 22, 14, 14, 17, 15, 15, 15, 16, 20, 20, 19, 20];
-const scale = entries.length / baseCounts.reduce((a, b) => a + b, 0);
-const counts = baseCounts.map((c) => Math.max(1, Math.round(c * scale)));
-// Fix up rounding drift on the last lecture so counts sum exactly to entries.length.
-const drift = entries.length - counts.reduce((a, b) => a + b, 0);
-counts[counts.length - 1] += drift;
+// The last-word position (1-indexed, inclusive) of each lecture, confirmed against the
+// user's real course by matching the lecture's actual last word to its position here.
+// A few lectures' last word isn't in this note set at all (the user didn't write it down),
+// so those boundaries are only a rough even split of the confirmed range around them -
+// marked "guess" below. Update this array (and re-run this script) as more get confirmed.
+const LECTURE_END_POSITIONS = [
+  31, // 1강 last="terrific" (confirmed)
+  50, // 2강 - "carve" not in notes; guessed even split with 3강 over [32,69]
+  69, // 3강 last="optional" (confirmed)
+  91, // 4강 last="intolerance" (confirmed)
+  102, // 5강 last="Presume" (confirmed)
+  118, // 6강 last="initiative" (confirmed)
+  137, // 7강 last="moter"/motor (confirmed)
+  161, // 8강 last="appreciate" (confirmed)
+  191, // 9강 last="substantial"/substantially (confirmed)
+  222, // 10강 last="pitch" (confirmed)
+  247, // 11강 - "code" not in notes; guessed even split with 12강 over [223,273]
+  273, // 12강 last="be absorbed in A" (confirmed)
+  289, // 13강 last="take over" (confirmed)
+  307, // 14강 - "give way to" not in notes; guessed even split with 15강 over [290,325]
+  325, // 15강 last="owe A to B" (confirmed)
+  343, // 16강 last="socialize" (confirmed)
+  362, // 17강 last="pale" (confirmed)
+  380, // 18강 last="clear" (confirmed)
+  394, // 19강 - "arm" not in notes; guessed even split with 20강 over [381,409]
+  409, // 20강 last="perseverance" (confirmed)
+  434, // 21강 last="jet lag" (confirmed)
+  441, // 22강 - no marker given ("끝까지" = "to the end"); guessed even split of [435,449]
+  // 23강 always runs to the end of the list, whatever that is.
+];
 
 const chapters = [
   { through: 2, name: "챕터 01 · 안 헷갈려?" },
@@ -45,22 +64,24 @@ function chapterName(lectureNo) {
   return chapters.find((c) => lectureNo <= c.through)?.name ?? "";
 }
 
+const globalId = (i) => `w${i + 1}`;
+
 const lectures = [];
 let cursor = 0;
 for (let lecNo = 1; lecNo <= 23; lecNo++) {
-  const count = lecNo < 23 ? counts[lecNo - 1] : entries.length - cursor;
-  const slice = entries.slice(cursor, cursor + count);
+  const end = lecNo <= LECTURE_END_POSITIONS.length ? LECTURE_END_POSITIONS[lecNo - 1] : entries.length;
+  const slice = entries.slice(cursor, end);
   lectures.push({
     id: lecNo,
     title: `${lecNo}강`,
     subtitle: chapterName(lecNo),
     words: slice.map((w, idx) => ({
-      id: `${lecNo}-${idx + 1}`,
+      id: globalId(cursor + idx),
       term: w.term,
       meaning: w.meaning,
     })),
   });
-  cursor += count;
+  cursor = end;
 }
 
 writeFileSync(

@@ -15,9 +15,12 @@ export function getAllWords(): Word[] {
   return catalog.lectures.flatMap((l) => l.words);
 }
 
+const catalogLectureByWordId: Record<string, number> = Object.fromEntries(
+  catalog.lectures.flatMap((l) => l.words.map((w) => [w.id, l.id]))
+);
+
 export function getWordCatalogLecture(wordId: string): number {
-  const lecNo = Number(wordId.split("-")[0]);
-  return lecNo;
+  return catalogLectureByWordId[wordId];
 }
 
 export const wordIndex: Record<string, Word> = Object.fromEntries(

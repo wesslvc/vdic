@@ -1,12 +1,27 @@
 import { getLecture, getLectures, getWordCatalogLecture, wordIndex } from "./catalog";
 import type { ProgressData, Word } from "./types";
 
+export type StudyWord = Word & { nuance?: string };
+
+export function effectiveMeaning(word: Word, progress: ProgressData): string {
+  return progress.meaningOverrides[word.id] ?? word.meaning;
+}
+
+export function toStudyWord(word: Word, progress: ProgressData): StudyWord {
+  const nuance = progress.nuanceNotes[word.id];
+  return {
+    ...word,
+    meaning: effectiveMeaning(word, progress),
+    ...(nuance ? { nuance } : {}),
+  };
+}
+
 export function effectiveLectureId(wordId: string, progress: ProgressData): number {
   return progress.lectureOverrides[wordId] ?? getWordCatalogLecture(wordId);
 }
 
-/** Words currently assigned to a lecture, accounting for manual reassignment overrides. */
-export function wordsForLecture(lectureId: number, progress: ProgressData): Word[] {
+/** Words currently assigned to a lecture, accounting for manual reassignment and meaning/nuance edits. */
+export function wordsForLecture(lectureId: number, progress: ProgressData): StudyWord[] {
   const catalogWords = getLecture(lectureId)?.words ?? [];
   const movedIn: Word[] = [];
   for (const [wordId, overrideLecture] of Object.entries(progress.lectureOverrides)) {
@@ -22,7 +37,7 @@ export function wordsForLecture(lectureId: number, progress: ProgressData): Word
       .map(([id]) => id)
   );
   const stayed = catalogWords.filter((w) => !movedOutIds.has(w.id));
-  return [...stayed, ...movedIn];
+  return [...stayed, ...movedIn].map((w) => toStudyWord(w, progress));
 }
 
 export type LectureProgress = {
@@ -52,12 +67,12 @@ export function lectureProgress(lectureId: number, progress: ProgressData): Lect
   return { total: words.length, attempted, mastered, wrongCount, lastStudiedAt };
 }
 
-export function allWrongWords(progress: ProgressData): Word[] {
-  const result: Word[] = [];
+export function allWrongWords(progress: ProgressData): StudyWord[] {
+  const result: StudyWord[] = [];
   for (const [wordId, stat] of Object.entries(progress.wordStats)) {
     if (stat.lastResult === "wrong") {
       const w = wordIndex[wordId];
-      if (w) result.push(w);
+      if (w) result.push(toStudyWord(w, progress));
     }
   }
   return result;

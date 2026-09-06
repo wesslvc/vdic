@@ -3,9 +3,15 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { getLecture, getLectures, getWordCatalogLecture } from "@/lib/catalog";
+import { getAllWords, getLecture, getLectures, getWordCatalogLecture } from "@/lib/catalog";
 import { lectureProgress, wordsForLecture } from "@/lib/derived";
-import { getWordStat, moveWordToLecture, useProgress } from "@/lib/progressStore";
+import {
+  getWordStat,
+  moveWordToLecture,
+  setMeaningOverride,
+  setNuanceNote,
+  useProgress,
+} from "@/lib/progressStore";
 import { StudySession } from "@/components/StudySession";
 import { useMounted } from "@/hooks/useMounted";
 
@@ -15,11 +21,18 @@ export default function LecturePage() {
   const mounted = useMounted();
   const progress = useProgress();
   const [mode, setMode] = useState<"browse" | "study">("browse");
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editMeaning, setEditMeaning] = useState("");
+  const [editNuance, setEditNuance] = useState("");
 
   const lecture = getLecture(lectureId);
   const allLectures = getLectures();
   const words = useMemo(() => wordsForLecture(lectureId, progress), [lectureId, progress]);
   const prog = lectureProgress(lectureId, progress);
+  const catalogWordIndex = useMemo(
+    () => Object.fromEntries(getAllWords().map((w) => [w.id, w])),
+    []
+  );
 
   if (!lecture) {
     return <p className="text-neutral-500">강의를 찾을 수 없어요.</p>;
@@ -42,6 +55,19 @@ export default function LecturePage() {
         />
       </div>
     );
+  }
+
+  function startEdit(wordId: string, currentMeaning: string, currentNuance?: string) {
+    setEditingId(wordId);
+    setEditMeaning(currentMeaning);
+    setEditNuance(currentNuance ?? "");
+  }
+
+  function saveEdit(wordId: string) {
+    const catalogMeaning = catalogWordIndex[wordId]?.meaning ?? "";
+    setMeaningOverride(wordId, editMeaning, catalogMeaning);
+    setNuanceNote(wordId, editNuance);
+    setEditingId(null);
   }
 
   return (
@@ -76,34 +102,81 @@ export default function LecturePage() {
         {words.map((w) => {
           const stat = mounted ? getWordStat(w.id) : null;
           const catalogLec = getWordCatalogLecture(w.id);
+          const isEditing = editingId === w.id;
           return (
-            <li key={w.id} className="flex items-center gap-3 px-4 py-3">
-              <div className="min-w-0 flex-1">
-                <p className="font-medium">{w.term}</p>
-                <p className="truncate text-sm text-neutral-500">{w.meaning}</p>
+            <li key={w.id} className="px-4 py-3">
+              <div className="flex items-center gap-3">
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium">{w.term}</p>
+                  {!isEditing && (
+                    <p className="truncate text-sm text-neutral-500">
+                      {w.meaning}
+                      {w.nuance && (
+                        <span className="ml-1.5 text-neutral-400">· {w.nuance}</span>
+                      )}
+                    </p>
+                  )}
+                </div>
+                {stat?.lastResult === "wrong" && (
+                  <span className="shrink-0 rounded-full bg-rose-100 px-2 py-0.5 text-xs font-semibold text-rose-700 dark:bg-rose-950 dark:text-rose-400">
+                    오답
+                  </span>
+                )}
+                {stat?.lastResult === "correct" && (
+                  <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">
+                    완료
+                  </span>
+                )}
+                <button
+                  onClick={() =>
+                    isEditing ? setEditingId(null) : startEdit(w.id, w.meaning, w.nuance)
+                  }
+                  className="shrink-0 text-xs text-neutral-400 underline"
+                >
+                  {isEditing ? "취소" : "수정"}
+                </button>
+                <select
+                  value={lectureId}
+                  onChange={(e) => moveWordToLecture(w.id, Number(e.target.value), catalogLec)}
+                  className="shrink-0 rounded-lg border border-neutral-300 bg-white px-1.5 py-1 text-xs dark:border-neutral-700 dark:bg-neutral-800"
+                  title="단어를 다른 강의로 재배정"
+                >
+                  {allLectures.map((l) => (
+                    <option key={l.id} value={l.id}>
+                      {l.id}강
+                    </option>
+                  ))}
+                </select>
               </div>
-              {stat?.lastResult === "wrong" && (
-                <span className="shrink-0 rounded-full bg-rose-100 px-2 py-0.5 text-xs font-semibold text-rose-700 dark:bg-rose-950 dark:text-rose-400">
-                  오답
-                </span>
+              {isEditing && (
+                <div className="mt-2.5 space-y-2 rounded-xl bg-neutral-50 p-3 dark:bg-neutral-800">
+                  <div>
+                    <label className="mb-1 block text-xs text-neutral-500">뜻</label>
+                    <textarea
+                      value={editMeaning}
+                      onChange={(e) => setEditMeaning(e.target.value)}
+                      rows={2}
+                      className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-1 block text-xs text-neutral-500">
+                      뉘앙스/관계 (선택, 예: +, -, A→B)
+                    </label>
+                    <input
+                      value={editNuance}
+                      onChange={(e) => setEditNuance(e.target.value)}
+                      className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+                    />
+                  </div>
+                  <button
+                    onClick={() => saveEdit(w.id)}
+                    className="rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-semibold text-white dark:bg-white dark:text-neutral-900"
+                  >
+                    저장
+                  </button>
+                </div>
               )}
-              {stat?.lastResult === "correct" && (
-                <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">
-                  완료
-                </span>
-              )}
-              <select
-                value={lectureId}
-                onChange={(e) => moveWordToLecture(w.id, Number(e.target.value), catalogLec)}
-                className="shrink-0 rounded-lg border border-neutral-300 bg-white px-1.5 py-1 text-xs dark:border-neutral-700 dark:bg-neutral-800"
-                title="단어를 다른 강의로 재배정"
-              >
-                {allLectures.map((l) => (
-                  <option key={l.id} value={l.id}>
-                    {l.id}강
-                  </option>
-                ))}
-              </select>
             </li>
           );
         })}

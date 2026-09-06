@@ -11,6 +11,8 @@ function emptyData(): ProgressData {
     version: 1,
     wordStats: {},
     lectureOverrides: {},
+    meaningOverrides: {},
+    nuanceNotes: {},
     sessionLog: [],
   };
 }
@@ -25,6 +27,8 @@ function loadFromStorage(): ProgressData {
       version: 1,
       wordStats: parsed.wordStats ?? {},
       lectureOverrides: parsed.lectureOverrides ?? {},
+      meaningOverrides: parsed.meaningOverrides ?? {},
+      nuanceNotes: parsed.nuanceNotes ?? {},
       sessionLog: Array.isArray(parsed.sessionLog) ? parsed.sessionLog : [],
     };
   } catch {
@@ -133,6 +137,30 @@ export function moveWordToLecture(wordId: string, lectureId: number, catalogLect
   setState({ ...state, lectureOverrides: overrides });
 }
 
+export function setMeaningOverride(wordId: string, meaning: string, catalogMeaning: string) {
+  ensureHydrated();
+  const overrides = { ...state.meaningOverrides };
+  const trimmed = meaning.trim();
+  if (!trimmed || trimmed === catalogMeaning) {
+    delete overrides[wordId];
+  } else {
+    overrides[wordId] = trimmed;
+  }
+  setState({ ...state, meaningOverrides: overrides });
+}
+
+export function setNuanceNote(wordId: string, nuance: string) {
+  ensureHydrated();
+  const notes = { ...state.nuanceNotes };
+  const trimmed = nuance.trim();
+  if (!trimmed) {
+    delete notes[wordId];
+  } else {
+    notes[wordId] = trimmed;
+  }
+  setState({ ...state, nuanceNotes: notes });
+}
+
 export function logSession(entry: Omit<SessionLogEntry, "id" | "date" | "timestamp">) {
   ensureHydrated();
   const full: SessionLogEntry = {
@@ -163,6 +191,8 @@ export function importProgressJSON(json: string): { ok: true } | { ok: false; er
       version: 1,
       wordStats: parsed.wordStats ?? {},
       lectureOverrides: parsed.lectureOverrides ?? {},
+      meaningOverrides: parsed.meaningOverrides ?? {},
+      nuanceNotes: parsed.nuanceNotes ?? {},
       sessionLog: Array.isArray(parsed.sessionLog) ? parsed.sessionLog : [],
     });
     return { ok: true };

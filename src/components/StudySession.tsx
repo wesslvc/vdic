@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import type { Word } from "@/lib/types";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { StudyWord } from "@/lib/derived";
 import { logSession, recordAnswer } from "@/lib/progressStore";
+import { isAnswerCorrect } from "@/lib/grading";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -13,13 +14,15 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+type Phase = "meaning" | "nuance" | "reveal";
+
 export function StudySession({
   words,
   sessionLabel,
   mode,
   onFinish,
 }: {
-  words: Word[];
+  words: StudyWord[];
   sessionLabel: string;
   mode: "study" | "wrong-note";
   onFinish: () => void;
@@ -27,12 +30,18 @@ export function StudySession({
   const [direction, setDirection] = useState<"en-ko" | "ko-en">("en-ko");
   const [order] = useState(() => shuffle(words));
   const [index, setIndex] = useState(0);
-  const [revealed, setRevealed] = useState(false);
+  const [phase, setPhase] = useState<Phase>("meaning");
+  const [meaningInput, setMeaningInput] = useState("");
+  const [nuanceInput, setNuanceInput] = useState("");
+  const [meaningCorrect, setMeaningCorrect] = useState(false);
+  const [nuanceCorrect, setNuanceCorrect] = useState<boolean | null>(null);
+  const [overallCorrect, setOverallCorrect] = useState(false);
   const [results, setResults] = useState<{ correct: number; wrong: number }>({
     correct: 0,
     wrong: 0,
   });
   const [done, setDone] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const current = order[index];
   const isLast = index === order.length - 1;
@@ -40,6 +49,13 @@ export function StudySession({
     () => Math.round((index / Math.max(order.length, 1)) * 100),
     [index, order.length]
   );
+  const askNuance = direction === "en-ko" && !!current?.nuance;
+
+  useEffect(() => {
+    if (phase === "meaning" || phase === "nuance") {
+      inputRef.current?.focus();
+    }
+  }, [phase, index]);
 
   if (order.length === 0) {
     return (
@@ -77,23 +93,49 @@ export function StudySession({
   const front = direction === "en-ko" ? current.term : current.meaning;
   const back = direction === "en-ko" ? current.meaning : current.term;
 
-  function grade(correct: boolean) {
-    recordAnswer(current.id, correct);
-    setResults((r) => ({
-      correct: r.correct + (correct ? 1 : 0),
-      wrong: r.wrong + (correct ? 0 : 1),
-    }));
+  function resetCard() {
+    setMeaningInput("");
+    setNuanceInput("");
+    setNuanceCorrect(null);
+    setPhase("meaning");
+  }
+
+  function submitMeaning() {
+    const ok = isAnswerCorrect(meaningInput, back);
+    setMeaningCorrect(ok);
+    if (askNuance) {
+      setPhase("nuance");
+    } else {
+      setOverallCorrect(ok);
+      setPhase("reveal");
+    }
+  }
+
+  function submitNuance() {
+    const ok = isAnswerCorrect(nuanceInput, current.nuance ?? "");
+    setNuanceCorrect(ok);
+    setOverallCorrect(meaningCorrect && ok);
+    setPhase("reveal");
+  }
+
+  function proceed() {
+    recordAnswer(current.id, overallCorrect);
+    const newResults = {
+      correct: results.correct + (overallCorrect ? 1 : 0),
+      wrong: results.wrong + (overallCorrect ? 0 : 1),
+    };
+    setResults(newResults);
     if (isLast) {
       logSession({
         lectureLabel: sessionLabel,
         mode,
         count: order.length,
-        correctCount: results.correct + (correct ? 1 : 0),
+        correctCount: newResults.correct,
       });
       setDone(true);
     } else {
       setIndex((i) => i + 1);
-      setRevealed(false);
+      resetCard();
     }
   }
 
@@ -112,43 +154,139 @@ export function StudySession({
           </p>
         </div>
         <button
-          onClick={() => setDirection((d) => (d === "en-ko" ? "ko-en" : "en-ko"))}
-          className="shrink-0 rounded-full border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 dark:border-neutral-700 dark:text-neutral-400"
+          onClick={() => {
+            setDirection((d) => (d === "en-ko" ? "ko-en" : "en-ko"));
+          }}
+          disabled={phase !== "meaning"}
+          className="shrink-0 rounded-full border border-neutral-300 px-3 py-1.5 text-xs font-medium text-neutral-600 disabled:opacity-40 dark:border-neutral-700 dark:text-neutral-400"
         >
           {direction === "en-ko" ? "영→한" : "한→영"}
         </button>
       </div>
 
-      <button
-        onClick={() => setRevealed((v) => !v)}
-        className="flex min-h-[220px] w-full flex-col items-center justify-center gap-4 rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-sm active:scale-[0.99] dark:border-neutral-800 dark:bg-neutral-900"
-      >
+      <div className="flex min-h-[220px] w-full flex-col items-center justify-center gap-4 rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
         <span className="whitespace-pre-line text-2xl font-bold leading-snug">{front}</span>
-        {revealed ? (
-          <span className="whitespace-pre-line text-lg text-neutral-600 dark:text-neutral-400">
-            {back}
-          </span>
-        ) : (
-          <span className="text-sm text-neutral-400">탭해서 뜻 보기</span>
-        )}
-      </button>
 
-      <div className="mt-5 grid grid-cols-2 gap-3">
-        <button
-          disabled={!revealed}
-          onClick={() => grade(false)}
-          className="rounded-xl bg-rose-100 py-3.5 font-semibold text-rose-700 disabled:opacity-40 dark:bg-rose-950 dark:text-rose-400"
-        >
-          몰랐어요
-        </button>
-        <button
-          disabled={!revealed}
-          onClick={() => grade(true)}
-          className="rounded-xl bg-emerald-100 py-3.5 font-semibold text-emerald-700 disabled:opacity-40 dark:bg-emerald-950 dark:text-emerald-400"
-        >
-          알고 있었어요
-        </button>
+        {phase === "meaning" && (
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              submitMeaning();
+            }}
+            className="w-full max-w-xs"
+          >
+            <input
+              ref={inputRef}
+              value={meaningInput}
+              onChange={(e) => setMeaningInput(e.target.value)}
+              placeholder={direction === "en-ko" ? "뜻을 입력하세요" : "영어 단어를 입력하세요"}
+              autoComplete="off"
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
+              className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-center text-lg dark:border-neutral-700 dark:bg-neutral-800"
+            />
+          </form>
+        )}
+
+        {phase === "nuance" && (
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              submitNuance();
+            }}
+            className="w-full max-w-xs"
+          >
+            <p className="mb-2 text-sm text-neutral-500">이 단어의 뉘앙스/관계는?</p>
+            <input
+              ref={inputRef}
+              value={nuanceInput}
+              onChange={(e) => setNuanceInput(e.target.value)}
+              placeholder="예: +, -, A->B"
+              autoComplete="off"
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
+              className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-center text-lg dark:border-neutral-700 dark:bg-neutral-800"
+            />
+          </form>
+        )}
+
+        {phase === "reveal" && (
+          <div className="w-full space-y-2">
+            <span className="block whitespace-pre-line text-lg text-neutral-600 dark:text-neutral-400">
+              {back}
+            </span>
+            {current.nuance && (
+              <span className="block whitespace-pre-line text-sm text-neutral-400">
+                뉘앙스: {current.nuance}
+              </span>
+            )}
+            <p className="text-sm text-neutral-400">
+              내 답: {meaningInput || "(빈 답)"}
+              {askNuance && ` · ${nuanceInput || "(빈 답)"}`}
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-1.5">
+              {askNuance && (
+                <>
+                  <Badge ok={meaningCorrect} label={`뜻 ${meaningCorrect ? "정답" : "오답"}`} />
+                  <Badge ok={!!nuanceCorrect} label={`뉘앙스 ${nuanceCorrect ? "정답" : "오답"}`} />
+                </>
+              )}
+              <Badge ok={overallCorrect} label={overallCorrect ? "종합 정답" : "종합 오답"} />
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="mt-5">
+        {phase === "meaning" && (
+          <button
+            onClick={submitMeaning}
+            className="w-full rounded-xl bg-neutral-900 py-3.5 font-semibold text-white dark:bg-white dark:text-neutral-900"
+          >
+            확인
+          </button>
+        )}
+        {phase === "nuance" && (
+          <button
+            onClick={submitNuance}
+            className="w-full rounded-xl bg-neutral-900 py-3.5 font-semibold text-white dark:bg-white dark:text-neutral-900"
+          >
+            확인
+          </button>
+        )}
+        {phase === "reveal" && (
+          <div className="space-y-2">
+            <button
+              onClick={() => setOverallCorrect((v) => !v)}
+              className="w-full rounded-xl border border-neutral-300 py-2.5 text-sm text-neutral-500 dark:border-neutral-700"
+            >
+              {overallCorrect ? "아니에요, 사실 틀렸어요" : "아니에요, 사실 맞았어요"}
+            </button>
+            <button
+              onClick={proceed}
+              className="w-full rounded-xl bg-neutral-900 py-3.5 font-semibold text-white dark:bg-white dark:text-neutral-900"
+            >
+              다음
+            </button>
+          </div>
+        )}
       </div>
     </div>
+  );
+}
+
+function Badge({ ok, label }: { ok: boolean; label: string }) {
+  return (
+    <span
+      className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
+        ok
+          ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400"
+          : "bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-400"
+      }`}
+    >
+      {label}
+    </span>
   );
 }

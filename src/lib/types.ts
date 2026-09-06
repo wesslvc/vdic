@@ -37,5 +37,7 @@ export type ProgressData = {
   version: 1;
   wordStats: Record<string, WordStat>;
   lectureOverrides: Record<string, number>;
+  meaningOverrides: Record<string, string>;
+  nuanceNotes: Record<string, string>;
   sessionLog: SessionLogEntry[];
 };

@@ -59,6 +59,18 @@ export function StudySession({
     }
   }, [phase, index]);
 
+  useEffect(() => {
+    if (phase !== "reveal") return;
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        proceed();
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  });
+
   if (order.length === 0) {
     return (
       <div className="rounded-2xl border border-dashed border-neutral-300 p-8 text-center text-neutral-500 dark:border-neutral-700">

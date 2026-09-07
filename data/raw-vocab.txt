@@ -101,7 +101,7 @@ comprehensive
 comprehensible
 아해할 수 있는(=understandable, intelligible)
 mixed
-+ - 공존
+공존
 occupy
 차지하다
 be occupied with A
@@ -109,9 +109,9 @@ A에 사로잡히다(=be absorbed by A)
 be absorbed by ( with )
 A 에 사로 잡히다
 struggle
--이미지, 무언가 잘 안될 때(서장훈 is struggling)
+무언가 잘 안될 때(서장훈 is struggling)
 Strive
-+이미지, 열심히 하는 이미지
+열심히 하는 이미지
 Vacuum
 진공상태, 고립된 상태(=isolated)
 myth
@@ -145,9 +145,9 @@ A를 산출하다
 yield to A
 A에게 굴복하다
 fascinate
-+이미지, 유혹하다
+유혹하다
 tempt
--이미지, 하면 안되는 것을 유혹하다
+하면 안되는 것을 유혹하다
 develop
 개발하다, 성장하다(생명체), 발생하다(부정적인 것)
 developed countries
@@ -373,11 +373,11 @@ A를 고려하다(여러가지 중 중요하니까)
 account for A
 A를 차지하다
 edge
-이점(+이미지)
+이점
 cutting-edge
 첨단
 rewarding
-좋은(+이미지)(<->demanding)
+좋은(<->demanding)
 substantial
 상당한(=large)(<->sufficient:충분한)
 originate
@@ -475,7 +475,7 @@ A 에 영향을 받지 않는
 in this light
 이러한 측면에서(=in this respect)
 sound
-+이미지, 건전한, 견고한
+건전한, 견고한
 fineq
 미세한, 정교한, 순수한(refine:정제하다, fine gold:순금), 벌금
 treat

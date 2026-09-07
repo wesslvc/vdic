@@ -1,5 +1,8 @@
 {
-  "meaningOverrides": {},
+  "meaningOverrides": {
+    "w51": "이해할 수 있는(=understandable, intelligible)"
+  },
+  "termOverrides": {},
   "nuanceNotes": {
     "w10": "+",
     "w11": "-",

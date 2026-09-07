@@ -3,10 +3,14 @@ import { GITHUB_OWNER, GITHUB_REPO, GITHUB_BRANCH, OVERRIDES_PATH } from "@/lib/
 
 export const runtime = "nodejs";
 
+type CustomWord = { id: string; term: string; meaning: string; lectureId: number };
+
 type OverridesPayload = {
   meaningOverrides?: Record<string, string>;
   nuanceNotes?: Record<string, string>;
   lectureOverrides?: Record<string, number>;
+  memos?: Record<string, string>;
+  customWords?: Record<string, CustomWord>;
 };
 
 function contentsUrl() {
@@ -54,6 +58,8 @@ export async function POST(req: NextRequest) {
     meaningOverrides: { ...current.meaningOverrides, ...body.meaningOverrides },
     nuanceNotes: { ...current.nuanceNotes, ...body.nuanceNotes },
     lectureOverrides: { ...current.lectureOverrides, ...body.lectureOverrides },
+    memos: { ...current.memos, ...body.memos },
+    customWords: { ...current.customWords, ...body.customWords },
   };
   const content = Buffer.from(JSON.stringify(merged, null, 2) + "\n", "utf-8").toString("base64");
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import type { ProgressData, SessionLogEntry, WordStat } from "./types";
+import type { CustomWord, ProgressData, SessionLogEntry, WordStat } from "./types";
 import { todayStr } from "./date";
 import { pullOverrides, pushOverrides } from "./sync";
 
@@ -14,7 +14,9 @@ function emptyData(): ProgressData {
     lectureOverrides: {},
     meaningOverrides: {},
     nuanceNotes: {},
+    memos: {},
     favorites: {},
+    customWords: {},
     sessionLog: [],
   };
 }
@@ -31,7 +33,9 @@ function loadFromStorage(): ProgressData {
       lectureOverrides: parsed.lectureOverrides ?? {},
       meaningOverrides: parsed.meaningOverrides ?? {},
       nuanceNotes: parsed.nuanceNotes ?? {},
+      memos: parsed.memos ?? {},
       favorites: parsed.favorites ?? {},
+      customWords: parsed.customWords ?? {},
       sessionLog: Array.isArray(parsed.sessionLog) ? parsed.sessionLog : [],
     };
   } catch {
@@ -54,6 +58,8 @@ function ensureHydrated() {
         meaningOverrides: { ...remote.meaningOverrides, ...state.meaningOverrides },
         nuanceNotes: { ...remote.nuanceNotes, ...state.nuanceNotes },
         lectureOverrides: { ...remote.lectureOverrides, ...state.lectureOverrides },
+        memos: { ...remote.memos, ...state.memos },
+        customWords: { ...remote.customWords, ...state.customWords },
       });
     });
   }
@@ -64,6 +70,8 @@ function syncPush() {
     meaningOverrides: state.meaningOverrides,
     nuanceNotes: state.nuanceNotes,
     lectureOverrides: state.lectureOverrides,
+    memos: state.memos,
+    customWords: state.customWords,
   });
 }
 
@@ -74,6 +82,8 @@ export function syncNow() {
     meaningOverrides: state.meaningOverrides,
     nuanceNotes: state.nuanceNotes,
     lectureOverrides: state.lectureOverrides,
+    memos: state.memos,
+    customWords: state.customWords,
   });
 }
 
@@ -194,6 +204,20 @@ export function setNuanceNote(wordId: string, nuance: string) {
   syncPush();
 }
 
+/** A free-text note shown alongside the answer every time, regardless of right/wrong - not quizzed. */
+export function setMemo(wordId: string, memo: string) {
+  ensureHydrated();
+  const memos = { ...state.memos };
+  const trimmed = memo.trim();
+  if (!trimmed) {
+    delete memos[wordId];
+  } else {
+    memos[wordId] = trimmed;
+  }
+  setState({ ...state, memos });
+  syncPush();
+}
+
 export function isFavorite(wordId: string): boolean {
   ensureHydrated();
   return !!state.favorites[wordId];
@@ -210,6 +234,24 @@ export function toggleFavorite(wordId: string) {
   setState({ ...state, favorites });
 }
 
+/** Adds a word the user typed in themselves. Returns the new word's id. */
+export function addCustomWord(term: string, meaning: string, lectureId: number): string {
+  ensureHydrated();
+  const id = `c${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+  const word: CustomWord = { id, term: term.trim(), meaning: meaning.trim(), lectureId };
+  setState({ ...state, customWords: { ...state.customWords, [id]: word } });
+  syncPush();
+  return id;
+}
+
+export function deleteCustomWord(id: string) {
+  ensureHydrated();
+  const customWords = { ...state.customWords };
+  delete customWords[id];
+  setState({ ...state, customWords });
+  syncPush();
+}
+
 export function logSession(entry: Omit<SessionLogEntry, "id" | "date" | "timestamp">) {
   ensureHydrated();
   const full: SessionLogEntry = {
@@ -221,8 +263,8 @@ export function logSession(entry: Omit<SessionLogEntry, "id" | "date" | "timesta
   setState({ ...state, sessionLog: [full, ...state.sessionLog] });
 }
 
-/** Clears study stats and the session log, but keeps word edits (meaning/nuance/lecture
- * reassignment) intact - those are corrections to the data itself, not learning progress. */
+/** Clears study stats and the session log, but keeps word edits (meaning/nuance/memo/lecture
+ * reassignment/custom words) intact - those are corrections to the data itself, not progress. */
 export function resetStudyProgress() {
   setState({ ...state, wordStats: {}, sessionLog: [] });
 }
@@ -249,7 +291,9 @@ export function importProgressJSON(json: string): { ok: true } | { ok: false; er
       lectureOverrides: parsed.lectureOverrides ?? {},
       meaningOverrides: parsed.meaningOverrides ?? {},
       nuanceNotes: parsed.nuanceNotes ?? {},
+      memos: parsed.memos ?? {},
       favorites: parsed.favorites ?? {},
+      customWords: parsed.customWords ?? {},
       sessionLog: Array.isArray(parsed.sessionLog) ? parsed.sessionLog : [],
     });
     return { ok: true };

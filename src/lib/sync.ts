@@ -1,6 +1,7 @@
 "use client";
 
 import { RAW_OVERRIDES_URL } from "./syncConfig";
+import type { CustomWord } from "./types";
 
 const SECRET_KEY = "vdic:sync-secret";
 
@@ -30,6 +31,8 @@ export type OverridesBundle = {
   meaningOverrides: Record<string, string>;
   nuanceNotes: Record<string, string>;
   lectureOverrides: Record<string, number>;
+  memos: Record<string, string>;
+  customWords: Record<string, CustomWord>;
 };
 
 /** Pushes local overrides to GitHub (fire-and-forget from callers). No-op if no secret is set. */
@@ -61,6 +64,8 @@ export async function pullOverrides(): Promise<OverridesBundle | null> {
       meaningOverrides: data.meaningOverrides ?? {},
       nuanceNotes: data.nuanceNotes ?? {},
       lectureOverrides: data.lectureOverrides ?? {},
+      memos: data.memos ?? {},
+      customWords: data.customWords ?? {},
     };
   } catch {
     return null;

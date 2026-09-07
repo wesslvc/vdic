@@ -2,8 +2,14 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { getAllWords, getLectures } from "@/lib/catalog";
-import { effectiveLectureId, lectureProgress, overallStats, wordsForLecture } from "@/lib/derived";
+import { getLectures } from "@/lib/catalog";
+import {
+  effectiveLectureId,
+  getAllWordsWithCustom,
+  lectureProgress,
+  overallStats,
+  wordsForLecture,
+} from "@/lib/derived";
 import { useProgress } from "@/lib/progressStore";
 import { LectureCard } from "@/components/LectureCard";
 import { StudySession } from "@/components/StudySession";
@@ -22,10 +28,10 @@ export default function Home() {
   const searchResults = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
-    return getAllWords()
+    return getAllWordsWithCustom(progress)
       .filter((w) => w.term.toLowerCase().includes(q) || w.meaning.includes(q))
       .slice(0, 20);
-  }, [query]);
+  }, [query, progress]);
 
   function toggleSelectMode() {
     setSelectMode((v) => !v);

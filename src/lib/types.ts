@@ -33,12 +33,22 @@ export type SessionLogEntry = {
   correctCount: number;
 };
 
+/** A word added by hand through the app, not from the source notes. */
+export type CustomWord = {
+  id: string;
+  term: string;
+  meaning: string;
+  lectureId: number;
+};
+
 export type ProgressData = {
   version: 1;
   wordStats: Record<string, WordStat>;
   lectureOverrides: Record<string, number>;
   meaningOverrides: Record<string, string>;
   nuanceNotes: Record<string, string>;
+  memos: Record<string, string>;
   favorites: Record<string, true>;
+  customWords: Record<string, CustomWord>;
   sessionLog: SessionLogEntry[];
 };

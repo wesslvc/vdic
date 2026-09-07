@@ -1,7 +1,7 @@
-import { getLecture, getLectures, getWordCatalogLecture, wordIndex } from "./catalog";
+import { getAllWords, getLectures, getWordCatalogLecture, wordIndex } from "./catalog";
 import type { ProgressData, Word } from "./types";
 
-export type StudyWord = Word & { nuance?: string };
+export type StudyWord = Word & { nuance?: string; memo?: string };
 
 export function effectiveMeaning(word: Word, progress: ProgressData): string {
   return progress.meaningOverrides[word.id] ?? word.meaning;
@@ -9,35 +9,38 @@ export function effectiveMeaning(word: Word, progress: ProgressData): string {
 
 export function toStudyWord(word: Word, progress: ProgressData): StudyWord {
   const nuance = progress.nuanceNotes[word.id];
+  const memo = progress.memos[word.id];
   return {
     ...word,
     meaning: effectiveMeaning(word, progress),
     ...(nuance ? { nuance } : {}),
+    ...(memo ? { memo } : {}),
   };
 }
 
-export function effectiveLectureId(wordId: string, progress: ProgressData): number {
-  return progress.lectureOverrides[wordId] ?? getWordCatalogLecture(wordId);
+/** Looks a word up by id, whether it's from the source notes or added by hand. */
+export function getWordById(wordId: string, progress: ProgressData): Word | undefined {
+  return wordIndex[wordId] ?? progress.customWords[wordId];
 }
 
-/** Words currently assigned to a lecture, accounting for manual reassignment and meaning/nuance edits. */
+/** All words - the source notes plus anything the user added by hand. */
+export function getAllWordsWithCustom(progress: ProgressData): Word[] {
+  return [...getAllWords(), ...Object.values(progress.customWords)];
+}
+
+export function effectiveLectureId(wordId: string, progress: ProgressData): number {
+  if (progress.lectureOverrides[wordId] != null) return progress.lectureOverrides[wordId];
+  const custom = progress.customWords[wordId];
+  if (custom) return custom.lectureId;
+  return getWordCatalogLecture(wordId);
+}
+
+/** Words currently assigned to a lecture, accounting for manual reassignment, custom additions,
+ * and meaning/nuance/memo edits. */
 export function wordsForLecture(lectureId: number, progress: ProgressData): StudyWord[] {
-  const catalogWords = getLecture(lectureId)?.words ?? [];
-  const movedIn: Word[] = [];
-  for (const [wordId, overrideLecture] of Object.entries(progress.lectureOverrides)) {
-    if (overrideLecture === lectureId) {
-      const w = wordIndex[wordId];
-      const catalogOwner = getWordCatalogLecture(wordId);
-      if (w && catalogOwner !== lectureId) movedIn.push(w);
-    }
-  }
-  const movedOutIds = new Set(
-    Object.entries(progress.lectureOverrides)
-      .filter(([, l]) => l !== lectureId)
-      .map(([id]) => id)
-  );
-  const stayed = catalogWords.filter((w) => !movedOutIds.has(w.id));
-  return [...stayed, ...movedIn].map((w) => toStudyWord(w, progress));
+  return getAllWordsWithCustom(progress)
+    .filter((w) => effectiveLectureId(w.id, progress) === lectureId)
+    .map((w) => toStudyWord(w, progress));
 }
 
 export type LectureProgress = {
@@ -71,7 +74,7 @@ export function allWrongWords(progress: ProgressData): StudyWord[] {
   const result: StudyWord[] = [];
   for (const [wordId, stat] of Object.entries(progress.wordStats)) {
     if (stat.lastResult === "wrong") {
-      const w = wordIndex[wordId];
+      const w = getWordById(wordId, progress);
       if (w) result.push(toStudyWord(w, progress));
     }
   }
@@ -98,7 +101,8 @@ export function overallStats(progress: ProgressData): OverallStats {
     if (w.lastResult === "correct") mastered++;
     if (w.lastResult === "wrong") wrongCount++;
   }
-  const totalWords = lectures.reduce((sum, l) => sum + l.words.length, 0);
+  const totalWords =
+    lectures.reduce((sum, l) => sum + l.words.length, 0) + Object.keys(progress.customWords).length;
   const studyDays = new Set(progress.sessionLog.map((s) => s.date)).size;
   const favoriteCount = Object.keys(progress.favorites).length;
   return { totalWords, attempted, mastered, wrongCount, favoriteCount, studyDays };
@@ -108,7 +112,7 @@ export function overallStats(progress: ProgressData): OverallStats {
 export function allFavoriteWords(progress: ProgressData): StudyWord[] {
   const result: StudyWord[] = [];
   for (const wordId of Object.keys(progress.favorites)) {
-    const w = wordIndex[wordId];
+    const w = getWordById(wordId, progress);
     if (w) result.push(toStudyWord(w, progress));
   }
   return result;

@@ -245,6 +245,11 @@ export function StudySession({
                 뉘앙스: {current.nuance}
               </span>
             )}
+            {current.memo && (
+              <span className="block whitespace-pre-line rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-800 dark:bg-amber-950 dark:text-amber-300">
+                📝 {current.memo}
+              </span>
+            )}
             <p className="text-sm text-neutral-400">
               내 답: {meaningInput || "(빈 답)"}
               {askNuance && ` · ${nuanceInput || "(빈 답)"}`}

@@ -3,12 +3,15 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { getAllWords, getLecture, getLectures, getWordCatalogLecture } from "@/lib/catalog";
-import { lectureProgress, wordsForLecture } from "@/lib/derived";
+import { getLecture, getLectures, getWordCatalogLecture } from "@/lib/catalog";
+import { getWordById, lectureProgress, wordsForLecture } from "@/lib/derived";
 import {
+  addCustomWord,
+  deleteCustomWord,
   getWordStat,
   moveWordToLecture,
   setMeaningOverride,
+  setMemo,
   setNuanceNote,
   toggleFavorite,
   useProgress,
@@ -26,15 +29,15 @@ export default function LecturePage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editMeaning, setEditMeaning] = useState("");
   const [editNuance, setEditNuance] = useState("");
+  const [editMemo, setEditMemo] = useState("");
+  const [adding, setAdding] = useState(false);
+  const [newTerm, setNewTerm] = useState("");
+  const [newMeaning, setNewMeaning] = useState("");
 
   const lecture = getLecture(lectureId);
   const allLectures = getLectures();
   const words = useMemo(() => wordsForLecture(lectureId, progress), [lectureId, progress]);
   const prog = lectureProgress(lectureId, progress);
-  const catalogWordIndex = useMemo(
-    () => Object.fromEntries(getAllWords().map((w) => [w.id, w])),
-    []
-  );
 
   if (!lecture) {
     return <p className="text-neutral-500">강의를 찾을 수 없어요.</p>;
@@ -59,17 +62,27 @@ export default function LecturePage() {
     );
   }
 
-  function startEdit(wordId: string, currentMeaning: string, currentNuance?: string) {
+  function startEdit(wordId: string, currentMeaning: string, currentNuance?: string, currentMemo?: string) {
     setEditingId(wordId);
     setEditMeaning(currentMeaning);
     setEditNuance(currentNuance ?? "");
+    setEditMemo(currentMemo ?? "");
   }
 
   function saveEdit(wordId: string) {
-    const catalogMeaning = catalogWordIndex[wordId]?.meaning ?? "";
-    setMeaningOverride(wordId, editMeaning, catalogMeaning);
+    const baseMeaning = getWordById(wordId, progress)?.meaning ?? "";
+    setMeaningOverride(wordId, editMeaning, baseMeaning);
     setNuanceNote(wordId, editNuance);
+    setMemo(wordId, editMemo);
     setEditingId(null);
+  }
+
+  function saveNewWord() {
+    if (!newTerm.trim() || !newMeaning.trim()) return;
+    addCustomWord(newTerm, newMeaning, lectureId);
+    setNewTerm("");
+    setNewMeaning("");
+    setAdding(false);
   }
 
   return (
@@ -99,17 +112,72 @@ export default function LecturePage() {
         이 강의 학습하기 ({words.length}개)
       </button>
 
+      <div className="mt-4">
+        {!adding ? (
+          <button
+            onClick={() => setAdding(true)}
+            className="w-full rounded-xl border border-dashed border-neutral-300 py-2.5 text-sm font-medium text-neutral-500 dark:border-neutral-700"
+          >
+            + 새 단어 추가
+          </button>
+        ) : (
+          <div className="space-y-2 rounded-xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-900">
+            <input
+              value={newTerm}
+              onChange={(e) => setNewTerm(e.target.value)}
+              placeholder="단어 (영어)"
+              autoComplete="off"
+              autoCapitalize="off"
+              className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-950"
+            />
+            <textarea
+              value={newMeaning}
+              onChange={(e) => setNewMeaning(e.target.value)}
+              placeholder="뜻"
+              rows={2}
+              className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-950"
+            />
+            <div className="flex gap-2">
+              <button
+                onClick={saveNewWord}
+                className="rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-semibold text-white dark:bg-white dark:text-neutral-900"
+              >
+                추가
+              </button>
+              <button
+                onClick={() => {
+                  setAdding(false);
+                  setNewTerm("");
+                  setNewMeaning("");
+                }}
+                className="rounded-lg border border-neutral-300 px-3 py-1.5 text-xs text-neutral-500 dark:border-neutral-700"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
       <h2 className="mb-2 mt-6 text-sm font-semibold text-neutral-500">단어 목록</h2>
       <ul className="divide-y divide-neutral-100 overflow-hidden rounded-xl border border-neutral-200 bg-white dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900">
         {words.map((w) => {
           const stat = mounted ? getWordStat(w.id) : null;
-          const catalogLec = getWordCatalogLecture(w.id);
+          const isCustom = w.id.startsWith("c");
+          const catalogLec = isCustom ? lectureId : getWordCatalogLecture(w.id);
           const isEditing = editingId === w.id;
           return (
             <li key={w.id} className="px-4 py-3">
               <div className="flex items-center gap-3">
                 <div className="min-w-0 flex-1">
-                  <p className="font-medium">{w.term}</p>
+                  <p className="font-medium">
+                    {w.term}
+                    {isCustom && (
+                      <span className="ml-1.5 rounded-full bg-neutral-100 px-1.5 py-0.5 text-[10px] font-normal text-neutral-500 dark:bg-neutral-800">
+                        직접 추가
+                      </span>
+                    )}
+                  </p>
                   {!isEditing && (
                     <p className="truncate text-sm text-neutral-500">
                       {w.meaning}
@@ -140,7 +208,7 @@ export default function LecturePage() {
                 </button>
                 <button
                   onClick={() =>
-                    isEditing ? setEditingId(null) : startEdit(w.id, w.meaning, w.nuance)
+                    isEditing ? setEditingId(null) : startEdit(w.id, w.meaning, w.nuance, w.memo)
                   }
                   className="shrink-0 text-xs text-neutral-400 underline"
                 >
@@ -178,7 +246,7 @@ export default function LecturePage() {
                   </div>
                   <div>
                     <label className="mb-1 block text-xs text-neutral-500">
-                      뉘앙스/관계 (선택, 예: +, -, A→B)
+                      뉘앙스/관계 (선택, 예: +, -, A→B) · 시험볼 때 물어봐요
                     </label>
                     <input
                       value={editNuance}
@@ -189,12 +257,37 @@ export default function LecturePage() {
                       <SymbolButtons onInsert={(s) => setEditNuance((v) => v + s)} />
                     </div>
                   </div>
-                  <button
-                    onClick={() => saveEdit(w.id)}
-                    className="rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-semibold text-white dark:bg-white dark:text-neutral-900"
-                  >
-                    저장
-                  </button>
+                  <div>
+                    <label className="mb-1 block text-xs text-neutral-500">
+                      메모 (선택) · 정답/오답과 상관없이 항상 보여줘요, 시험엔 안 나와요
+                    </label>
+                    <textarea
+                      value={editMemo}
+                      onChange={(e) => setEditMemo(e.target.value)}
+                      rows={2}
+                      placeholder="예문, 헷갈리는 포인트 등 자유롭게"
+                      className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+                    />
+                  </div>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => saveEdit(w.id)}
+                      className="rounded-lg bg-neutral-900 px-3 py-1.5 text-xs font-semibold text-white dark:bg-white dark:text-neutral-900"
+                    >
+                      저장
+                    </button>
+                    {isCustom && (
+                      <button
+                        onClick={() => {
+                          deleteCustomWord(w.id);
+                          setEditingId(null);
+                        }}
+                        className="rounded-lg border border-rose-300 px-3 py-1.5 text-xs font-semibold text-rose-600 dark:border-rose-900"
+                      >
+                        이 단어 삭제
+                      </button>
+                    )}
+                  </div>
                 </div>
               )}
             </li>

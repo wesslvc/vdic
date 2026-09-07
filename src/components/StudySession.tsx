@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { StudyWord } from "@/lib/derived";
 import { logSession, recordAnswer } from "@/lib/progressStore";
-import { isAnswerCorrect } from "@/lib/grading";
+import { isAnswerCorrect, isRelationExpression } from "@/lib/grading";
 import { SymbolButtons } from "@/components/SymbolButtons";
 
 function shuffle<T>(arr: T[]): T[] {
@@ -93,6 +93,7 @@ export function StudySession({
 
   const front = direction === "en-ko" ? current.term : current.meaning;
   const back = direction === "en-ko" ? current.meaning : current.term;
+  const relationAnswer = isRelationExpression(back);
 
   function resetCard() {
     setMeaningInput("");
@@ -187,6 +188,14 @@ export function StudySession({
               spellCheck={false}
               className="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-center text-lg dark:border-neutral-700 dark:bg-neutral-800"
             />
+            {relationAnswer && (
+              <div className="mt-2.5 flex justify-center">
+                <SymbolButtons
+                  variant="relation"
+                  onInsert={(s) => setMeaningInput((v) => v + s)}
+                />
+              </div>
+            )}
           </form>
         )}
 

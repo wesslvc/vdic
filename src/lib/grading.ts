@@ -56,6 +56,15 @@ export function splitCandidates(raw: string): string[] {
     .filter((p) => p.length > 0);
 }
 
+const RELATION_PATTERN = /^[a-z](↔|→|←|<->|->|<-|>|<)[a-z]$/i;
+
+/** True if the word's meaning is just a relation shorthand like "A<-B" rather than a Korean gloss. */
+export function isRelationExpression(rawAnswer: string): boolean {
+  const first = splitCandidates(rawAnswer)[0];
+  if (!first) return false;
+  return RELATION_PATTERN.test(first.replace(/\s+/g, ""));
+}
+
 /** True if `userInput` matches any accepted sense of `rawAnswer`, ignoring particles/endings. */
 export function isAnswerCorrect(userInput: string, rawAnswer: string): boolean {
   const userNorm = normalize(userInput);

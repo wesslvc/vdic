@@ -159,6 +159,12 @@ export default function LecturePage() {
                       rows={2}
                       className="w-full rounded-lg border border-neutral-300 bg-white px-2.5 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
                     />
+                    <div className="mt-1.5">
+                      <SymbolButtons
+                        variant="relation"
+                        onInsert={(s) => setEditMeaning((v) => v + s)}
+                      />
+                    </div>
                   </div>
                   <div>
                     <label className="mb-1 block text-xs text-neutral-500">

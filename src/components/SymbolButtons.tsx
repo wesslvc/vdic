@@ -1,11 +1,19 @@
 "use client";
 
-const SYMBOLS = ["+", "-", "→", "←", "↔"];
+const NUANCE_SYMBOLS = ["+", "-", "→", "←", "↔"];
+const RELATION_SYMBOLS = ["A", "→", "←", "↔", ">", "<", "B"];
 
-export function SymbolButtons({ onInsert }: { onInsert: (symbol: string) => void }) {
+export function SymbolButtons({
+  onInsert,
+  variant = "nuance",
+}: {
+  onInsert: (symbol: string) => void;
+  variant?: "nuance" | "relation";
+}) {
+  const symbols = variant === "relation" ? RELATION_SYMBOLS : NUANCE_SYMBOLS;
   return (
     <div className="flex flex-wrap gap-1.5">
-      {SYMBOLS.map((s) => (
+      {symbols.map((s) => (
         <button
           key={s}
           type="button"

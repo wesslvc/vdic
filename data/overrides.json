@@ -18,6 +18,8 @@
     "w242": "+"
   },
   "lectureOverrides": {},
-  "memos": {},
+  "memos": {
+    "w45": "State(상태) -> Station(고정) -> Stationary(정적인)"
+  },
   "customWords": {}
 }

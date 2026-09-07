@@ -261,6 +261,26 @@
           "id": "w50",
           "term": "comprehensive",
           "meaning": "포괄적인(=inclusive)"
+        },
+        {
+          "id": "w51",
+          "term": "comprehensible",
+          "meaning": "아해할 수 있는(=understandable, intelligible)"
+        },
+        {
+          "id": "w52",
+          "term": "curve",
+          "meaning": "곡선으로 나아가다, 곡선"
+        },
+        {
+          "id": "w53",
+          "term": "curb",
+          "meaning": "억제하다, 제한하다"
+        },
+        {
+          "id": "w54",
+          "term": "carve",
+          "meaning": "조각하다, 새기다"
         }
       ]
     },
@@ -270,97 +290,92 @@
       "subtitle": "챕터 02 · 제대로 아니?",
       "words": [
         {
-          "id": "w51",
-          "term": "comprehensible",
-          "meaning": "아해할 수 있는(=understandable, intelligible)"
-        },
-        {
-          "id": "w52",
+          "id": "w55",
           "term": "mixed",
           "meaning": "공존"
         },
         {
-          "id": "w53",
+          "id": "w56",
           "term": "occupy",
           "meaning": "차지하다"
         },
         {
-          "id": "w54",
+          "id": "w57",
           "term": "be occupied with A",
           "meaning": "A에 사로잡히다(=be absorbed by A)"
         },
         {
-          "id": "w55",
+          "id": "w58",
           "term": "be absorbed by ( with )",
           "meaning": "A 에 사로 잡히다"
         },
         {
-          "id": "w56",
+          "id": "w59",
           "term": "struggle",
           "meaning": "무언가 잘 안될 때(서장훈 is struggling)"
         },
         {
-          "id": "w57",
+          "id": "w60",
           "term": "Strive",
           "meaning": "열심히 하는 이미지"
         },
         {
-          "id": "w58",
+          "id": "w61",
           "term": "Vacuum",
           "meaning": "진공상태, 고립된 상태(=isolated)"
         },
         {
-          "id": "w59",
+          "id": "w62",
           "term": "myth",
           "meaning": "사실이 아닌 이야기(뒤에서 반대가 나올것 기대)"
         },
         {
-          "id": "w60",
+          "id": "w63",
           "term": "alien",
           "meaning": "외계인 , 외국인 , 이질적인"
         },
         {
-          "id": "w61",
+          "id": "w64",
           "term": "alienate",
           "meaning": "멀어지게 하다, 소외감을 느끼게 하다(=vacuum=isolated)"
         },
         {
-          "id": "w62",
+          "id": "w65",
           "term": "Alien Species",
           "meaning": "외래종"
         },
         {
-          "id": "w63",
+          "id": "w66",
           "term": "Weigh",
           "meaning": "무게가 ~이다, 중요하다, 따져 보다(양팔저울)"
         },
         {
-          "id": "w64",
+          "id": "w67",
           "term": "inform",
           "meaning": "알리다, 통지 하다"
         },
         {
-          "id": "w65",
+          "id": "w68",
           "term": "informed 명",
           "meaning": "좋은(많은 정보에 기반하기 때문에)"
         },
         {
-          "id": "w66",
+          "id": "w69",
           "term": "incident",
           "meaning": "사건"
         },
         {
-          "id": "w67",
+          "id": "w70",
           "term": "incidental",
           "meaning": "중요하지 않은"
         },
         {
-          "id": "w68",
+          "id": "w71",
           "term": "manipulate",
           "meaning": "조종하다, 조작하다(등처먹다, 가스라이팅)"
         },
         {
-          "id": "w69",
+          "id": "w72",
           "term": "optional",
           "meaning": "중요하지 않은(=incidental)"
         }
@@ -372,112 +387,112 @@
       "subtitle": "챕터 02 · 제대로 아니?",
       "words": [
         {
-          "id": "w70",
+          "id": "w73",
           "term": "submit A",
           "meaning": "A를 제출하다"
         },
         {
-          "id": "w71",
+          "id": "w74",
           "term": "submit to A",
           "meaning": "A에게 굴복하다"
         },
         {
-          "id": "w72",
+          "id": "w75",
           "term": "yield A",
           "meaning": "A를 산출하다"
         },
         {
-          "id": "w73",
+          "id": "w76",
           "term": "yield to A",
           "meaning": "A에게 굴복하다"
         },
         {
-          "id": "w74",
+          "id": "w77",
           "term": "fascinate",
           "meaning": "유혹하다"
         },
         {
-          "id": "w75",
+          "id": "w78",
           "term": "tempt",
           "meaning": "하면 안되는 것을 유혹하다"
         },
         {
-          "id": "w76",
+          "id": "w79",
           "term": "develop",
           "meaning": "개발하다, 성장하다(생명체), 발생하다(부정적인 것)"
         },
         {
-          "id": "w77",
+          "id": "w80",
           "term": "developed countries",
           "meaning": "선진국"
         },
         {
-          "id": "w78",
+          "id": "w81",
           "term": "developing countries",
           "meaning": "후진국(발전중인 국가x)=poor countries"
         },
         {
-          "id": "w79",
+          "id": "w82",
           "term": "suspect",
           "meaning": "~ 일거라 생각하다"
         },
         {
-          "id": "w80",
+          "id": "w83",
           "term": "doubt",
           "meaning": "~가 아닐거라 생각하다"
         },
         {
-          "id": "w81",
+          "id": "w84",
           "term": "adopt",
           "meaning": "입양하다, 채택 하다기존에 없던 새롭게 갖게 되는 느낌"
         },
         {
-          "id": "w82",
+          "id": "w85",
           "term": "adapt",
           "meaning": "적응하다,각색하다(change)"
         },
         {
-          "id": "w83",
+          "id": "w86",
           "term": "adaptation",
           "meaning": "각색"
         },
         {
-          "id": "w84",
+          "id": "w87",
           "term": "adapt A",
           "meaning": "A를 적응시키다"
         },
         {
-          "id": "w85",
+          "id": "w88",
           "term": "adapt to A",
           "meaning": "A로 적응 하다"
         },
         {
-          "id": "w86",
+          "id": "w89",
           "term": "faith",
           "meaning": "신뢰"
         },
         {
-          "id": "w87",
+          "id": "w90",
           "term": "faithful",
           "meaning": "충실한, 있는 그대로의"
         },
         {
-          "id": "w88",
+          "id": "w91",
           "term": "bother",
           "meaning": "괴롭히다"
         },
         {
-          "id": "w89",
+          "id": "w92",
           "term": "bother (부정)",
           "meaning": "(주로 부정문 의문문) 신경쓰다(사람들은 저에 대해서 말하는걸 즐겨하고 저에 대란 뒷담화를 하는것을 좋아해요 but i don't bother it)"
         },
         {
-          "id": "w90",
+          "id": "w93",
           "term": "tolerate",
           "meaning": "참다, 민감하지 않다"
         },
         {
-          "id": "w91",
+          "id": "w94",
           "term": "intolerance",
           "meaning": "과민증(민감하다)"
         }
@@ -489,57 +504,57 @@
       "subtitle": "챕터 02 · 제대로 아니?",
       "words": [
         {
-          "id": "w92",
+          "id": "w95",
           "term": "existing A",
           "meaning": "기존의 A"
         },
         {
-          "id": "w93",
+          "id": "w96",
           "term": "irony",
           "meaning": "+ - ,- +"
         },
         {
-          "id": "w94",
+          "id": "w97",
           "term": "paradox",
           "meaning": "+ -, - +"
         },
         {
-          "id": "w95",
+          "id": "w98",
           "term": "assume",
           "meaning": "(사실이 아닐 수도 있는것을)가정하다(반대가 사실일 가능성 기대)"
         },
         {
-          "id": "w96",
+          "id": "w99",
           "term": "assume 명사",
           "meaning": "취하다"
         },
         {
-          "id": "w97",
+          "id": "w100",
           "term": "Compromise",
           "meaning": "타협하다, 훼손시키다, 변절시키다(캡틴 아메리카 he's compromised so we don't need to be friends with him)"
         },
         {
-          "id": "w98",
+          "id": "w101",
           "term": "negotiate",
           "meaning": "협상하다(대등관계)"
         },
         {
-          "id": "w99",
+          "id": "w102",
           "term": "biology",
           "meaning": "타고남(=infant, innate, be programmed to v, gene, genetic, dna, hardwire, anchor)"
         },
         {
-          "id": "w100",
+          "id": "w103",
           "term": "exclusive",
           "meaning": "오직(only)"
         },
         {
-          "id": "w101",
+          "id": "w104",
           "term": "Prescribe",
           "meaning": "규정하다, 처방하다"
         },
         {
-          "id": "w102",
+          "id": "w105",
           "term": "Presume",
           "meaning": "(사실이 아닐수도 있는것을 사실이라)추정하다(=assume)"
         }
@@ -551,82 +566,82 @@
       "subtitle": "챕터 02 · 제대로 아니?",
       "words": [
         {
-          "id": "w103",
+          "id": "w106",
           "term": "mere",
           "meaning": "겨우 그래봤자 고작(무시 깔보는 이미지)"
         },
         {
-          "id": "w104",
+          "id": "w107",
           "term": "static",
           "meaning": "고정된"
         },
         {
-          "id": "w105",
+          "id": "w108",
           "term": "displace",
           "meaning": "대체하다 (어떤 위치한것에 대해 dis 를 걸어 버린다는 이미지로 쫓아 내다까지)"
         },
         {
-          "id": "w106",
+          "id": "w109",
           "term": "seize",
           "meaning": "붙잡다(확 잡아서 자기쪽으로 끌어 당기는 이미지로 기회 주도권을 잡다까지)"
         },
         {
-          "id": "w107",
+          "id": "w110",
           "term": "seige",
           "meaning": "포위"
         },
         {
-          "id": "w108",
+          "id": "w111",
           "term": "orientation",
           "meaning": "성향(삶의 방식에 있어서 방향을 잡는다)"
         },
         {
-          "id": "w109",
+          "id": "w112",
           "term": "disorient",
           "meaning": "방향을 잡지못하다(물리적, 추상적 둘다 해당)"
         },
         {
-          "id": "w110",
+          "id": "w113",
           "term": "identify",
           "meaning": "확인하다"
         },
         {
-          "id": "w111",
+          "id": "w114",
           "term": "identificiation",
           "meaning": "신원확인, 신분증"
         },
         {
-          "id": "w112",
+          "id": "w115",
           "term": "identity",
           "meaning": "신원, 정체성"
         },
         {
-          "id": "w113",
+          "id": "w116",
           "term": "identify with A",
           "meaning": "A와 동일시하다"
         },
         {
-          "id": "w114",
+          "id": "w117",
           "term": "reconsider",
           "meaning": "재고하다(결국 기존의 상황에 대해 변화가 있어야한다는 이미지)"
         },
         {
-          "id": "w115",
+          "id": "w118",
           "term": "counterpart",
           "meaning": "상응, 대응 관계에 있는 사람(반대가 아니라 동일한 지위나 기능)"
         },
         {
-          "id": "w116",
+          "id": "w119",
           "term": "mobilize",
           "meaning": "동원하다(단순한 이동이 아니라 특정한 목적이 전제된 상태)"
         },
         {
-          "id": "w117",
+          "id": "w120",
           "term": "initiate",
           "meaning": "시작하다"
         },
         {
-          "id": "w118",
+          "id": "w121",
           "term": "initiative",
           "meaning": "진취성, 계획(남들이 하기전에 가장 먼저 시작하는 이미지)"
         }
@@ -638,97 +653,97 @@
       "subtitle": "챕터 03 · 다 아니?",
       "words": [
         {
-          "id": "w119",
+          "id": "w122",
           "term": "established",
           "meaning": "인정받는, 저명한"
         },
         {
-          "id": "w120",
+          "id": "w123",
           "term": "even",
           "meaning": "평평한, 고른, 짝수의"
         },
         {
-          "id": "w121",
+          "id": "w124",
           "term": "odd",
           "meaning": "이상한, 홀수의"
         },
         {
-          "id": "w122",
+          "id": "w125",
           "term": "odds",
           "meaning": "가능성 , 고난"
         },
         {
-          "id": "w123",
+          "id": "w126",
           "term": "mean",
           "meaning": "비열한, 중간"
         },
         {
-          "id": "w124",
+          "id": "w127",
           "term": "means",
           "meaning": "수단, 방법, 돈"
         },
         {
-          "id": "w125",
+          "id": "w128",
           "term": "claim",
           "meaning": "주장하다, (목숨을)앗아가다"
         },
         {
-          "id": "w126",
+          "id": "w129",
           "term": "subject",
           "meaning": "주제, 과목, 피실험자, ~의 영향을 받다(=be affected by)"
         },
         {
-          "id": "w127",
+          "id": "w130",
           "term": "Contemporary",
           "meaning": "동시대의, 동시대인, 현재의"
         },
         {
-          "id": "w128",
+          "id": "w131",
           "term": "demanding A",
           "meaning": "힘든(자꾸 많은것을 요구하는 이미지)"
         },
         {
-          "id": "w129",
+          "id": "w132",
           "term": "consequence",
           "meaning": "결과, 중요성"
         },
         {
-          "id": "w130",
+          "id": "w133",
           "term": "sequence",
           "meaning": "순서"
         },
         {
-          "id": "w131",
+          "id": "w134",
           "term": "consequential",
           "meaning": "중요한"
         },
         {
-          "id": "w132",
+          "id": "w135",
           "term": "providing, Provided SV",
           "meaning": "If로 읽기(가정법)"
         },
         {
-          "id": "w133",
+          "id": "w136",
           "term": "Provision",
           "meaning": "공급 , 준비"
         },
         {
-          "id": "w134",
+          "id": "w137",
           "term": "rather",
           "meaning": "오히려~~~ 부등호달고 달리기"
         },
         {
-          "id": "w135",
+          "id": "w138",
           "term": "Instead of A~, B~",
           "meaning": "A<->B"
         },
         {
-          "id": "w136",
+          "id": "w139",
           "term": "game",
           "meaning": "사냥감"
         },
         {
-          "id": "w137",
+          "id": "w140",
           "term": "moter",
           "meaning": "자동차, 운동의"
         }
@@ -740,122 +755,122 @@
       "subtitle": "챕터 03 · 다 아니?",
       "words": [
         {
-          "id": "w138",
+          "id": "w141",
           "term": "rate",
           "meaning": "비율, 속도, 등급을 매기다"
         },
         {
-          "id": "w139",
+          "id": "w142",
           "term": "Contain",
           "meaning": "포함하다, 억제하다(컨테이너 생각! 바깥으로 빠져나가지 못하도록 하는 이미지)"
         },
         {
-          "id": "w140",
+          "id": "w143",
           "term": "vehicle",
           "meaning": "차량, 수단"
         },
         {
-          "id": "w141",
+          "id": "w144",
           "term": "flavor",
           "meaning": "맛, 특징"
         },
         {
-          "id": "w142",
+          "id": "w145",
           "term": "celebrity",
           "meaning": "유명 인사(셀수 o) , 명성(셀수 x)"
         },
         {
-          "id": "w143",
+          "id": "w146",
           "term": "virtual",
           "meaning": "가상의, 사실상의(문맥으로 판단)"
         },
         {
-          "id": "w144",
+          "id": "w147",
           "term": "scarce",
           "meaning": "부족한 , 드문"
         },
         {
-          "id": "w145",
+          "id": "w148",
           "term": "scarcity",
           "meaning": "부족, 희소성(경제적)"
         },
         {
-          "id": "w146",
+          "id": "w149",
           "term": "hardly rarely seldom scarcely",
           "meaning": "거의 ~ 하지 않는"
         },
         {
-          "id": "w147",
+          "id": "w150",
           "term": "grant",
           "meaning": "주다 , 보조금, 장학금"
         },
         {
-          "id": "w148",
+          "id": "w151",
           "term": "take A for granted",
           "meaning": "A를 당연시 여기다"
         },
         {
-          "id": "w149",
+          "id": "w152",
           "term": "Granted (that) S V~",
           "meaning": "그래.. 너 말은 인정해,, 근데!!(반전 기대)"
         },
         {
-          "id": "w150",
+          "id": "w153",
           "term": "engage",
           "meaning": "관심을 끌다(잡아서 내 쪽으로 끌어 당기는 이미지)"
         },
         {
-          "id": "w151",
+          "id": "w154",
           "term": "engage in A",
           "meaning": "A에 참여하다, 관여하다"
         },
         {
-          "id": "w152",
+          "id": "w155",
           "term": "engaging",
           "meaning": "매력적인(=attractive)"
         },
         {
-          "id": "w153",
+          "id": "w156",
           "term": "colony",
           "meaning": "식민지, 군집"
         },
         {
-          "id": "w154",
+          "id": "w157",
           "term": "settle",
           "meaning": "정착하다(자동사), ~를 해결하다(타동사)"
         },
         {
-          "id": "w155",
+          "id": "w158",
           "term": "dispute",
           "meaning": "분쟁을 벌이다"
         },
         {
-          "id": "w156",
+          "id": "w159",
           "term": "undisputed",
           "meaning": "반박의 여자가 없는, 확실한"
         },
         {
-          "id": "w157",
+          "id": "w160",
           "term": "context",
           "meaning": "상황"
         },
         {
-          "id": "w158",
+          "id": "w161",
           "term": "break",
           "meaning": "뉴스가 알려지다, 소식을 알리다"
         },
         {
-          "id": "w159",
+          "id": "w162",
           "term": "breaking news",
           "meaning": "긴급 속보"
         },
         {
-          "id": "w160",
+          "id": "w163",
           "term": "relevant",
           "meaning": "관련 있는 , 중요한 , 적절한"
         },
         {
-          "id": "w161",
+          "id": "w164",
           "term": "appreciate",
           "meaning": "고마워하다, 진가를 알아보다, 환영하다(높이 평가 하는 이미지)"
         }
@@ -867,152 +882,152 @@
       "subtitle": "챕터 03 · 다 아니?",
       "words": [
         {
-          "id": "w162",
+          "id": "w165",
           "term": "exceptional",
           "meaning": "뛰어난(=outstanding)(예외적인 같은 부정적 뉘앙스x)"
         },
         {
-          "id": "w163",
+          "id": "w166",
           "term": "credit",
           "meaning": "공로, 업적, 학점, 신용"
         },
         {
-          "id": "w164",
+          "id": "w167",
           "term": "A be credited to B",
           "meaning": "A<-B"
         },
         {
-          "id": "w165",
+          "id": "w168",
           "term": "frequency",
           "meaning": "주파수"
         },
         {
-          "id": "w166",
+          "id": "w169",
           "term": "count",
           "meaning": "중요하다, 간주하다"
         },
         {
-          "id": "w167",
+          "id": "w170",
           "term": "count on somebody",
           "meaning": "의지하다(=rely on)"
         },
         {
-          "id": "w168",
+          "id": "w171",
           "term": "Count A as B",
           "meaning": "A를 B로 간주하다(=regard A as B)"
         },
         {
-          "id": "w169",
+          "id": "w172",
           "term": "case",
           "meaning": "경우, 소송, 상자"
         },
         {
-          "id": "w170",
+          "id": "w173",
           "term": "the case",
           "meaning": "사실"
         },
         {
-          "id": "w171",
+          "id": "w174",
           "term": "make the case",
           "meaning": "주장을 하다"
         },
         {
-          "id": "w172",
+          "id": "w175",
           "term": "inquire",
           "meaning": "물어보다"
         },
         {
-          "id": "w173",
+          "id": "w176",
           "term": "inquiry",
           "meaning": "질문, 조사, 탐구"
         },
         {
-          "id": "w174",
+          "id": "w177",
           "term": "Positive",
           "meaning": "양성의, 적극적인"
         },
         {
-          "id": "w175",
+          "id": "w178",
           "term": "negative",
           "meaning": "음성의, 소극적인"
         },
         {
-          "id": "w176",
+          "id": "w179",
           "term": "Chemistry",
           "meaning": "화학, 교감"
         },
         {
-          "id": "w177",
+          "id": "w180",
           "term": "cell",
           "meaning": "세포, 독방, 칸"
         },
         {
-          "id": "w178",
+          "id": "w181",
           "term": "contract",
           "meaning": "계약하다, 수축시키다, (병에)걸리다"
         },
         {
-          "id": "w179",
+          "id": "w182",
           "term": "register",
           "meaning": "등록하다, 나타낸다, 인식하다(뇌에 등록하다)"
         },
         {
-          "id": "w180",
+          "id": "w183",
           "term": "agent",
           "meaning": "행위자, 대리인, 중개인"
         },
         {
-          "id": "w181",
+          "id": "w184",
           "term": "agency",
           "meaning": "행위"
         },
         {
-          "id": "w182",
+          "id": "w185",
           "term": "figure",
           "meaning": "모양, 수치, (등장)인물, 생각하다"
         },
         {
-          "id": "w183",
+          "id": "w186",
           "term": "figure out",
           "meaning": "알아내다"
         },
         {
-          "id": "w184",
+          "id": "w187",
           "term": "account",
           "meaning": "계좌, 이야기(설명), 중요성"
         },
         {
-          "id": "w185",
+          "id": "w188",
           "term": "accountable",
           "meaning": "책임이 있는"
         },
         {
-          "id": "w186",
+          "id": "w189",
           "term": "take A into account",
           "meaning": "A를 고려하다(여러가지 중 중요하니까)"
         },
         {
-          "id": "w187",
+          "id": "w190",
           "term": "account for A",
           "meaning": "A를 차지하다"
         },
         {
-          "id": "w188",
+          "id": "w191",
           "term": "edge",
           "meaning": "이점"
         },
         {
-          "id": "w189",
+          "id": "w192",
           "term": "cutting-edge",
           "meaning": "첨단"
         },
         {
-          "id": "w190",
+          "id": "w193",
           "term": "rewarding",
           "meaning": "좋은(<->demanding)"
         },
         {
-          "id": "w191",
+          "id": "w194",
           "term": "substantial",
           "meaning": "상당한(=large)(<->sufficient:충분한)"
         }
@@ -1024,157 +1039,157 @@
       "subtitle": "챕터 03 · 다 아니?",
       "words": [
         {
-          "id": "w192",
+          "id": "w195",
           "term": "originate",
           "meaning": "~에서 비롯하다"
         },
         {
-          "id": "w193",
+          "id": "w196",
           "term": "Original",
           "meaning": "독창적인(처음에 한거니까)"
         },
         {
-          "id": "w194",
+          "id": "w197",
           "term": "originality",
           "meaning": "독창성"
         },
         {
-          "id": "w195",
+          "id": "w198",
           "term": "measure",
           "meaning": "측정하다, 조치, 정책"
         },
         {
-          "id": "w196",
+          "id": "w199",
           "term": "address",
           "meaning": "주소, 연설, 다루다"
         },
         {
-          "id": "w197",
+          "id": "w200",
           "term": "represent",
           "meaning": "대표하다, 표현하다, 나타내다"
         },
         {
-          "id": "w198",
+          "id": "w201",
           "term": "compound",
           "meaning": "혼합하다, 혼합물, 악화시키다"
         },
         {
-          "id": "w199",
+          "id": "w202",
           "term": "observe",
           "meaning": "관찰하다, 지키다, 준수하다"
         },
         {
-          "id": "w200",
+          "id": "w203",
           "term": "observation",
           "meaning": "관찰"
         },
         {
-          "id": "w201",
+          "id": "w204",
           "term": "observance",
           "meaning": "준수"
         },
         {
-          "id": "w202",
+          "id": "w205",
           "term": "anchor",
           "meaning": "닻을 내리다, 타고난(몸에 안에서 고정된 채로 태어난)(=biology~)"
         },
         {
-          "id": "w203",
+          "id": "w206",
           "term": "margin",
           "meaning": "주변부(코어가 아닌 부분), 하찮은것"
         },
         {
-          "id": "w204",
+          "id": "w207",
           "term": "marginal",
           "meaning": "중요하지 않은"
         },
         {
-          "id": "w205",
+          "id": "w208",
           "term": "marginalize",
           "meaning": "무시하다, 소외시키다(=ignore=alienate)"
         },
         {
-          "id": "w206",
+          "id": "w209",
           "term": "shallow",
           "meaning": "얕은, 천박한(생각이 얕은), 피상적인"
         },
         {
-          "id": "w207",
+          "id": "w210",
           "term": "respect",
           "meaning": "면, 점"
         },
         {
-          "id": "w208",
+          "id": "w211",
           "term": "in this respect",
           "meaning": "이러한 측면에서(=in this light)"
         },
         {
-          "id": "w209",
+          "id": "w212",
           "term": "respectable",
           "meaning": "존경할만한"
         },
         {
-          "id": "w210",
+          "id": "w213",
           "term": "respective",
           "meaning": "각각의"
         },
         {
-          "id": "w211",
+          "id": "w214",
           "term": "respectively",
           "meaning": "각각"
         },
         {
-          "id": "w212",
+          "id": "w215",
           "term": "property",
           "meaning": "재산, 특성, 속성"
         },
         {
-          "id": "w213",
+          "id": "w216",
           "term": "rough",
           "meaning": "거친, 대략적인(=approximate) rough하게 봤을때~"
         },
         {
-          "id": "w214",
+          "id": "w217",
           "term": "succeed to v",
           "meaning": "성공하다"
         },
         {
-          "id": "w215",
+          "id": "w218",
           "term": "succeed to 명사",
           "meaning": "계승하다"
         },
         {
-          "id": "w216",
+          "id": "w219",
           "term": "successive",
           "meaning": "연속적인(<->successful:성공적인)"
         },
         {
-          "id": "w217",
+          "id": "w220",
           "term": "succession",
           "meaning": "연속물"
         },
         {
-          "id": "w218",
+          "id": "w221",
           "term": "custom",
           "meaning": "개별적, 저기만의것-> 관습, 풍습"
         },
         {
-          "id": "w219",
+          "id": "w222",
           "term": "customize",
           "meaning": "맞춤 제작"
         },
         {
-          "id": "w220",
+          "id": "w223",
           "term": "customization",
           "meaning": "맞춤화"
         },
         {
-          "id": "w221",
+          "id": "w224",
           "term": "climate",
           "meaning": "기후, 분위기"
         },
         {
-          "id": "w222",
+          "id": "w225",
           "term": "pitch",
           "meaning": "투구, 음 높이, 던지다"
         }
@@ -1186,127 +1201,127 @@
       "subtitle": "챕터 03 · 다 아니?",
       "words": [
         {
-          "id": "w223",
+          "id": "w226",
           "term": "cast",
           "meaning": "던지다(윌슨 cast away), (그림자를)드리우다, 출연진, 깁스"
         },
         {
-          "id": "w224",
+          "id": "w227",
           "term": "score",
           "meaning": "악보"
         },
         {
-          "id": "w225",
+          "id": "w228",
           "term": "scores of",
           "meaning": "아주 많이(=a lot of)"
         },
         {
-          "id": "w226",
+          "id": "w229",
           "term": "integrate",
           "meaning": "통합시키다"
         },
         {
-          "id": "w227",
+          "id": "w230",
           "term": "integral",
           "meaning": "필수적인"
         },
         {
-          "id": "w228",
+          "id": "w231",
           "term": "integrity",
           "meaning": "온전함, 진실성, 청렴"
         },
         {
-          "id": "w229",
+          "id": "w232",
           "term": "mark",
           "meaning": "특징짓다(임마는 좀 특이하네 체크!)"
         },
         {
-          "id": "w230",
+          "id": "w233",
           "term": "A condition B",
           "meaning": "A가 B를 조건화시키다(종소리가 개를 조건화시키다) A->B"
         },
         {
-          "id": "w231",
+          "id": "w234",
           "term": "unconditional",
           "meaning": "무조건적인"
         },
         {
-          "id": "w232",
+          "id": "w235",
           "term": "precondition",
           "meaning": "전제 조건"
         },
         {
-          "id": "w233",
+          "id": "w236",
           "term": "minute",
           "meaning": "미세한"
         },
         {
-          "id": "w234",
+          "id": "w237",
           "term": "invariable",
           "meaning": "변함없는"
         },
         {
-          "id": "w235",
+          "id": "w238",
           "term": "invariably",
           "meaning": "항상(=always)"
         },
         {
-          "id": "w236",
+          "id": "w239",
           "term": "question",
           "meaning": "이의을 제기하다, 의문을 갖다(=doubt)"
         },
         {
-          "id": "w237",
+          "id": "w240",
           "term": "be imnmune to A",
           "meaning": "A 에 영향을 받지 않는"
         },
         {
-          "id": "w238",
+          "id": "w241",
           "term": "in this light",
           "meaning": "이러한 측면에서(=in this respect)"
         },
         {
-          "id": "w239",
+          "id": "w242",
           "term": "sound",
           "meaning": "건전한, 견고한"
         },
         {
-          "id": "w240",
+          "id": "w243",
           "term": "fineq",
           "meaning": "미세한, 정교한, 순수한(refine:정제하다, fine gold:순금), 벌금"
         },
         {
-          "id": "w241",
+          "id": "w244",
           "term": "treat",
           "meaning": "대접하다(trick or treat), 한턱"
         },
         {
-          "id": "w242",
+          "id": "w245",
           "term": "retreat",
           "meaning": "후퇴하다"
         },
         {
-          "id": "w243",
+          "id": "w246",
           "term": "treaty",
           "meaning": "조약"
         },
         {
-          "id": "w244",
+          "id": "w247",
           "term": "authorize",
           "meaning": "권한을 부여하다, 강화시키다(힘을 주어)"
         },
         {
-          "id": "w245",
+          "id": "w248",
           "term": "authorized",
           "meaning": "권한을 받은, 공인된"
         },
         {
-          "id": "w246",
+          "id": "w249",
           "term": "mechanical",
           "meaning": "진심이 담기지 않은(기계적인 사랑, 대답이 기계적이다)"
         },
         {
-          "id": "w247",
+          "id": "w250",
           "term": "be it A or B",
           "meaning": "A이든 B이든(whether it is A or B에서 whether 생략되고 도치)"
         }
@@ -1318,132 +1333,132 @@
       "subtitle": "챕터 04 · 반드시 알아야 할 숙어",
       "words": [
         {
-          "id": "w248",
+          "id": "w251",
           "term": "turn sour",
           "meaning": "안좋게 되다"
         },
         {
-          "id": "w249",
+          "id": "w252",
           "term": "A contribute to B",
           "meaning": "A->B"
         },
         {
-          "id": "w250",
+          "id": "w253",
           "term": "it follows that s v",
           "meaning": "~이다(필자의 주장)"
         },
         {
-          "id": "w251",
+          "id": "w254",
           "term": "at best",
           "meaning": "기껏해야"
         },
         {
-          "id": "w252",
+          "id": "w255",
           "term": "at most",
           "meaning": "기껏해야"
         },
         {
-          "id": "w253",
+          "id": "w256",
           "term": "at worst",
           "meaning": "at best가 부정적의미라고 해서 긍정적 의미x"
         },
         {
-          "id": "w254",
+          "id": "w257",
           "term": "A is a creation of B",
           "meaning": "A<-B"
         },
         {
-          "id": "w255",
+          "id": "w258",
           "term": "A is a product of B",
           "meaning": "A<-B"
         },
         {
-          "id": "w256",
+          "id": "w259",
           "term": "A is a function of B",
           "meaning": "A<-B"
         },
         {
-          "id": "w257",
+          "id": "w260",
           "term": "not so much A as B",
           "meaning": "A 라기보다는 오히려~~~ B다(A<B)"
         },
         {
-          "id": "w258",
+          "id": "w261",
           "term": "other than A",
           "meaning": "A를 제외하고(=except)"
         },
         {
-          "id": "w259",
+          "id": "w262",
           "term": "not A until B",
           "meaning": "B를 하고 나서야 비로서 A다"
         },
         {
-          "id": "w260",
+          "id": "w263",
           "term": "not until B~,A~",
           "meaning": "A부분 도치!"
         },
         {
-          "id": "w261",
+          "id": "w264",
           "term": "removed from A",
           "meaning": "A로부터 멀리 떨어져 있다"
         },
         {
-          "id": "w262",
+          "id": "w265",
           "term": "A is a window into B",
           "meaning": "A->B(A를 보면 B를 알 수 있다)"
         },
         {
-          "id": "w263",
+          "id": "w266",
           "term": "attend to",
           "meaning": "주목하다(=pay attention to)"
         },
         {
-          "id": "w264",
+          "id": "w267",
           "term": "aside(=apart) from A",
           "meaning": "A 와는 별개로(A에 대한 얘기는 여기까지, B에 대한 얘기 여기서부터)"
         },
         {
-          "id": "w265",
+          "id": "w268",
           "term": "confuse with A with/and B",
           "meaning": "A=B인 줄 안다는 것"
         },
         {
-          "id": "w266",
+          "id": "w269",
           "term": "be programmed to V",
           "meaning": "타고난"
         },
         {
-          "id": "w267",
+          "id": "w270",
           "term": "distinction/gap between A and B",
           "meaning": "A<->B"
         },
         {
-          "id": "w268",
+          "id": "w271",
           "term": "A is to B as/what C is to D",
           "meaning": "A와 B의 관계는 C와 D의 관계와 같다"
         },
         {
-          "id": "w269",
+          "id": "w272",
           "term": "as 형 as",
           "meaning": "(문장 맨앞에 있을 때) ~일지라도"
         },
         {
-          "id": "w270",
+          "id": "w273",
           "term": "even so",
           "meaning": "(역접)그럼에도 불구하도"
         },
         {
-          "id": "w271",
+          "id": "w274",
           "term": "replace A with B",
           "meaning": "A를 B고 대체하다(A가 사라지고 B로 바뀐다)"
         },
         {
-          "id": "w272",
+          "id": "w275",
           "term": "substitute A for B",
           "meaning": "B를 A로 대체하다"
         },
         {
-          "id": "w273",
+          "id": "w276",
           "term": "be absorbed in A",
           "meaning": "A 에 열중하다(=be occupied with A)"
         }
@@ -1455,82 +1470,82 @@
       "subtitle": "챕터 04 · 반드시 알아야 할 숙어",
       "words": [
         {
-          "id": "w274",
+          "id": "w277",
           "term": "make a difference",
           "meaning": "혁신을 만들다(iphone, we make a difference)"
         },
         {
-          "id": "w275",
+          "id": "w278",
           "term": "as well",
           "meaning": "또한(=also) 주제는 같지만 다른 소재 제시"
         },
         {
-          "id": "w276",
+          "id": "w279",
           "term": "should s v",
           "meaning": "if"
         },
         {
-          "id": "w277",
+          "id": "w280",
           "term": "attribute A to B",
           "meaning": "A<-B"
         },
         {
-          "id": "w278",
+          "id": "w281",
           "term": "attribute",
           "meaning": "속성, 특성"
         },
         {
-          "id": "w279",
+          "id": "w282",
           "term": "draw on A",
           "meaning": "A를 이용하다"
         },
         {
-          "id": "w280",
+          "id": "w283",
           "term": "as far as",
           "meaning": "~ 하는 한(=as long as=so far as=in so far as)"
         },
         {
-          "id": "w281",
+          "id": "w284",
           "term": "argue for",
           "meaning": "~에 찬성하다"
         },
         {
-          "id": "w282",
+          "id": "w285",
           "term": "aruge against",
           "meaning": "~에 반대하다"
         },
         {
-          "id": "w283",
+          "id": "w286",
           "term": "in need",
           "meaning": "어려움에 처한(계속 필요한것)"
         },
         {
-          "id": "w284",
+          "id": "w287",
           "term": "be on the same page",
           "meaning": "입장이 같다"
         },
         {
-          "id": "w285",
+          "id": "w288",
           "term": "tap into",
           "meaning": "다가가다(모르는 친구애게 툭툭치며 다가가는 이미지), 이용하다"
         },
         {
-          "id": "w286",
+          "id": "w289",
           "term": "in and of itself",
           "meaning": "그자체로"
         },
         {
-          "id": "w287",
+          "id": "w290",
           "term": "having said that",
           "meaning": "그렇기는 하지만"
         },
         {
-          "id": "w288",
+          "id": "w291",
           "term": "Chances are S V",
           "meaning": "~일 가능성이 있다(=be likely to)"
         },
         {
-          "id": "w289",
+          "id": "w292",
           "term": "take over",
           "meaning": "인계받다, 장악하다"
         }
@@ -1542,92 +1557,92 @@
       "subtitle": "챕터 04 · 반드시 알아야 할 숙어",
       "words": [
         {
-          "id": "w290",
+          "id": "w293",
           "term": "give rise to",
           "meaning": "발생시키다"
         },
         {
-          "id": "w291",
+          "id": "w294",
           "term": "take place",
           "meaning": "발생하다"
         },
         {
-          "id": "w292",
+          "id": "w295",
           "term": "lay off",
           "meaning": "해고시키다"
         },
         {
-          "id": "w293",
+          "id": "w296",
           "term": "nothing but",
           "meaning": "오직(=only), i have nothing but you"
         },
         {
-          "id": "w294",
+          "id": "w297",
           "term": "rule out",
           "meaning": "제외시키다(=exclude)"
         },
         {
-          "id": "w295",
+          "id": "w298",
           "term": "in V-ing",
           "meaning": "~할 때"
         },
         {
-          "id": "w296",
+          "id": "w299",
           "term": "deal with",
           "meaning": "다루다, 해결해내다(hey, deal with it!)"
         },
         {
-          "id": "w297",
+          "id": "w300",
           "term": "rob A of B",
           "meaning": "A에게서 B를 빼앗다(=strip A of B=deprive A of B)"
         },
         {
-          "id": "w298",
+          "id": "w301",
           "term": "cannot help but v",
           "meaning": "~하지 않을 수 없다(=cannot but v=cannot help ving)"
         },
         {
-          "id": "w299",
+          "id": "w302",
           "term": "give away",
           "meaning": "내어주다"
         },
         {
-          "id": "w300",
+          "id": "w303",
           "term": "It is (not) that S V",
           "meaning": "~때문이다 (is that 사이 아무것도 없음)"
         },
         {
-          "id": "w301",
+          "id": "w304",
           "term": "mover",
           "meaning": "원동력"
         },
         {
-          "id": "w302",
+          "id": "w305",
           "term": "outpace",
           "meaning": "A>B(=outstand, outnumber, outperform)"
         },
         {
-          "id": "w303",
+          "id": "w306",
           "term": "base A on B",
           "meaning": "A<-B"
         },
         {
-          "id": "w304",
+          "id": "w307",
           "term": "A is the basis of B",
           "meaning": "A->B"
         },
         {
-          "id": "w305",
+          "id": "w308",
           "term": "~A on which B is based",
           "meaning": "A->B"
         },
         {
-          "id": "w306",
+          "id": "w309",
           "term": "A is a driving force in B",
           "meaning": "A->B"
         },
         {
-          "id": "w307",
+          "id": "w310",
           "term": "determine",
           "meaning": "A->B"
         }
@@ -1639,92 +1654,92 @@
       "subtitle": "챕터 05 · 관계를 주는 단어",
       "words": [
         {
-          "id": "w308",
+          "id": "w311",
           "term": "determinant",
           "meaning": "결정요인"
         },
         {
-          "id": "w309",
+          "id": "w312",
           "term": "determinism",
           "meaning": "결정론"
         },
         {
-          "id": "w310",
+          "id": "w313",
           "term": "determinacy",
           "meaning": "결정성, 확정성"
         },
         {
-          "id": "w311",
+          "id": "w314",
           "term": "determination",
           "meaning": "결정, 결단력"
         },
         {
-          "id": "w312",
+          "id": "w315",
           "term": "distinguish A from B",
           "meaning": "A<->B"
         },
         {
-          "id": "w313",
+          "id": "w316",
           "term": "distinguishing",
           "meaning": "독특란"
         },
         {
-          "id": "w314",
+          "id": "w317",
           "term": "distinguished",
           "meaning": "유명한"
         },
         {
-          "id": "w315",
+          "id": "w318",
           "term": "reflect",
           "meaning": "반영하다, 반성하다, 반사하다"
         },
         {
-          "id": "w316",
+          "id": "w319",
           "term": "A reflect B",
           "meaning": "A<-B"
         },
         {
-          "id": "w317",
+          "id": "w320",
           "term": "A require B",
           "meaning": "A<-B"
         },
         {
-          "id": "w318",
+          "id": "w321",
           "term": "A~ according to B~",
           "meaning": "B에 따라서 A하다(A<-B)"
         },
         {
-          "id": "w319",
+          "id": "w322",
           "term": "A follow B",
           "meaning": "A<-B"
         },
         {
-          "id": "w320",
+          "id": "w323",
           "term": "A is followed by B",
           "meaning": "A->B"
         },
         {
-          "id": "w321",
+          "id": "w324",
           "term": "outgrowth",
           "meaning": "결과"
         },
         {
-          "id": "w322",
+          "id": "w325",
           "term": "subordinate",
           "meaning": "종속된"
         },
         {
-          "id": "w323",
+          "id": "w326",
           "term": "A is subordinate to B",
           "meaning": "A<-B"
         },
         {
-          "id": "w324",
+          "id": "w327",
           "term": "independent",
           "meaning": "독립적인"
         },
         {
-          "id": "w325",
+          "id": "w328",
           "term": "owe A to B",
           "meaning": "A는 B덕분이다(A<-B)"
         }
@@ -1736,92 +1751,92 @@
       "subtitle": "챕터 06 · 초기본 단어의 본질과 확장",
       "words": [
         {
-          "id": "w326",
+          "id": "w329",
           "term": "school",
           "meaning": "학교, 무리"
         },
         {
-          "id": "w327",
+          "id": "w330",
           "term": "new to A",
           "meaning": "A에 미숙한"
         },
         {
-          "id": "w328",
+          "id": "w331",
           "term": "cost",
           "meaning": "비용, 대가, 희생"
         },
         {
-          "id": "w329",
+          "id": "w332",
           "term": "at the cost of A",
           "meaning": "A를 대가로(=at the expense of=at the toll of=at the price of)"
         },
         {
-          "id": "w330",
+          "id": "w333",
           "term": "level",
           "meaning": "평평한, 평평하게 하다(i'm on the next level ㄷ)"
         },
         {
-          "id": "w331",
+          "id": "w334",
           "term": "cultural",
           "meaning": "특정적(<->universal)"
         },
         {
-          "id": "w332",
+          "id": "w335",
           "term": "discount",
           "meaning": "무시하다(내 노력을 깍아내리지마!)"
         },
         {
-          "id": "w333",
+          "id": "w336",
           "term": "economy",
           "meaning": "(경제 주체로서의)국가, 절약"
         },
         {
-          "id": "w334",
+          "id": "w337",
           "term": "star",
           "meaning": "나타나다, 출연하다"
         },
         {
-          "id": "w335",
+          "id": "w338",
           "term": "put",
           "meaning": "말하다, 쓰다(let me put it this way)"
         },
         {
-          "id": "w336",
+          "id": "w339",
           "term": "win over",
           "meaning": "설득하다(완전히 이겨버리다)"
         },
         {
-          "id": "w337",
+          "id": "w340",
           "term": "file",
           "meaning": "쌓다, 정리하다"
         },
         {
-          "id": "w338",
+          "id": "w341",
           "term": "invite",
           "meaning": "끌다, 매혹하다"
         },
         {
-          "id": "w339",
+          "id": "w342",
           "term": "inviting",
           "meaning": "매혹적인(=attractive=engaging)"
         },
         {
-          "id": "w340",
+          "id": "w343",
           "term": "general",
           "meaning": "종합적인(=whole)"
         },
         {
-          "id": "w341",
+          "id": "w344",
           "term": "common(s)",
           "meaning": "공유지, 공유자원"
         },
         {
-          "id": "w342",
+          "id": "w345",
           "term": "social",
           "meaning": "사교적"
         },
         {
-          "id": "w343",
+          "id": "w346",
           "term": "socialize",
           "meaning": "어울리다"
         }
@@ -1833,97 +1848,97 @@
       "subtitle": "챕터 06 · 초기본 단어의 본질과 확장",
       "words": [
         {
-          "id": "w344",
+          "id": "w347",
           "term": "social development",
           "meaning": "사회 발달(x) 사교성 발달(o)"
         },
         {
-          "id": "w345",
+          "id": "w348",
           "term": "partial",
           "meaning": "부분적인, 편파적인, 불공평한"
         },
         {
-          "id": "w346",
+          "id": "w349",
           "term": "impartial",
           "meaning": "공정한"
         },
         {
-          "id": "w347",
+          "id": "w350",
           "term": "still",
           "meaning": "그럼에도 불구하고, 가만히 있는(stay still)"
         },
         {
-          "id": "w348",
+          "id": "w351",
           "term": "manner",
           "meaning": "방식"
         },
         {
-          "id": "w349",
+          "id": "w352",
           "term": "things",
           "meaning": "상황, 형편"
         },
         {
-          "id": "w350",
+          "id": "w353",
           "term": "in A's shoes",
           "meaning": "A의 입장에서"
         },
         {
-          "id": "w351",
+          "id": "w354",
           "term": "tackle",
           "meaning": "(어려운 사안에 대해서)다루다(=deal with)"
         },
         {
-          "id": "w352",
+          "id": "w355",
           "term": "coin",
           "meaning": "만들다"
         },
         {
-          "id": "w353",
+          "id": "w356",
           "term": "pay",
           "meaning": "~에게 이익이 되다, 대가를 치르다(you're gonna pay for this)"
         },
         {
-          "id": "w354",
+          "id": "w357",
           "term": "pay-off, pay off",
           "meaning": "보상, 보상을 주다"
         },
         {
-          "id": "w355",
+          "id": "w358",
           "term": "mirror",
           "meaning": "반영하다(=reflect)"
         },
         {
-          "id": "w356",
+          "id": "w359",
           "term": "second",
           "meaning": "이류, 열등한"
         },
         {
-          "id": "w357",
+          "id": "w360",
           "term": "secondary",
           "meaning": "이차적인, 부수적인(=incidental=optional=marginal)"
         },
         {
-          "id": "w358",
+          "id": "w361",
           "term": "increasingly",
           "meaning": "증가하게도(x) 점점(o)"
         },
         {
-          "id": "w359",
+          "id": "w362",
           "term": "party",
           "meaning": "정당, 당사자"
         },
         {
-          "id": "w360",
+          "id": "w363",
           "term": "beyond A",
           "meaning": "A의 수준을 넘어섰다=A로는 안된다"
         },
         {
-          "id": "w361",
+          "id": "w364",
           "term": "very",
           "meaning": "adj 바로 그"
         },
         {
-          "id": "w362",
+          "id": "w365",
           "term": "pale",
           "meaning": "창백한, 잘 못하는, 어설픈"
         }
@@ -1935,92 +1950,92 @@
       "subtitle": "챕터 06 · 초기본 단어의 본질과 확장",
       "words": [
         {
-          "id": "w363",
+          "id": "w366",
           "term": "press",
           "meaning": "언론, 기자들"
         },
         {
-          "id": "w364",
+          "id": "w367",
           "term": "life",
           "meaning": "생물, 생명체"
         },
         {
-          "id": "w365",
+          "id": "w368",
           "term": "cultivate",
           "meaning": "경작하다, 만들다, 기르다"
         },
         {
-          "id": "w366",
+          "id": "w369",
           "term": "meet",
           "meaning": "충족핟, (기한을)지키다"
         },
         {
-          "id": "w367",
+          "id": "w370",
           "term": "challenge",
           "meaning": "어려운 일, 이의를 제기하다"
         },
         {
-          "id": "w368",
+          "id": "w371",
           "term": "factor",
           "meaning": "요소, 원인"
         },
         {
-          "id": "w369",
+          "id": "w372",
           "term": "while",
           "meaning": "~하는데"
         },
         {
-          "id": "w370",
+          "id": "w373",
           "term": "limit A",
           "meaning": "A를 제한하다"
         },
         {
-          "id": "w371",
+          "id": "w374",
           "term": "be limited to A",
           "meaning": "A까지 제한됨=A까지는 ok"
         },
         {
-          "id": "w372",
+          "id": "w375",
           "term": "free from A",
           "meaning": "A로 부터 자유로운=A가 없는"
         },
         {
-          "id": "w373",
+          "id": "w376",
           "term": "free to v",
           "meaning": "자유롭게 ~하다"
         },
         {
-          "id": "w374",
+          "id": "w377",
           "term": "A-free",
           "meaning": "A가 없는"
         },
         {
-          "id": "w375",
+          "id": "w378",
           "term": "plastic",
           "meaning": "바꾸기가 쉬운, 가짜의"
         },
         {
-          "id": "w376",
+          "id": "w379",
           "term": "arugably",
           "meaning": "주장하건대"
         },
         {
-          "id": "w377",
+          "id": "w380",
           "term": "gauge",
           "meaning": "판단하다, 측정하다"
         },
         {
-          "id": "w378",
+          "id": "w381",
           "term": "end",
           "meaning": "목적"
         },
         {
-          "id": "w379",
+          "id": "w382",
           "term": "A survive B",
           "meaning": "A가 B보다 오래 살다"
         },
         {
-          "id": "w380",
+          "id": "w383",
           "term": "clear",
           "meaning": "제거하다(clear the area! 싹다 쓸어버려!)"
         }
@@ -2032,72 +2047,72 @@
       "subtitle": "챕터 07 · 이걸 외워?",
       "words": [
         {
-          "id": "w381",
+          "id": "w384",
           "term": "literautre",
           "meaning": "문학, 문헌"
         },
         {
-          "id": "w382",
+          "id": "w385",
           "term": "make up",
           "meaning": "화장하다, 구성하다, (거짓으로)꾸며넣다"
         },
         {
-          "id": "w383",
+          "id": "w386",
           "term": "long for",
           "meaning": "갈망하다"
         },
         {
-          "id": "w384",
+          "id": "w387",
           "term": "competition",
           "meaning": "경쟁, 경쟁자"
         },
         {
-          "id": "w385",
+          "id": "w388",
           "term": "trunk",
           "meaning": "몸통, 줄기"
         },
         {
-          "id": "w386",
+          "id": "w389",
           "term": "mad",
           "meaning": "화난, 미친듯이"
         },
         {
-          "id": "w387",
+          "id": "w390",
           "term": "modest",
           "meaning": "크지 않은, 겸손한"
         },
         {
-          "id": "w388",
+          "id": "w391",
           "term": "seal",
           "meaning": "봉인하다, 바다표범"
         },
         {
-          "id": "w389",
+          "id": "w392",
           "term": "anecdote",
           "meaning": "일화, 이야기"
         },
         {
-          "id": "w390",
+          "id": "w393",
           "term": "shiver",
           "meaning": "떨다(춥다 시벌)"
         },
         {
-          "id": "w391",
+          "id": "w394",
           "term": "better/well off",
           "meaning": "형평이 나은"
         },
         {
-          "id": "w392",
+          "id": "w395",
           "term": "layperson",
           "meaning": "비전문기"
         },
         {
-          "id": "w393",
+          "id": "w396",
           "term": "comfort zone=autopilot",
           "meaning": "변화나 혁신이 필요없는 곳"
         },
         {
-          "id": "w394",
+          "id": "w397",
           "term": "the last thing",
           "meaning": "가장 원하지 않는 것"
         }
@@ -2109,77 +2124,77 @@
       "subtitle": "챕터 07 · 이걸 외워?",
       "words": [
         {
-          "id": "w395",
+          "id": "w398",
           "term": "analogy",
           "meaning": "비유"
         },
         {
-          "id": "w396",
+          "id": "w399",
           "term": "natural selection",
           "meaning": "자연섬택=적자생존"
         },
         {
-          "id": "w397",
+          "id": "w400",
           "term": "hardwire",
           "meaning": "타고난"
         },
         {
-          "id": "w398",
+          "id": "w401",
           "term": "ratio of A to B",
           "meaning": "B에 대한 A의 비율=A/B"
         },
         {
-          "id": "w399",
+          "id": "w402",
           "term": "diabetes",
           "meaning": "당뇨병"
         },
         {
-          "id": "w400",
+          "id": "w403",
           "term": "patent",
           "meaning": "특허"
         },
         {
-          "id": "w401",
+          "id": "w404",
           "term": "manifest",
           "meaning": "명백한, 나타내다"
         },
         {
-          "id": "w402",
+          "id": "w405",
           "term": "manifestation",
           "meaning": "증상(결과)"
         },
         {
-          "id": "w403",
+          "id": "w406",
           "term": "incompatible",
           "meaning": "양립할 수 없는"
         },
         {
-          "id": "w404",
+          "id": "w407",
           "term": "indispensable",
           "meaning": "없어서는 안되는=필수적인"
         },
         {
-          "id": "w405",
+          "id": "w408",
           "term": "outdated",
           "meaning": "구식이 된"
         },
         {
-          "id": "w406",
+          "id": "w409",
           "term": "perplex",
           "meaning": "당혹하게 하다(=confuse)"
         },
         {
-          "id": "w407",
+          "id": "w410",
           "term": "perserve",
           "meaning": "참다"
         },
         {
-          "id": "w408",
+          "id": "w411",
           "term": "preserve",
           "meaning": "지키다"
         },
         {
-          "id": "w409",
+          "id": "w412",
           "term": "perseverance",
           "meaning": "인내심"
         }
@@ -2191,127 +2206,127 @@
       "subtitle": "챕터 07 · 이걸 외워?",
       "words": [
         {
-          "id": "w410",
+          "id": "w413",
           "term": "double-edged sword",
           "meaning": "양날의 검"
         },
         {
-          "id": "w411",
+          "id": "w414",
           "term": "authenticate",
           "meaning": "진짜임을 증명하다"
         },
         {
-          "id": "w412",
+          "id": "w415",
           "term": "authentic",
           "meaning": "진짜의"
         },
         {
-          "id": "w413",
+          "id": "w416",
           "term": "tyrant",
           "meaning": "폭군"
         },
         {
-          "id": "w414",
+          "id": "w417",
           "term": "milestone",
           "meaning": "중요한 순간"
         },
         {
-          "id": "w415",
+          "id": "w418",
           "term": "A is a milestone of B",
           "meaning": "A를 보면 B를 알 수 있다"
         },
         {
-          "id": "w416",
+          "id": "w419",
           "term": "conerstone",
           "meaning": "주춧돌(=base)"
         },
         {
-          "id": "w417",
+          "id": "w420",
           "term": "peasant",
           "meaning": "소작농"
         },
         {
-          "id": "w418",
+          "id": "w421",
           "term": "quest",
           "meaning": "탐구하다"
         },
         {
-          "id": "w419",
+          "id": "w422",
           "term": "fluctuate",
           "meaning": "변동하다"
         },
         {
-          "id": "w420",
+          "id": "w423",
           "term": "fluctuation",
           "meaning": "변동"
         },
         {
-          "id": "w421",
+          "id": "w424",
           "term": "indigenous",
           "meaning": "토착의"
         },
         {
-          "id": "w422",
+          "id": "w425",
           "term": "symmetry",
           "meaning": "대칭, 균형"
         },
         {
-          "id": "w423",
+          "id": "w426",
           "term": "asymmetry",
           "meaning": "비대칭, 불균형"
         },
         {
-          "id": "w424",
+          "id": "w427",
           "term": "coverage",
           "meaning": "보도범위"
         },
         {
-          "id": "w425",
+          "id": "w428",
           "term": "self-contained",
           "meaning": "독립된(스스로 컨테이너안에 차단된 상태)"
         },
         {
-          "id": "w426",
+          "id": "w429",
           "term": "lest",
           "meaning": "~하지 않기 위해서(<->in order to)"
         },
         {
-          "id": "w427",
+          "id": "w430",
           "term": "conventional wisdom",
           "meaning": "통념"
         },
         {
-          "id": "w428",
+          "id": "w431",
           "term": "pitfall",
           "meaning": "위험(구멍에 떨어지다)"
         },
         {
-          "id": "w429",
+          "id": "w432",
           "term": "aggravate",
           "meaning": "악화시키다(공격하다X)"
         },
         {
-          "id": "w430",
+          "id": "w433",
           "term": "unaided eye",
           "meaning": "맨눈(다른것의 도움을 받지 않은 눈)"
         },
         {
-          "id": "w431",
+          "id": "w434",
           "term": "naked eye",
           "meaning": "맨눈"
         },
         {
-          "id": "w432",
+          "id": "w435",
           "term": "fortify",
           "meaning": "요새화하다, 강화하다"
         },
         {
-          "id": "w433",
+          "id": "w436",
           "term": "time lag",
           "meaning": "시간 지연"
         },
         {
-          "id": "w434",
+          "id": "w437",
           "term": "jet lag",
           "meaning": "시차로 인란 피로감"
         }
@@ -2323,77 +2338,77 @@
       "subtitle": "챕터 07 · 이걸 외워?",
       "words": [
         {
-          "id": "w435",
+          "id": "w438",
           "term": "cutting-edge",
           "meaning": "첨단"
         },
         {
-          "id": "w436",
+          "id": "w439",
           "term": "natural enemy",
           "meaning": "천적"
         },
         {
-          "id": "w437",
+          "id": "w440",
           "term": "zero-sum game",
           "meaning": "(뜻 미입력)"
         },
         {
-          "id": "w438",
+          "id": "w441",
           "term": "polarize",
           "meaning": "양극화하다"
         },
         {
-          "id": "w439",
+          "id": "w442",
           "term": "polarity",
           "meaning": "양극성"
         },
         {
-          "id": "w440",
+          "id": "w443",
           "term": "built-in",
           "meaning": "내재된"
         },
         {
-          "id": "w441",
+          "id": "w444",
           "term": "photosynthesize",
           "meaning": "광합성하다"
         },
         {
-          "id": "w442",
+          "id": "w445",
           "term": "photosynthesis",
           "meaning": "광합성"
         },
         {
-          "id": "w443",
+          "id": "w446",
           "term": "acquaint",
           "meaning": "알다, 가까워지다"
         },
         {
-          "id": "w444",
+          "id": "w447",
           "term": "acquaintance",
           "meaning": "지인(알고 있는 사람)"
         },
         {
-          "id": "w445",
+          "id": "w448",
           "term": "be acquainted with",
           "meaning": "~와 알고지내다"
         },
         {
-          "id": "w446",
+          "id": "w449",
           "term": "proactive",
           "meaning": "상황을 압서서 주도하는"
         },
         {
-          "id": "w447",
+          "id": "w450",
           "term": "autonomy",
           "meaning": "저율성"
         },
         {
-          "id": "w448",
+          "id": "w451",
           "term": "autonomous",
           "meaning": "자율의"
         },
         {
-          "id": "w449",
+          "id": "w452",
           "term": "perspective",
           "meaning": "관점, 원근법"
         }

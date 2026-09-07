@@ -28,26 +28,26 @@ for (let i = 0; i < lines.length - 1; i += 2) {
 // marked "guess" below. Update this array (and re-run this script) as more get confirmed.
 const LECTURE_END_POSITIONS = [
   31, // 1강 last="terrific" (confirmed)
-  50, // 2강 - "carve" not in notes; guessed even split with 3강 over [32,69]
-  69, // 3강 last="optional" (confirmed)
-  91, // 4강 last="intolerance" (confirmed)
-  102, // 5강 last="Presume" (confirmed)
-  118, // 6강 last="initiative" (confirmed)
-  137, // 7강 last="moter"/motor (confirmed)
-  161, // 8강 last="appreciate" (confirmed)
-  191, // 9강 last="substantial"/substantially (confirmed)
-  222, // 10강 last="pitch" (confirmed)
-  247, // 11강 - "code" not in notes; guessed even split with 12강 over [223,273]
-  273, // 12강 last="be absorbed in A" (confirmed)
-  289, // 13강 last="take over" (confirmed)
-  307, // 14강 - "give way to" not in notes; guessed even split with 15강 over [290,325]
-  325, // 15강 last="owe A to B" (confirmed)
-  343, // 16강 last="socialize" (confirmed)
-  362, // 17강 last="pale" (confirmed)
-  380, // 18강 last="clear" (confirmed)
-  394, // 19강 - "arm" not in notes; guessed even split with 20강 over [381,409]
-  409, // 20강 last="perseverance" (confirmed)
-  434, // 21강 last="jet lag" (confirmed)
+  54, // 2강 last="carve" (confirmed - ends with the curve/curb/carve group)
+  72, // 3강 last="optional" (confirmed)
+  94, // 4강 last="intolerance" (confirmed)
+  105, // 5강 last="Presume" (confirmed)
+  121, // 6강 last="initiative" (confirmed)
+  140, // 7강 last="moter"/motor (confirmed)
+  164, // 8강 last="appreciate" (confirmed)
+  194, // 9강 last="substantial"/substantially (confirmed)
+  225, // 10강 last="pitch" (confirmed)
+  250, // 11강 - "code" not in notes; guessed even split with 12강 over [226,276]
+  276, // 12강 last="be absorbed in A" (confirmed)
+  292, // 13강 last="take over" (confirmed)
+  310, // 14강 - "give way to" not in notes; guessed even split with 15강 over [293,328]
+  328, // 15강 last="owe A to B" (confirmed)
+  346, // 16강 last="socialize" (confirmed)
+  365, // 17강 last="pale" (confirmed)
+  383, // 18강 last="clear" (confirmed)
+  397, // 19강 - "arm" not in notes; guessed even split with 20강 over [384,412]
+  412, // 20강 last="perseverance" (confirmed)
+  437, // 21강 last="jet lag" (confirmed)
   // 22강 (the last lecture, confirmed - there is no 23강) always runs to the end.
 ];
 

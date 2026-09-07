@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from "react";
 import type { ProgressData, SessionLogEntry, WordStat } from "./types";
 import { todayStr } from "./date";
+import { pullOverrides, pushOverrides } from "./sync";
 
 const STORAGE_KEY = "vdic:progress:v1";
 
@@ -44,7 +45,34 @@ function ensureHydrated() {
   if (!hydrated && typeof window !== "undefined") {
     state = loadFromStorage();
     hydrated = true;
+    pullOverrides().then((remote) => {
+      if (!remote) return;
+      setState({
+        ...state,
+        meaningOverrides: { ...remote.meaningOverrides, ...state.meaningOverrides },
+        nuanceNotes: { ...remote.nuanceNotes, ...state.nuanceNotes },
+        lectureOverrides: { ...remote.lectureOverrides, ...state.lectureOverrides },
+      });
+    });
   }
+}
+
+function syncPush() {
+  pushOverrides({
+    meaningOverrides: state.meaningOverrides,
+    nuanceNotes: state.nuanceNotes,
+    lectureOverrides: state.lectureOverrides,
+  });
+}
+
+/** Manually push the current word edits to GitHub, for a "지금 동기화" button with visible feedback. */
+export function syncNow() {
+  ensureHydrated();
+  return pushOverrides({
+    meaningOverrides: state.meaningOverrides,
+    nuanceNotes: state.nuanceNotes,
+    lectureOverrides: state.lectureOverrides,
+  });
 }
 
 function emit() {
@@ -135,6 +163,7 @@ export function moveWordToLecture(wordId: string, lectureId: number, catalogLect
     overrides[wordId] = lectureId;
   }
   setState({ ...state, lectureOverrides: overrides });
+  syncPush();
 }
 
 export function setMeaningOverride(wordId: string, meaning: string, catalogMeaning: string) {
@@ -147,6 +176,7 @@ export function setMeaningOverride(wordId: string, meaning: string, catalogMeani
     overrides[wordId] = trimmed;
   }
   setState({ ...state, meaningOverrides: overrides });
+  syncPush();
 }
 
 export function setNuanceNote(wordId: string, nuance: string) {
@@ -159,6 +189,7 @@ export function setNuanceNote(wordId: string, nuance: string) {
     notes[wordId] = trimmed;
   }
   setState({ ...state, nuanceNotes: notes });
+  syncPush();
 }
 
 export function logSession(entry: Omit<SessionLogEntry, "id" | "date" | "timestamp">) {

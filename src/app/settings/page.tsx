@@ -6,12 +6,18 @@ import {
   importProgressJSON,
   resetEverything,
   resetStudyProgress,
+  syncNow,
 } from "@/lib/progressStore";
+import { getSyncSecret, setSyncSecret } from "@/lib/sync";
+import { useMounted } from "@/hooks/useMounted";
 import { todayStr } from "@/lib/date";
 
 export default function SettingsPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const mounted = useMounted();
   const [message, setMessage] = useState<string | null>(null);
+  const [secretInput, setSecretInput] = useState("");
+  const [syncing, setSyncing] = useState(false);
 
   function handleExport() {
     const json = exportProgressJSON();
@@ -54,6 +60,20 @@ export default function SettingsPage() {
     }
   }
 
+  function handleSaveSecret() {
+    setSyncSecret(secretInput);
+    setMessage(secretInput ? "동기화 비밀번호를 저장했어요." : "동기화 비밀번호를 지웠어요.");
+  }
+
+  async function handleSyncNow() {
+    setSyncing(true);
+    const result = await syncNow();
+    setSyncing(false);
+    setMessage(result.ok ? "GitHub에 동기화했어요." : `동기화 실패: ${result.error}`);
+  }
+
+  const hasSecret = mounted && getSyncSecret().length > 0;
+
   return (
     <div>
       <h1 className="text-xl font-extrabold">설정</h1>
@@ -69,7 +89,41 @@ export default function SettingsPage() {
         </p>
       )}
 
-      <div className="mt-6 space-y-3">
+      <h2 className="mb-2 mt-6 text-sm font-semibold text-neutral-500">
+        GitHub 동기화 {mounted && (hasSecret ? "(설정됨)" : "(미설정)")}
+      </h2>
+      <p className="mb-3 text-xs text-neutral-500">
+        동기화 비밀번호를 설정하면 뜻 수정·뉘앙스·강의 재배정이 저장할 때마다 GitHub 저장소에도
+        반영돼요. 브라우저 데이터를 지우거나 기기를 바꿔도 그대로 남아있어요. (서버 쪽 설정이
+        아직 안 되어 있으면 비밀번호를 설정해도 동기화는 조용히 실패해요 — 서버 환경변수
+        설정이 먼저 필요해요.)
+      </p>
+      <div className="space-y-2">
+        <input
+          type="password"
+          value={secretInput}
+          onChange={(e) => setSecretInput(e.target.value)}
+          placeholder="동기화 비밀번호"
+          className="w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+        />
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            onClick={handleSaveSecret}
+            className="rounded-lg border border-neutral-300 py-2 text-sm font-medium dark:border-neutral-700"
+          >
+            비밀번호 저장
+          </button>
+          <button
+            onClick={handleSyncNow}
+            disabled={syncing || !hasSecret}
+            className="rounded-lg bg-neutral-900 py-2 text-sm font-medium text-white disabled:opacity-40 dark:bg-white dark:text-neutral-900"
+          >
+            {syncing ? "동기화 중..." : "지금 동기화"}
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-8 space-y-3">
         <button
           onClick={handleExport}
           className="w-full rounded-xl border border-neutral-300 bg-white py-3 font-medium dark:border-neutral-700 dark:bg-neutral-900"

@@ -13,6 +13,7 @@ function emptyData(): ProgressData {
     wordStats: {},
     lectureOverrides: {},
     meaningOverrides: {},
+    termOverrides: {},
     nuanceNotes: {},
     memos: {},
     favorites: {},
@@ -32,6 +33,7 @@ function loadFromStorage(): ProgressData {
       wordStats: parsed.wordStats ?? {},
       lectureOverrides: parsed.lectureOverrides ?? {},
       meaningOverrides: parsed.meaningOverrides ?? {},
+      termOverrides: parsed.termOverrides ?? {},
       nuanceNotes: parsed.nuanceNotes ?? {},
       memos: parsed.memos ?? {},
       favorites: parsed.favorites ?? {},
@@ -56,6 +58,7 @@ function ensureHydrated() {
       setState({
         ...state,
         meaningOverrides: { ...remote.meaningOverrides, ...state.meaningOverrides },
+        termOverrides: { ...remote.termOverrides, ...state.termOverrides },
         nuanceNotes: { ...remote.nuanceNotes, ...state.nuanceNotes },
         lectureOverrides: { ...remote.lectureOverrides, ...state.lectureOverrides },
         memos: { ...remote.memos, ...state.memos },
@@ -68,6 +71,7 @@ function ensureHydrated() {
 function syncPush() {
   pushOverrides({
     meaningOverrides: state.meaningOverrides,
+    termOverrides: state.termOverrides,
     nuanceNotes: state.nuanceNotes,
     lectureOverrides: state.lectureOverrides,
     memos: state.memos,
@@ -80,6 +84,7 @@ export function syncNow() {
   ensureHydrated();
   return pushOverrides({
     meaningOverrides: state.meaningOverrides,
+    termOverrides: state.termOverrides,
     nuanceNotes: state.nuanceNotes,
     lectureOverrides: state.lectureOverrides,
     memos: state.memos,
@@ -191,6 +196,19 @@ export function setMeaningOverride(wordId: string, meaning: string, catalogMeani
   syncPush();
 }
 
+export function setTermOverride(wordId: string, term: string, catalogTerm: string) {
+  ensureHydrated();
+  const overrides = { ...state.termOverrides };
+  const trimmed = term.trim();
+  if (!trimmed || trimmed === catalogTerm) {
+    delete overrides[wordId];
+  } else {
+    overrides[wordId] = trimmed;
+  }
+  setState({ ...state, termOverrides: overrides });
+  syncPush();
+}
+
 export function setNuanceNote(wordId: string, nuance: string) {
   ensureHydrated();
   const notes = { ...state.nuanceNotes };
@@ -290,6 +308,7 @@ export function importProgressJSON(json: string): { ok: true } | { ok: false; er
       wordStats: parsed.wordStats ?? {},
       lectureOverrides: parsed.lectureOverrides ?? {},
       meaningOverrides: parsed.meaningOverrides ?? {},
+      termOverrides: parsed.termOverrides ?? {},
       nuanceNotes: parsed.nuanceNotes ?? {},
       memos: parsed.memos ?? {},
       favorites: parsed.favorites ?? {},

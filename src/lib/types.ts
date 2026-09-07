@@ -46,6 +46,7 @@ export type ProgressData = {
   wordStats: Record<string, WordStat>;
   lectureOverrides: Record<string, number>;
   meaningOverrides: Record<string, string>;
+  termOverrides: Record<string, string>;
   nuanceNotes: Record<string, string>;
   memos: Record<string, string>;
   favorites: Record<string, true>;

@@ -7,6 +7,7 @@ type CustomWord = { id: string; term: string; meaning: string; lectureId: number
 
 type OverridesPayload = {
   meaningOverrides?: Record<string, string>;
+  termOverrides?: Record<string, string>;
   nuanceNotes?: Record<string, string>;
   lectureOverrides?: Record<string, number>;
   memos?: Record<string, string>;
@@ -56,6 +57,7 @@ export async function POST(req: NextRequest) {
 
   const merged = {
     meaningOverrides: { ...current.meaningOverrides, ...body.meaningOverrides },
+    termOverrides: { ...current.termOverrides, ...body.termOverrides },
     nuanceNotes: { ...current.nuanceNotes, ...body.nuanceNotes },
     lectureOverrides: { ...current.lectureOverrides, ...body.lectureOverrides },
     memos: { ...current.memos, ...body.memos },

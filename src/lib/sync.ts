@@ -29,6 +29,7 @@ export function isSyncConfigured(): boolean {
 
 export type OverridesBundle = {
   meaningOverrides: Record<string, string>;
+  termOverrides: Record<string, string>;
   nuanceNotes: Record<string, string>;
   lectureOverrides: Record<string, number>;
   memos: Record<string, string>;
@@ -62,6 +63,7 @@ export async function pullOverrides(): Promise<OverridesBundle | null> {
     const data = await res.json();
     return {
       meaningOverrides: data.meaningOverrides ?? {},
+      termOverrides: data.termOverrides ?? {},
       nuanceNotes: data.nuanceNotes ?? {},
       lectureOverrides: data.lectureOverrides ?? {},
       memos: data.memos ?? {},

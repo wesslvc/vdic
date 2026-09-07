@@ -1,10 +1,20 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { StudyWord } from "@/lib/derived";
-import { logSession, recordAnswer, toggleFavorite, useProgress } from "@/lib/progressStore";
+import { getWordById, type StudyWord } from "@/lib/derived";
+import {
+  logSession,
+  recordAnswer,
+  setMeaningOverride,
+  setNuanceNote,
+  setTermOverride,
+  toggleFavorite,
+  useProgress,
+} from "@/lib/progressStore";
 import { isAnswerCorrect, isRelationExpression } from "@/lib/grading";
 import { SymbolButtons } from "@/components/SymbolButtons";
+
+type AcceptField = { kind: "meaning" | "term" | "nuance"; label: string; value: string };
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -43,6 +53,7 @@ export function StudySession({
     wrong: 0,
   });
   const [done, setDone] = useState(false);
+  const [acceptPrompt, setAcceptPrompt] = useState<AcceptField[] | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const current = order[index];
@@ -112,6 +123,7 @@ export function StudySession({
     setMeaningInput("");
     setNuanceInput("");
     setNuanceCorrect(null);
+    setAcceptPrompt(null);
     setPhase("meaning");
   }
 
@@ -131,6 +143,52 @@ export function StudySession({
     setNuanceCorrect(ok);
     setOverallCorrect(meaningCorrect && ok);
     setPhase("reveal");
+  }
+
+  function buildAcceptCandidates(): AcceptField[] {
+    const fields: AcceptField[] = [];
+    const primaryTrimmed = meaningInput.trim();
+    if (!meaningCorrect && primaryTrimmed) {
+      fields.push({
+        kind: direction === "en-ko" ? "meaning" : "term",
+        label: direction === "en-ko" ? "뜻" : "단어",
+        value: primaryTrimmed,
+      });
+    }
+    if (askNuance && nuanceCorrect === false) {
+      const nuanceTrimmed = nuanceInput.trim();
+      if (nuanceTrimmed) {
+        fields.push({ kind: "nuance", label: "뉘앙스", value: nuanceTrimmed });
+      }
+    }
+    return fields;
+  }
+
+  function handleToggleOverall() {
+    const turningCorrect = !overallCorrect;
+    setOverallCorrect(turningCorrect);
+    if (turningCorrect) {
+      const fields = buildAcceptCandidates();
+      if (fields.length > 0) {
+        setAcceptPrompt(fields);
+        return;
+      }
+    }
+    setAcceptPrompt(null);
+  }
+
+  function applyAcceptCandidates(fields: AcceptField[]) {
+    const baseWord = getWordById(current.id, progress);
+    for (const f of fields) {
+      if (f.kind === "meaning") {
+        setMeaningOverride(current.id, `${current.meaning}, ${f.value}`, baseWord?.meaning ?? current.meaning);
+      } else if (f.kind === "term") {
+        setTermOverride(current.id, `${current.term}, ${f.value}`, baseWord?.term ?? current.term);
+      } else {
+        setNuanceNote(current.id, current.nuance ? `${current.nuance}, ${f.value}` : f.value);
+      }
+    }
+    setAcceptPrompt(null);
   }
 
   function proceed() {
@@ -299,11 +357,34 @@ export function StudySession({
         {phase === "reveal" && (
           <div className="space-y-2">
             <button
-              onClick={() => setOverallCorrect((v) => !v)}
+              onClick={handleToggleOverall}
               className="w-full rounded-xl border border-neutral-300 py-2.5 text-sm text-neutral-500 dark:border-neutral-700"
             >
               {overallCorrect ? "아니에요, 사실 틀렸어요" : "아니에요, 사실 맞았어요"}
             </button>
+            {acceptPrompt && (
+              <div className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm dark:border-amber-900 dark:bg-amber-950">
+                <p className="text-amber-800 dark:text-amber-300">
+                  {acceptPrompt.map((f) => `"${f.value}"`).join(", ")}
+                  {acceptPrompt.length > 1 ? "을(를) 각각 " : "을(를) "}
+                  정답 인정 범주에 넣을까요?
+                </p>
+                <div className="mt-2 flex gap-2">
+                  <button
+                    onClick={() => applyAcceptCandidates(acceptPrompt)}
+                    className="rounded-lg bg-amber-600 px-3 py-1.5 text-xs font-semibold text-white"
+                  >
+                    예
+                  </button>
+                  <button
+                    onClick={() => setAcceptPrompt(null)}
+                    className="rounded-lg border border-amber-300 px-3 py-1.5 text-xs text-amber-700 dark:border-amber-800 dark:text-amber-300"
+                  >
+                    아니오
+                  </button>
+                </div>
+              </div>
+            )}
             <button
               onClick={proceed}
               className="w-full rounded-xl bg-neutral-900 py-3.5 font-semibold text-white dark:bg-white dark:text-neutral-900"

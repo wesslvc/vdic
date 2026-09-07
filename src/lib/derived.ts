@@ -7,11 +7,16 @@ export function effectiveMeaning(word: Word, progress: ProgressData): string {
   return progress.meaningOverrides[word.id] ?? word.meaning;
 }
 
+export function effectiveTerm(word: Word, progress: ProgressData): string {
+  return progress.termOverrides[word.id] ?? word.term;
+}
+
 export function toStudyWord(word: Word, progress: ProgressData): StudyWord {
   const nuance = progress.nuanceNotes[word.id];
   const memo = progress.memos[word.id];
   return {
     ...word,
+    term: effectiveTerm(word, progress),
     meaning: effectiveMeaning(word, progress),
     ...(nuance ? { nuance } : {}),
     ...(memo ? { memo } : {}),

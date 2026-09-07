@@ -172,7 +172,14 @@ export function logSession(entry: Omit<SessionLogEntry, "id" | "date" | "timesta
   setState({ ...state, sessionLog: [full, ...state.sessionLog] });
 }
 
-export function resetProgress() {
+/** Clears study stats and the session log, but keeps word edits (meaning/nuance/lecture
+ * reassignment) intact - those are corrections to the data itself, not learning progress. */
+export function resetStudyProgress() {
+  setState({ ...state, wordStats: {}, sessionLog: [] });
+}
+
+/** Wipes everything, including word edits. Rarely what you want - see resetStudyProgress. */
+export function resetEverything() {
   setState(emptyData());
 }
 

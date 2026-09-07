@@ -1,7 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { exportProgressJSON, importProgressJSON, resetProgress } from "@/lib/progressStore";
+import {
+  exportProgressJSON,
+  importProgressJSON,
+  resetEverything,
+  resetStudyProgress,
+} from "@/lib/progressStore";
 import { todayStr } from "@/lib/date";
 
 export default function SettingsPage() {
@@ -35,10 +40,17 @@ export default function SettingsPage() {
     e.target.value = "";
   }
 
-  function handleReset() {
-    if (confirm("모든 학습 진행상황이 삭제돼요. 계속할까요?")) {
-      resetProgress();
-      setMessage("초기화했어요.");
+  function handleResetStudy() {
+    if (confirm("학습 기록(정답/오답, 학습 로그)이 삭제돼요. 뜻 수정·뉘앙스·강의 재배정은 그대로 남아요. 계속할까요?")) {
+      resetStudyProgress();
+      setMessage("학습 기록을 초기화했어요. 수정한 뜻/뉘앙스/강의 배정은 남아있어요.");
+    }
+  }
+
+  function handleResetEverything() {
+    if (confirm("뜻 수정, 뉘앙스, 강의 재배정까지 포함해서 전부 삭제돼요. 정말 계속할까요?")) {
+      resetEverything();
+      setMessage("전부 초기화했어요.");
     }
   }
 
@@ -47,7 +59,8 @@ export default function SettingsPage() {
       <h1 className="text-xl font-extrabold">설정</h1>
       <p className="mt-1 text-sm text-neutral-500">
         학습 데이터는 이 기기의 브라우저에만 저장돼요. 다른 기기에서 이어서 하려면 백업 파일을
-        내보낸 뒤 그 기기에서 불러오세요.
+        내보낸 뒤 그 기기에서 불러오세요. 뜻 수정·뉘앙스·강의 재배정은 학습 기록을 초기화해도
+        지워지지 않아요.
       </p>
 
       {message && (
@@ -77,10 +90,16 @@ export default function SettingsPage() {
           onChange={handleFileChange}
         />
         <button
-          onClick={handleReset}
+          onClick={handleResetStudy}
           className="w-full rounded-xl bg-rose-600 py-3 font-medium text-white"
         >
-          전체 진행상황 초기화
+          학습 기록 초기화 (수정 내용은 유지)
+        </button>
+        <button
+          onClick={handleResetEverything}
+          className="w-full rounded-xl border border-rose-300 py-3 text-sm font-medium text-rose-600 dark:border-rose-900"
+        >
+          뜻 수정·뉘앙스·강의 배정까지 전부 초기화
         </button>
       </div>
     </div>

@@ -1,7 +1,8 @@
 // Parses data/raw-vocab.txt (alternating term/meaning lines) into src/data/words.json,
-// grouped into 23 lecture units. Word IDs are stable global sequence numbers (w1, w2, ...)
-// based on position in raw-vocab.txt, independent of which lecture a word falls into - so
-// re-running this after a boundary correction never orphans a user's saved progress.
+// grouped into 22 lecture units (the real course has no 23강 - 22강 is the last one).
+// Word IDs are stable global sequence numbers (w1, w2, ...) based on position in
+// raw-vocab.txt, independent of which lecture a word falls into - so re-running this
+// after a boundary correction never orphans a user's saved progress.
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -47,9 +48,10 @@ const LECTURE_END_POSITIONS = [
   394, // 19강 - "arm" not in notes; guessed even split with 20강 over [381,409]
   409, // 20강 last="perseverance" (confirmed)
   434, // 21강 last="jet lag" (confirmed)
-  441, // 22강 - no marker given ("끝까지" = "to the end"); guessed even split of [435,449]
-  // 23강 always runs to the end of the list, whatever that is.
+  // 22강 (the last lecture, confirmed - there is no 23강) always runs to the end.
 ];
+
+const TOTAL_LECTURES = 22;
 
 const chapters = [
   { through: 2, name: "챕터 01 · 안 헷갈려?" },
@@ -58,7 +60,7 @@ const chapters = [
   { through: 14, name: "챕터 04 · 반드시 알아야 할 숙어" },
   { through: 15, name: "챕터 05 · 관계를 주는 단어" },
   { through: 18, name: "챕터 06 · 초기본 단어의 본질과 확장" },
-  { through: 23, name: "챕터 07 · 이걸 외워?" },
+  { through: 22, name: "챕터 07 · 이걸 외워?" },
 ];
 function chapterName(lectureNo) {
   return chapters.find((c) => lectureNo <= c.through)?.name ?? "";
@@ -68,7 +70,7 @@ const globalId = (i) => `w${i + 1}`;
 
 const lectures = [];
 let cursor = 0;
-for (let lecNo = 1; lecNo <= 23; lecNo++) {
+for (let lecNo = 1; lecNo <= TOTAL_LECTURES; lecNo++) {
   const end = lecNo <= LECTURE_END_POSITIONS.length ? LECTURE_END_POSITIONS[lecNo - 1] : entries.length;
   const slice = entries.slice(cursor, end);
   lectures.push({

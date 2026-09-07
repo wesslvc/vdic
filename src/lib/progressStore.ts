@@ -14,6 +14,7 @@ function emptyData(): ProgressData {
     lectureOverrides: {},
     meaningOverrides: {},
     nuanceNotes: {},
+    favorites: {},
     sessionLog: [],
   };
 }
@@ -30,6 +31,7 @@ function loadFromStorage(): ProgressData {
       lectureOverrides: parsed.lectureOverrides ?? {},
       meaningOverrides: parsed.meaningOverrides ?? {},
       nuanceNotes: parsed.nuanceNotes ?? {},
+      favorites: parsed.favorites ?? {},
       sessionLog: Array.isArray(parsed.sessionLog) ? parsed.sessionLog : [],
     };
   } catch {
@@ -192,6 +194,22 @@ export function setNuanceNote(wordId: string, nuance: string) {
   syncPush();
 }
 
+export function isFavorite(wordId: string): boolean {
+  ensureHydrated();
+  return !!state.favorites[wordId];
+}
+
+export function toggleFavorite(wordId: string) {
+  ensureHydrated();
+  const favorites = { ...state.favorites };
+  if (favorites[wordId]) {
+    delete favorites[wordId];
+  } else {
+    favorites[wordId] = true;
+  }
+  setState({ ...state, favorites });
+}
+
 export function logSession(entry: Omit<SessionLogEntry, "id" | "date" | "timestamp">) {
   ensureHydrated();
   const full: SessionLogEntry = {
@@ -231,6 +249,7 @@ export function importProgressJSON(json: string): { ok: true } | { ok: false; er
       lectureOverrides: parsed.lectureOverrides ?? {},
       meaningOverrides: parsed.meaningOverrides ?? {},
       nuanceNotes: parsed.nuanceNotes ?? {},
+      favorites: parsed.favorites ?? {},
       sessionLog: Array.isArray(parsed.sessionLog) ? parsed.sessionLog : [],
     });
     return { ok: true };

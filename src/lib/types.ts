@@ -28,7 +28,7 @@ export type SessionLogEntry = {
   date: string;
   timestamp: string;
   lectureLabel: string;
-  mode: "study" | "wrong-note";
+  mode: "study" | "wrong-note" | "favorites";
   count: number;
   correctCount: number;
 };
@@ -39,5 +39,6 @@ export type ProgressData = {
   lectureOverrides: Record<string, number>;
   meaningOverrides: Record<string, string>;
   nuanceNotes: Record<string, string>;
+  favorites: Record<string, true>;
   sessionLog: SessionLogEntry[];
 };

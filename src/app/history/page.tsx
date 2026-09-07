@@ -91,7 +91,7 @@ export default function HistoryPage() {
                       <span>
                         {e.lectureLabel}
                         <span className="ml-1.5 rounded-full bg-neutral-100 px-1.5 py-0.5 text-xs text-neutral-500 dark:bg-neutral-800">
-                          {e.mode === "wrong-note" ? "오답노트" : "학습"}
+                          {e.mode === "wrong-note" ? "오답노트" : e.mode === "favorites" ? "즐겨찾기" : "학습"}
                         </span>
                       </span>
                       <span className="text-neutral-500">

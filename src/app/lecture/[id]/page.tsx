@@ -10,6 +10,7 @@ import {
   moveWordToLecture,
   setMeaningOverride,
   setNuanceNote,
+  toggleFavorite,
   useProgress,
 } from "@/lib/progressStore";
 import { StudySession } from "@/components/StudySession";
@@ -128,6 +129,15 @@ export default function LecturePage() {
                     완료
                   </span>
                 )}
+                <button
+                  onClick={() => toggleFavorite(w.id)}
+                  className={`shrink-0 text-lg ${
+                    progress.favorites[w.id] ? "text-amber-500" : "text-neutral-300 dark:text-neutral-600"
+                  }`}
+                  aria-label="즐겨찾기"
+                >
+                  {progress.favorites[w.id] ? "★" : "☆"}
+                </button>
                 <button
                   onClick={() =>
                     isEditing ? setEditingId(null) : startEdit(w.id, w.meaning, w.nuance)

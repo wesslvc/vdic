@@ -83,6 +83,7 @@ export type OverallStats = {
   attempted: number;
   mastered: number;
   wrongCount: number;
+  favoriteCount: number;
   studyDays: number;
 };
 
@@ -99,5 +100,16 @@ export function overallStats(progress: ProgressData): OverallStats {
   }
   const totalWords = lectures.reduce((sum, l) => sum + l.words.length, 0);
   const studyDays = new Set(progress.sessionLog.map((s) => s.date)).size;
-  return { totalWords, attempted, mastered, wrongCount, studyDays };
+  const favoriteCount = Object.keys(progress.favorites).length;
+  return { totalWords, attempted, mastered, wrongCount, favoriteCount, studyDays };
+}
+
+/** Words the user starred, regardless of current right/wrong status - only removed by hand. */
+export function allFavoriteWords(progress: ProgressData): StudyWord[] {
+  const result: StudyWord[] = [];
+  for (const wordId of Object.keys(progress.favorites)) {
+    const w = wordIndex[wordId];
+    if (w) result.push(toStudyWord(w, progress));
+  }
+  return result;
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { StudyWord } from "@/lib/derived";
-import { logSession, recordAnswer } from "@/lib/progressStore";
+import { logSession, recordAnswer, toggleFavorite, useProgress } from "@/lib/progressStore";
 import { isAnswerCorrect, isRelationExpression } from "@/lib/grading";
 import { SymbolButtons } from "@/components/SymbolButtons";
 
@@ -25,9 +25,10 @@ export function StudySession({
 }: {
   words: StudyWord[];
   sessionLabel: string;
-  mode: "study" | "wrong-note";
+  mode: "study" | "wrong-note" | "favorites";
   onFinish: () => void;
 }) {
+  const progress = useProgress();
   const [direction, setDirection] = useState<"en-ko" | "ko-en">("en-ko");
   const [order] = useState(() => shuffle(words));
   const [index, setIndex] = useState(0);
@@ -155,6 +156,15 @@ export function StudySession({
             {index + 1} / {order.length}
           </p>
         </div>
+        <button
+          onClick={() => toggleFavorite(current.id)}
+          className={`shrink-0 text-xl ${
+            progress.favorites[current.id] ? "text-amber-500" : "text-neutral-300 dark:text-neutral-600"
+          }`}
+          aria-label="즐겨찾기"
+        >
+          {progress.favorites[current.id] ? "★" : "☆"}
+        </button>
         <button
           onClick={() => {
             setDirection((d) => (d === "en-ko" ? "ko-en" : "en-ko"));

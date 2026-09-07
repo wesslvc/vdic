@@ -1,18 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { effectiveLectureId, allWrongWords } from "@/lib/derived";
+import Link from "next/link";
+import { effectiveLectureId, allFavoriteWords } from "@/lib/derived";
 import { toggleFavorite, useProgress } from "@/lib/progressStore";
 import { StudySession } from "@/components/StudySession";
 import { useMounted } from "@/hooks/useMounted";
-import Link from "next/link";
 
-export default function WrongNotePage() {
+export default function FavoritesPage() {
   const mounted = useMounted();
   const progress = useProgress();
   const [mode, setMode] = useState<"browse" | "study">("browse");
 
-  const words = useMemo(() => (mounted ? allWrongWords(progress) : []), [mounted, progress]);
+  const words = useMemo(() => (mounted ? allFavoriteWords(progress) : []), [mounted, progress]);
 
   if (mode === "study") {
     return (
@@ -22,8 +22,8 @@ export default function WrongNotePage() {
         </button>
         <StudySession
           words={words}
-          sessionLabel="오답노트"
-          mode="wrong-note"
+          sessionLabel="즐겨찾기"
+          mode="favorites"
           onFinish={() => setMode("browse")}
         />
       </div>
@@ -32,22 +32,23 @@ export default function WrongNotePage() {
 
   return (
     <div>
-      <h1 className="text-xl font-extrabold">오답노트</h1>
+      <h1 className="text-xl font-extrabold">즐겨찾기</h1>
       <p className="mt-1 text-sm text-neutral-500">
-        가장 최근에 틀린 단어들만 모아서 다시 테스트해요. 맞히면 목록에서 사라져요.
+        직접 별표한 단어들이에요. 맞혀도 오답노트처럼 자동으로 사라지지 않고, 별표를 눌러서
+        빼야만 없어져요.
       </p>
 
       {!mounted ? null : words.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-dashed border-neutral-300 p-8 text-center text-neutral-500 dark:border-neutral-700">
-          오답이 없어요. 훌륭해요! 🎉
+          아직 즐겨찾기한 단어가 없어요. 단어 목록이나 학습 중에 ☆를 눌러 추가하세요.
         </div>
       ) : (
         <>
           <button
             onClick={() => setMode("study")}
-            className="mt-4 w-full rounded-xl bg-rose-600 py-3.5 font-semibold text-white"
+            className="mt-4 w-full rounded-xl bg-amber-500 py-3.5 font-semibold text-white"
           >
-            오답 {words.length}개 테스트하기
+            즐겨찾기 {words.length}개 테스트하기
           </button>
           <ul className="mt-6 divide-y divide-neutral-100 overflow-hidden rounded-xl border border-neutral-200 bg-white dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900">
             {words.map((w) => (
@@ -58,12 +59,10 @@ export default function WrongNotePage() {
                 </div>
                 <button
                   onClick={() => toggleFavorite(w.id)}
-                  className={`shrink-0 text-lg ${
-                    progress.favorites[w.id] ? "text-amber-500" : "text-neutral-300 dark:text-neutral-600"
-                  }`}
-                  aria-label="즐겨찾기"
+                  className="shrink-0 text-lg text-amber-500"
+                  aria-label="즐겨찾기 해제"
                 >
-                  {progress.favorites[w.id] ? "★" : "☆"}
+                  ★
                 </button>
                 <Link
                   href={`/lecture/${effectiveLectureId(w.id, progress)}`}

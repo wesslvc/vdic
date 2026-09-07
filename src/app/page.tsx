@@ -69,23 +69,40 @@ export default function Home() {
 
   return (
     <div className={selectMode ? "pb-20" : ""}>
-      <section className="mb-6 grid grid-cols-3 gap-3">
+      <section className="mb-6 grid grid-cols-4 gap-2.5">
         <StatBox label="전체 단어" value={stats.totalWords} />
         <StatBox label="외운 단어" value={mounted ? stats.mastered : 0} accent="text-emerald-600 dark:text-emerald-400" />
         <StatBox label="오답노트" value={mounted ? stats.wrongCount : 0} accent="text-rose-600 dark:text-rose-400" />
+        <StatBox label="즐겨찾기" value={mounted ? stats.favoriteCount : 0} accent="text-amber-500" />
       </section>
 
-      {mounted && stats.wrongCount > 0 && (
-        <Link
-          href="/wrong"
-          className="mb-6 flex items-center justify-between rounded-2xl bg-rose-600 px-5 py-4 text-white shadow-sm"
-        >
-          <div>
-            <p className="font-bold">오답노트 테스트하기</p>
-            <p className="text-sm text-rose-100">틀린 단어 {stats.wrongCount}개가 기다리고 있어요</p>
-          </div>
-          <span className="text-2xl">→</span>
-        </Link>
+      {mounted && (stats.wrongCount > 0 || stats.favoriteCount > 0) && (
+        <div className="mb-6 space-y-3">
+          {stats.wrongCount > 0 && (
+            <Link
+              href="/wrong"
+              className="flex items-center justify-between rounded-2xl bg-rose-600 px-5 py-4 text-white shadow-sm"
+            >
+              <div>
+                <p className="font-bold">오답노트 테스트하기</p>
+                <p className="text-sm text-rose-100">틀린 단어 {stats.wrongCount}개가 기다리고 있어요</p>
+              </div>
+              <span className="text-2xl">→</span>
+            </Link>
+          )}
+          {stats.favoriteCount > 0 && (
+            <Link
+              href="/favorites"
+              className="flex items-center justify-between rounded-2xl bg-amber-500 px-5 py-4 text-white shadow-sm"
+            >
+              <div>
+                <p className="font-bold">즐겨찾기 테스트하기</p>
+                <p className="text-sm text-amber-50">별표한 단어 {stats.favoriteCount}개</p>
+              </div>
+              <span className="text-2xl">→</span>
+            </Link>
+          )}
+        </div>
       )}
 
       <div className="mb-6">

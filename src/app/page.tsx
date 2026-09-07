@@ -3,9 +3,10 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { getAllWords, getLectures } from "@/lib/catalog";
-import { effectiveLectureId, lectureProgress, overallStats } from "@/lib/derived";
+import { effectiveLectureId, lectureProgress, overallStats, wordsForLecture } from "@/lib/derived";
 import { useProgress } from "@/lib/progressStore";
 import { LectureCard } from "@/components/LectureCard";
+import { StudySession } from "@/components/StudySession";
 import { useMounted } from "@/hooks/useMounted";
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
   const lectures = getLectures();
   const stats = overallStats(progress);
   const [query, setQuery] = useState("");
+  const [selectMode, setSelectMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
+  const [studying, setStudying] = useState(false);
 
   const searchResults = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -23,8 +27,48 @@ export default function Home() {
       .slice(0, 20);
   }, [query]);
 
+  function toggleSelectMode() {
+    setSelectMode((v) => !v);
+    setSelectedIds(new Set());
+  }
+
+  function toggleLecture(id: number) {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  const combinedWords = useMemo(() => {
+    return [...selectedIds].flatMap((id) => wordsForLecture(id, progress));
+  }, [selectedIds, progress]);
+
+  function finishStudying() {
+    setStudying(false);
+    setSelectMode(false);
+    setSelectedIds(new Set());
+  }
+
+  if (studying) {
+    return (
+      <div>
+        <button onClick={finishStudying} className="mb-4 text-sm text-neutral-500">
+          ← 그만하기
+        </button>
+        <StudySession
+          words={combinedWords}
+          sessionLabel={`${selectedIds.size}개 강의 학습`}
+          mode="study"
+          onFinish={finishStudying}
+        />
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className={selectMode ? "pb-20" : ""}>
       <section className="mb-6 grid grid-cols-3 gap-3">
         <StatBox label="전체 단어" value={stats.totalWords} />
         <StatBox label="외운 단어" value={mounted ? stats.mastered : 0} accent="text-emerald-600 dark:text-emerald-400" />
@@ -73,7 +117,19 @@ export default function Home() {
         )}
       </div>
 
-      <h2 className="mb-3 text-sm font-semibold text-neutral-500">강의 목록</h2>
+      <div className="mb-3 flex items-center justify-between">
+        <h2 className="text-sm font-semibold text-neutral-500">강의 목록</h2>
+        <button
+          onClick={toggleSelectMode}
+          className={`rounded-full px-3 py-1.5 text-xs font-medium ${
+            selectMode
+              ? "bg-neutral-900 text-white dark:bg-white dark:text-neutral-900"
+              : "border border-neutral-300 text-neutral-600 dark:border-neutral-700 dark:text-neutral-400"
+          }`}
+        >
+          {selectMode ? "선택 취소" : "여러 강의 선택"}
+        </button>
+      </div>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {lectures.map((l) => (
           <LectureCard
@@ -82,9 +138,23 @@ export default function Home() {
             title={l.title}
             subtitle={l.subtitle}
             progress={mounted ? lectureProgress(l.id, progress) : { total: l.words.length, attempted: 0, mastered: 0, wrongCount: 0, lastStudiedAt: null }}
+            selectMode={selectMode}
+            selected={selectedIds.has(l.id)}
+            onToggleSelect={toggleLecture}
           />
         ))}
       </div>
+
+      {selectMode && selectedIds.size > 0 && (
+        <div className="fixed inset-x-0 bottom-0 z-20 border-t border-neutral-200 bg-white/95 p-4 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95">
+          <button
+            onClick={() => setStudying(true)}
+            className="mx-auto block w-full max-w-2xl rounded-xl bg-neutral-900 py-3.5 font-semibold text-white dark:bg-white dark:text-neutral-900"
+          >
+            선택한 {selectedIds.size}개 강의 학습하기 ({combinedWords.length}개)
+          </button>
+        </div>
+      )}
     </div>
   );
 }

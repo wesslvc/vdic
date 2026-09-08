@@ -20,6 +20,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "VDIC · 영단어 학습",
   description: "강의별 영단어 학습, 오답노트, 학습 기록 — NEPICA",
+  // 파비콘은 로고와 같은 그림(책을 문 물까치)을 쓴다. 크기별로 두 벌을 두어
+  // 탭·홈 화면 어디에서든 뭉개지지 않게 한다(리프린트OCR 과 같은 방식이다).
+  icons: {
+    icon: [
+      { url: "/brand/magpie-book-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/brand/magpie-book-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/brand/magpie-book-192.png" }],
+  },
 };
 
 export const viewport: Viewport = {

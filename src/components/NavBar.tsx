@@ -16,7 +16,12 @@ export function NavBar() {
   return (
     <nav className="sticky top-0 z-10 border-b border-neutral-200 bg-white/80 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/80">
       <div className="mx-auto flex max-w-2xl items-center gap-1 px-4 py-3">
-        <Link href="/" className="mr-2 shrink-0 text-lg font-extrabold tracking-tight">
+        {/* 워드마크 — 지오글·리프린트OCR 과 같은 표시용 글꼴에 자간을 넓혀
+            상표처럼 보이게 한다(지오글의 .g3-logo 와 같은 처리다). */}
+        <Link
+          href="/"
+          className="mr-2 shrink-0 font-display text-lg font-semibold tracking-[0.06em]"
+        >
           VDIC
         </Link>
         <div className="flex flex-1 gap-1 overflow-x-auto">

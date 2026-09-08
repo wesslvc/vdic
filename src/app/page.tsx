@@ -185,7 +185,10 @@ export default function Home() {
 function StatBox({ label, value, accent }: { label: string; value: number; accent?: string }) {
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-4 text-center dark:border-neutral-800 dark:bg-neutral-900">
-      <p className={`text-2xl font-extrabold ${accent ?? ""}`}>{value}</p>
+      {/* 숫자는 표시용 글꼴로 — 지오글이 점수를 그렇게 찍는다(.sv). */}
+      <p className={`font-display text-2xl font-bold tracking-tight ${accent ?? ""}`}>
+        {value}
+      </p>
       <p className="mt-0.5 text-xs text-neutral-500">{label}</p>
     </div>
   );

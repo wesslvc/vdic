@@ -1,6 +1,117 @@
 @import "tailwindcss";
 
+/* ── 브랜드 색·글꼴 (NEPICA) ─────────────────────────────────────────────
+   같은 브랜드의 지오글(seji)·리프린트OCR(mathpix)과 **같은 값**을 쓴다.
+   두 사이트를 나란히 놓았을 때 같은 곳에서 만든 것으로 보이려면 색과
+   글꼴이 같아야 한다.
+
+   **클래스는 한 줄도 안 고치고 색 자체를 갈아 끼운다.** 화면 곳곳에
+   `bg-neutral-900`·`text-rose-400` 이 흩어져 있어 하나씩 고치면 반드시 몇
+   개를 빠뜨리고, 그러면 같은 회색이 두 가지로 보인다(리프린트OCR 에서
+   blue·slate 를 갈아 끼운 것과 같은 판단이다).
+
+   **의미색은 의미를 지킨다.** 완료·정답은 초록, 오답은 빨강, 즐겨찾기는
+   금색 — 전부 브랜드 파랑으로 칠하면 뜻을 잃는다. 대신 지오글이 쓰는
+   같은 뜻의 색(#81c995 정답 · #e08b83 오답 · #d9b268 금색)에 맞춰 톤만
+   브랜드 쪽으로 옮겼다. */
+@theme {
+  /* 중립 회색 — 지오글의 표면·글자색을 봉우리로 삼아 이었다.
+     라이트: 50 바탕 · 100 표면2 · 200 테두리 · 500 흐린 글자 · 900 본문
+     다크:   950 바탕 · 900 표면 · 800 테두리 · 400 흐린 글자 · 100 본문
+     Tailwind 기본 neutral 은 완전 무채색이라 파랑과 나란히 두면 탁해 보인다. */
+  --color-neutral-50: #f6f7f9;
+  --color-neutral-100: #eef1f5;
+  --color-neutral-200: #e0e5ec;
+  --color-neutral-300: #cbd2db;
+  --color-neutral-400: #98a1ad;
+  --color-neutral-500: #646a74;
+  --color-neutral-600: #4e545d;
+  --color-neutral-700: #3a3f47;
+  --color-neutral-800: #333944;
+  --color-neutral-900: #1c2027;
+  --color-neutral-950: #14171c;
+
+  /* 강조 — 물까치 날개색. 400 이 지오글의 다크 강조(--ac), 600 이 라이트 강조. */
+  --color-blue-50: #f1f6fb;
+  --color-blue-100: #e4edf7;
+  --color-blue-200: #cfe0f1;
+  --color-blue-300: #a7c7e6;
+  --color-blue-400: #7fb2e6;
+  --color-blue-500: #4a8cca;
+  --color-blue-600: #2f74b8;
+  --color-blue-700: #265f99;
+  --color-blue-800: #1e4c7c;
+  --color-blue-900: #17395c;
+  --color-blue-950: #102840;
+
+  /* 완료·정답 — 지오글이 정답에 쓰는 초록(#81c995)을 400 에 두었다. */
+  --color-emerald-50: #eef7f1;
+  --color-emerald-100: #d7ecdf;
+  --color-emerald-200: #b3dcc2;
+  --color-emerald-300: #97d0aa;
+  --color-emerald-400: #81c995;
+  --color-emerald-500: #5fae77;
+  --color-emerald-600: #47905d;
+  --color-emerald-700: #37714a;
+  --color-emerald-800: #2a5539;
+  --color-emerald-900: #1e3d29;
+  --color-emerald-950: #14251b;
+
+  /* 오답 — 지오글의 --wr(다크 #e08b83 · 라이트 #b3453c)를 400·600 에 두었다.
+     쨍한 빨강보다 옅어 보이지만, 틀린 것을 다그치는 화면이 아니다. */
+  --color-rose-50: #fbf0ef;
+  --color-rose-100: #f6dedb;
+  --color-rose-200: #eebfb9;
+  --color-rose-300: #e6a49c;
+  --color-rose-400: #e08b83;
+  --color-rose-500: #cf6a60;
+  --color-rose-600: #b3453c;
+  --color-rose-700: #8f382f;
+  --color-rose-800: #6b2a24;
+  --color-rose-900: #4a1d19;
+  --color-rose-950: #2b1210;
+
+  /* 즐겨찾기 — 지오글의 --gd(다크 #d9b268 · 라이트 #9a7b3c). */
+  --color-amber-50: #faf5ea;
+  --color-amber-100: #f4e9d2;
+  --color-amber-200: #e9d3a5;
+  --color-amber-300: #e0c081;
+  --color-amber-400: #d9b268;
+  --color-amber-500: #c39a4e;
+  --color-amber-600: #9a7b3c;
+  --color-amber-700: #7b6230;
+  --color-amber-800: #5b4924;
+  --color-amber-900: #3f321a;
+  --color-amber-950: #241d0f;
+}
+
+/* 글꼴 — 지오글·리프린트OCR 과 같은 짝. 본문은 Pretendard(CDN, layout 에서
+   받는다), 로고·숫자 같은 표시용 글자는 Space Grotesk(next/font). 두 사이트가
+   같은 브랜드로 보이려면 색보다 글꼴이 먼저다. */
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "Pretendard", "Pretendard Variable", "Noto Sans KR",
+    var(--font-fallback-sans);
+  --font-display: var(--font-space-grotesk), "Pretendard", sans-serif;
   --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --font-fallback-sans: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+}
+
+/* 브랜드 표기 — 지오글 랜딩 아래의 것(.ld-brand)과 같은 모양이다.
+   넓은 자간에 작은 글씨로 조용히 두고, 닿으면 또렷해진다. */
+.nepica-brand {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.nepica-brand:hover {
+  opacity: 0.9;
 }

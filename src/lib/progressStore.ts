@@ -49,6 +49,11 @@ let state: ProgressData = emptyData();
 let hydrated = false;
 const listeners = new Set<() => void>();
 
+/** Fills in words the local copy has no entry for; never touches a word already set locally. */
+function preferLocal<T extends Record<string, unknown>>(remote: T, local: T): T {
+  return { ...remote, ...local };
+}
+
 function ensureHydrated() {
   if (!hydrated && typeof window !== "undefined") {
     state = loadFromStorage();
@@ -57,12 +62,12 @@ function ensureHydrated() {
       if (!remote) return;
       setState({
         ...state,
-        meaningOverrides: { ...remote.meaningOverrides, ...state.meaningOverrides },
-        termOverrides: { ...remote.termOverrides, ...state.termOverrides },
-        nuanceNotes: { ...remote.nuanceNotes, ...state.nuanceNotes },
-        lectureOverrides: { ...remote.lectureOverrides, ...state.lectureOverrides },
-        memos: { ...remote.memos, ...state.memos },
-        customWords: { ...remote.customWords, ...state.customWords },
+        meaningOverrides: preferLocal(remote.meaningOverrides, state.meaningOverrides),
+        termOverrides: preferLocal(remote.termOverrides, state.termOverrides),
+        nuanceNotes: preferLocal(remote.nuanceNotes, state.nuanceNotes),
+        lectureOverrides: preferLocal(remote.lectureOverrides, state.lectureOverrides),
+        memos: preferLocal(remote.memos, state.memos),
+        customWords: preferLocal(remote.customWords, state.customWords),
       });
     });
   }

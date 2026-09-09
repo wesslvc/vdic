@@ -89,9 +89,17 @@ export default function SettingsPage() {
         </p>
       )}
 
-      <h2 className="mb-2 mt-6 text-sm font-semibold text-neutral-500">
+      <h2 className="mb-2 mt-6 flex items-center gap-2 text-sm font-semibold text-neutral-500">
         GitHub 동기화 {mounted && (hasSecret ? "(설정됨)" : "(미설정)")}
+        <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-700 dark:bg-rose-950 dark:text-rose-400">
+          관리자 전용
+        </span>
       </h2>
+      <p className="mb-3 rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-xs text-rose-700 dark:border-rose-900 dark:bg-rose-950 dark:text-rose-400">
+        ⚠️ 이 비밀번호는 GitHub 저장소에 직접 쓰기 권한을 갖는 관리자용 자격 증명이에요. 본인만
+        알고 있어야 하고, 다른 사람과 공유하거나 캡처해서 보내면 안 돼요. 이 기기에만 저장되며,
+        입력하는 순간 이후의 모든 수정 내용이 실제 저장소에 반영돼요.
+      </p>
       <p className="mb-3 text-xs text-neutral-500">
         동기화 비밀번호를 설정하면 뜻 수정·뉘앙스·강의 재배정이 저장할 때마다 GitHub 저장소에도
         반영돼요. 브라우저 데이터를 지우거나 기기를 바꿔도 그대로 남아있어요. (서버 쪽 설정이

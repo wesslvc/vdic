@@ -56,15 +56,28 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
         <NavBar />
         <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-6">{children}</main>
-        {/* 만든 곳 표기 — 사이트는 VDIC, 브랜드는 NEPICA. */}
-        <footer className="flex justify-center pb-8 pt-4">
+        {/* 만든 곳 표기 — 사이트는 VDIC, 브랜드는 NEPICA.
+            마크는 **아무것도 물지 않은 물까치**다(제품 마크인 책 문 새가 아니라
+            브랜드 마크). 지오글·리프린트OCR 도 바닥에 똑같은 모양을 달아서,
+            셋을 나란히 열어 두면 같은 곳에서 만든 것으로 보인다. */}
+        <footer className="flex justify-center px-4 pb-8 pt-10">
           <a
             href="https://nepica.vercel.app"
             target="_blank"
             rel="noreferrer"
             className="nepica-brand text-neutral-500"
+            aria-label="NEPICA 브랜드 사이트로 이동"
           >
-            NEPICA
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/nepica-64.png"
+              alt=""
+              width={22}
+              height={22}
+              decoding="async"
+              draggable={false}
+            />
+            <span>NEPICA</span>
           </a>
         </footer>
       </body>

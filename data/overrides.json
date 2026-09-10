@@ -1,6 +1,7 @@
 {
   "meaningOverrides": {
-    "w51": "이해할 수 있는(=understandable, intelligible)"
+    "w51": "이해할 수 있는(=understandable, intelligible)",
+    "w233": "A가 B를 조건화시키다(종소리가 개를 조건화시키다)"
   },
   "termOverrides": {},
   "nuanceNotes": {
@@ -18,7 +19,8 @@
     "w78": "-",
     "w191": "+",
     "w193": "+",
-    "w242": "+"
+    "w242": "+",
+    "w233": "A→B"
   },
   "lectureOverrides": {},
   "memos": {

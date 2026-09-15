@@ -26,7 +26,9 @@
     "w242": "+",
     "w233": "A→B"
   },
-  "lectureOverrides": {},
+  "lectureOverrides": {
+    "w56": 10
+  },
   "memos": {
     "w45": "State(상태) -> Station(고정) -> Stationary(정적인)",
     "w55": "긍정적인 부분과 부정적인 부분이 공존한다는 느낌"
